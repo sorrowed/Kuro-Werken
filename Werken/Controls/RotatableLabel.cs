@@ -16,7 +16,7 @@ namespace Werken.Controls
 		{
 			var g = e.Graphics;
 
-			g.DrawRectangle( Pens.Black, 0, 0, Width - 1, Height - 1 );
+			//g.DrawRectangle( Pens.Black, 0, 0, Width - 1, Height - 1 );
 
 			g.InterpolationMode = InterpolationMode.High;
 			g.SmoothingMode = SmoothingMode.HighQuality;
@@ -29,7 +29,7 @@ namespace Werken.Controls
 
 			using( var fmt = new StringFormat() )
 			{
-				fmt.Alignment = StringAlignment.Center;
+				fmt.Alignment = StringAlignment.Near;
 				fmt.LineAlignment = StringAlignment.Center;
 
 				g.DrawString( Text, Font, Brushes.Black, r, fmt );

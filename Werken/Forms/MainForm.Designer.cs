@@ -167,26 +167,26 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
 			this.WorkItemsPanel.AutoScroll = true;
-			this.WorkItemsPanel.Location = new System.Drawing.Point(12, 129);
+			this.WorkItemsPanel.Location = new System.Drawing.Point(12, 65);
 			this.WorkItemsPanel.Name = "WorkItemsPanel";
-			this.WorkItemsPanel.Size = new System.Drawing.Size(1194, 536);
+			this.WorkItemsPanel.Size = new System.Drawing.Size(1194, 469);
 			this.WorkItemsPanel.TabIndex = 11;
 			// 
 			// MessageList
 			// 
-			this.MessageList.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+			this.MessageList.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
 			this.MessageList.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
 			this.MessageList.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1});
-			this.MessageList.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
+			this.MessageList.Font = new System.Drawing.Font("Calibri", 12F);
 			this.MessageList.ForeColor = System.Drawing.Color.Red;
 			this.MessageList.FullRowSelect = true;
 			this.MessageList.GridLines = true;
 			this.MessageList.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.None;
-			this.MessageList.Location = new System.Drawing.Point(12, 65);
+			this.MessageList.Location = new System.Drawing.Point(12, 540);
 			this.MessageList.Name = "MessageList";
-			this.MessageList.Size = new System.Drawing.Size(1194, 58);
+			this.MessageList.Size = new System.Drawing.Size(1194, 125);
 			this.MessageList.TabIndex = 12;
 			this.MessageList.UseCompatibleStateImageBehavior = false;
 			this.MessageList.View = System.Windows.Forms.View.Details;

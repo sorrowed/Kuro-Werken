@@ -1,0 +1,79 @@
+﻿using System;
+using System.Windows.Forms;
+
+namespace Werken.Controls
+{
+	public partial class WorkItemCtrl : UserControl
+	{
+		public WorkItem Item { get; private set; }
+
+		public WorkItemCtrl()
+		{
+			InitializeComponent();
+		}
+
+		public void Assign( WorkItem item )
+		{
+			Item = item;
+
+			Bind();
+		}
+
+		private void Bind()
+		{
+			OrderNrLabel.DataBindings.Add( new Binding( "Text", Item, "OrderNr",false, DataSourceUpdateMode.OnPropertyChanged ) );
+			ProductionNrTextBox.DataBindings.Add( new Binding( "Text", Item, "ProductionNr", false, DataSourceUpdateMode.OnValidation ) );
+			label1.DataBindings.Add( new Binding( "Text", Item, "Project", false, DataSourceUpdateMode.OnPropertyChanged ) );
+			label2.DataBindings.Add( new Binding( "Text", Item, "Customer", false, DataSourceUpdateMode.OnPropertyChanged ) );
+
+			label3.DataBindings.Add( new Binding( "Text", Item, "Chalets", false, DataSourceUpdateMode.OnPropertyChanged ) );
+			label4.DataBindings.Add( new Binding( "Text", Item, "Kozijnen", false, DataSourceUpdateMode.OnPropertyChanged ) );
+			label5.DataBindings.Add( new Binding( "Text", Item, "Ramen", false, DataSourceUpdateMode.OnPropertyChanged ) );
+			label6.DataBindings.Add( new Binding( "Text", Item, "Deuren", false, DataSourceUpdateMode.OnPropertyChanged ) );
+
+			GlassTextBox.DataBindings.Add( new Binding( "Text", Item, "Glas", false, DataSourceUpdateMode.OnValidation ) );
+			RoosterTextBox.DataBindings.Add( new Binding( "Text", Item, "Roosters", false, DataSourceUpdateMode.OnValidation ) );
+			CilindersTextBox.DataBindings.Add( new Binding( "Text", Item, "Cilinders", false, DataSourceUpdateMode.OnValidation ) );
+			InzethorTextBox.DataBindings.Add( new Binding( "Text", Item, "Inzethor", false, DataSourceUpdateMode.OnValidation ) );
+
+			BazTextBox.DataBindings.Add( new Binding( "Text", Item, "BAZ", false, DataSourceUpdateMode.OnPropertyChanged ) );
+			LasTextBox.DataBindings.Add( new Binding( "Text", Item, "LAS", false, DataSourceUpdateMode.OnPropertyChanged ) );
+			AfmTextBox.DataBindings.Add( new Binding( "Text", Item, "AFM", false, DataSourceUpdateMode.OnPropertyChanged ) );
+			CompleteTextBox.DataBindings.Add( new Binding( "Text", Item, "Complete", false, DataSourceUpdateMode.OnPropertyChanged ) );
+		}
+
+		private void textBox_Enter( object sender, EventArgs e )
+		{
+			var t = sender as TextBox;
+			if( t == null )
+				return;
+			t.SelectAll();
+		}
+
+		private void WorkItemCtrl_SizeChanged( object sender, EventArgs e )
+		{
+			int top = ( Height - GlassTextBox.Height ) / 2;
+			int height = GlassTextBox.Height;
+
+			foreach( Control control in Controls )
+			{
+				control.Height = height;
+				control.Top = top;
+			}
+		}
+
+		private void BazTextBox_MouseDown( object sender, MouseEventArgs e )
+		{
+			var t = sender as Label;
+			if( t == null )
+				return;
+
+			if( string.IsNullOrEmpty( t.Text ) )
+				t.Text = @"\";
+			else if( t.Text == @"\" )
+				t.Text = @"X";
+			else
+				t.Text = string.Empty;
+		}
+	}
+}

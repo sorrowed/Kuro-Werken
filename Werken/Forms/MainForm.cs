@@ -20,11 +20,23 @@ namespace Werken
 		private List<WorkItem> Items { get; set; }
 		private List<WorkItemCtrl> WorkItemControls{ get; set; }
 
+		private WorkItemHdrCtrl headerCtrl;
+
 		public MainForm()
 		{
 			InitializeComponent();
 
 			Items = new List<WorkItem>();
+
+			headerCtrl = new WorkItemHdrCtrl();
+			WorkItemsPanel.Controls.Add( headerCtrl );
+			headerCtrl.Location = new Point( 0, 0 );
+			headerCtrl.Width = WorkItemsPanel.Width;
+			headerCtrl.Anchor = AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Top;
+
+			MainForm_SizeChanged( null, null );
+			MessageList.Items.Add( "Test message 1" );
+			MessageList.Items.Add( "Test message 2" );
 		}
 
 		private void MainForm_Load( object sender, EventArgs e )
@@ -80,6 +92,7 @@ namespace Werken
 		{
 			foreach( var item in Items )
 				item.PropertyChanged -= Item_PropertyChanged;
+
 			Items = WorkItems.GetWorkItems( new Database(), Week );
 			foreach( var item in Items )
 				item.PropertyChanged += Item_PropertyChanged;
@@ -87,10 +100,14 @@ namespace Werken
 			WorkItemsPanel.SuspendLayout();
 
 			foreach( var ctrl in WorkItemControls )
+			{
+				ctrl.Clicked -= Ctrl_Clicked;
 				WorkItemsPanel.Controls.Remove( ctrl );
+			}
+
 			WorkItemControls.Clear();
 
-			int y = 0;
+			int y = headerCtrl.Bottom;
 			foreach( var item in Items )
 			{
 				var ctrl = new WorkItemCtrl();
@@ -104,15 +121,27 @@ namespace Werken
 
 				y += ( ctrl.Height + 1 );
 
+				ctrl.Clicked += Ctrl_Clicked;
 				WorkItemControls.Add( ctrl );
 			}
 
 			WorkItemsPanel.ResumeLayout();
 		}
 
+		private void Ctrl_Clicked( WorkItemCtrl obj )
+		{
+			foreach( var ctrl in WorkItemControls )
+				ctrl.Emphasize = object.ReferenceEquals( ctrl, obj );
+		}
+
 		private void Item_PropertyChanged( object sender, PropertyChangedEventArgs e )
 		{
 			WorkItems.Update( new Database(), sender as WorkItem );
+		}
+
+		private void MainForm_SizeChanged( object sender, EventArgs e )
+		{
+			MessageList.Columns[ 0 ].Width = MessageList.ClientSize.Width;
 		}
 	}
 }

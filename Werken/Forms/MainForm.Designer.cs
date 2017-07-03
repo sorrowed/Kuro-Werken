@@ -39,13 +39,15 @@
 			this.ToLabel = new System.Windows.Forms.Label();
 			this.label1 = new System.Windows.Forms.Label();
 			this.WorkItemsPanel = new System.Windows.Forms.Panel();
+			this.MessageList = new System.Windows.Forms.ListView();
+			this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
 			this.SuspendLayout();
 			// 
 			// UpdateButton
 			// 
 			this.UpdateButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
 			this.UpdateButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.UpdateButton.Location = new System.Drawing.Point(858, 671);
+			this.UpdateButton.Location = new System.Drawing.Point(1068, 671);
 			this.UpdateButton.Name = "UpdateButton";
 			this.UpdateButton.Size = new System.Drawing.Size(138, 46);
 			this.UpdateButton.TabIndex = 0;
@@ -107,7 +109,7 @@
 			// 
 			this.CancelButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
 			this.CancelButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.CancelButton.Location = new System.Drawing.Point(714, 671);
+			this.CancelButton.Location = new System.Drawing.Point(924, 671);
 			this.CancelButton.Name = "CancelButton";
 			this.CancelButton.Size = new System.Drawing.Size(138, 46);
 			this.CancelButton.TabIndex = 5;
@@ -165,16 +167,36 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
 			this.WorkItemsPanel.AutoScroll = true;
-			this.WorkItemsPanel.Location = new System.Drawing.Point(12, 81);
+			this.WorkItemsPanel.Location = new System.Drawing.Point(12, 129);
 			this.WorkItemsPanel.Name = "WorkItemsPanel";
-			this.WorkItemsPanel.Size = new System.Drawing.Size(984, 566);
+			this.WorkItemsPanel.Size = new System.Drawing.Size(1194, 536);
 			this.WorkItemsPanel.TabIndex = 11;
+			// 
+			// MessageList
+			// 
+			this.MessageList.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+			this.MessageList.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+			this.MessageList.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1});
+			this.MessageList.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
+			this.MessageList.ForeColor = System.Drawing.Color.Red;
+			this.MessageList.FullRowSelect = true;
+			this.MessageList.GridLines = true;
+			this.MessageList.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.None;
+			this.MessageList.Location = new System.Drawing.Point(12, 65);
+			this.MessageList.Name = "MessageList";
+			this.MessageList.Size = new System.Drawing.Size(1194, 58);
+			this.MessageList.TabIndex = 12;
+			this.MessageList.UseCompatibleStateImageBehavior = false;
+			this.MessageList.View = System.Windows.Forms.View.Details;
 			// 
 			// MainForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(1008, 729);
+			this.ClientSize = new System.Drawing.Size(1218, 729);
+			this.Controls.Add(this.MessageList);
 			this.Controls.Add(this.WorkItemsPanel);
 			this.Controls.Add(this.label1);
 			this.Controls.Add(this.ToLabel);
@@ -190,6 +212,7 @@
 			this.Name = "MainForm";
 			this.Text = "Overzicht werken";
 			this.Load += new System.EventHandler(this.MainForm_Load);
+			this.SizeChanged += new System.EventHandler(this.MainForm_SizeChanged);
 			this.ResumeLayout(false);
 
 		}
@@ -207,6 +230,8 @@
 		private System.Windows.Forms.Label ToLabel;
 		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.Panel WorkItemsPanel;
+		private System.Windows.Forms.ListView MessageList;
+		private System.Windows.Forms.ColumnHeader columnHeader1;
 	}
 }
 

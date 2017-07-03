@@ -1,10 +1,26 @@
 ﻿using System;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace Werken.Controls
 {
 	public partial class WorkItemCtrl : UserControl
 	{
+		public event Action<WorkItemCtrl> Clicked;
+
+		private bool emphasize;
+
+		public bool Emphasize
+		{
+			get { return emphasize; }
+			set { emphasize = value; SetBackGround(); }
+		}
+
+		private void SetBackGround()
+		{
+			BackColor = emphasize ? SystemColors.ControlDarkDark : SystemColors.Control;
+		}
+
 		public WorkItem Item { get; private set; }
 
 		public WorkItemCtrl()
@@ -74,6 +90,12 @@ namespace Werken.Controls
 				t.Text = @"X";
 			else
 				t.Text = string.Empty;
+		}
+
+		private void Control_Click( object sender, EventArgs e )
+		{
+			if( Clicked != null )
+				Clicked( this );
 		}
 	}
 }

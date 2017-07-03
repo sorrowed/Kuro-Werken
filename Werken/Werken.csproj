@@ -62,6 +62,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controls\RotatableLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\WorkItemHdrCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\WorkItemHdrCtrl.Designer.cs">
+      <DependentUpon>WorkItemHdrCtrl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\WorkItemCtrl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -81,6 +90,9 @@
     <Compile Include="Support\TimeUtils.cs" />
     <Compile Include="Support\Week.cs" />
     <Compile Include="WorkItem\WorkItem.cs" />
+    <EmbeddedResource Include="Controls\WorkItemHdrCtrl.resx">
+      <DependentUpon>WorkItemHdrCtrl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Controls\WorkItemCtrl.resx">
       <DependentUpon>WorkItemCtrl.cs</DependentUpon>
     </EmbeddedResource>

@@ -1,18 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
-using System.Data.SQLite;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Werken.Controls;
 using Werken.DAL;
 using Werken.Support;
 
-namespace Werken
+namespace Werken.Forms
 {
 	public partial class MainForm : Form
 	{

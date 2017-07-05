@@ -39,6 +39,10 @@ namespace Werken
 		private string complete;
 		public string Complete { get { return complete; } set { if( complete != value ) { complete = value; Notify( "Complete" ); } } }
 
+		private string remarks;
+		public string Remarks { get { return remarks; } set { if( remarks != value ) { remarks = value; Notify( "Remarks" ); } } }
+
+
 		public event PropertyChangedEventHandler PropertyChanged;
 		private void Notify(string name )
 		{

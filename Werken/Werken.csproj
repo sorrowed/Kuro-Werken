@@ -79,6 +79,12 @@
     </Compile>
     <Compile Include="DAL\Database.cs" />
     <Compile Include="DAL\WorkItems.cs" />
+    <Compile Include="Forms\ColorChooser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ColorChooser.Designer.cs">
+      <DependentUpon>ColorChooser.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,6 +101,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\WorkItemCtrl.resx">
       <DependentUpon>WorkItemCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ColorChooser.resx">
+      <DependentUpon>ColorChooser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>

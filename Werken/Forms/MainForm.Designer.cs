@@ -1,4 +1,4 @@
-﻿namespace Werken
+﻿namespace Werken.Forms
 {
 	partial class MainForm
 	{

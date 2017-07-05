@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
+using Werken.Forms;
 
 namespace Werken.Controls
 {
@@ -56,6 +57,8 @@ namespace Werken.Controls
 			LasTextBox.DataBindings.Add( new Binding( "Text", Item, "LAS", false, DataSourceUpdateMode.OnPropertyChanged ) );
 			AfmTextBox.DataBindings.Add( new Binding( "Text", Item, "AFM", false, DataSourceUpdateMode.OnPropertyChanged ) );
 			CompleteTextBox.DataBindings.Add( new Binding( "Text", Item, "Complete", false, DataSourceUpdateMode.OnPropertyChanged ) );
+
+			RemarksTextBox.DataBindings.Add( new Binding( "Text", Item, "Remarks", false, DataSourceUpdateMode.OnPropertyChanged ) );
 		}
 
 		private void textBox_Enter( object sender, EventArgs e )
@@ -96,6 +99,26 @@ namespace Werken.Controls
 		{
 			if( Clicked != null )
 				Clicked( this );
+		}
+
+		private void InzethorTextBox_MouseDown( object sender, MouseEventArgs e )
+		{
+			if( e.Button != MouseButtons.Right )
+				return;
+
+			var tb = sender as TextBox;
+			if( tb == null )
+				return;
+
+			using( var dlg = new ColorChooser( tb.BackColor ) )
+			{
+				var l = Location;
+				l.Offset( tb.Location );
+				dlg.Location = l;
+
+				if( dlg.ShowDialog() == DialogResult.OK )
+					tb.BackColor = dlg.Color;
+			}
 		}
 	}
 }

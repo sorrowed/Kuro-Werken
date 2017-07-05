@@ -56,7 +56,8 @@ namespace Werken.DAL
 										BAZ varchar default '', 
 										LAS varchar default '', 
 										AFM varchar default '', 
-										Complete varchar default '' )";
+										Complete varchar default '',
+										Remarks varchar )";
 
 					using( var cmd = new SQLiteCommand( sql, cn ) )
 					{
@@ -85,7 +86,7 @@ namespace Werken.DAL
 						Customer,
 						Chalets,Kozijnen,Ramen,Deuren,
 						Glas,Roosters,Cilinders,Inzethor,
-						BAZ,LAS,AFM,Complete
+						BAZ,LAS,AFM,Complete,Remarks
 					) VALUES (
 					2017,26,
 					2017511,
@@ -94,7 +95,7 @@ namespace Werken.DAL
 					'Euro Recreatiebouw',
 					0,1,0,0,
 					'5-7','5-7','-','X',
-					'\','','','')" );
+					'\','','','', 'Testopmerking')" );
 			}
 
 		}

@@ -61,6 +61,7 @@
 			this.OrderNrLabel.Text = "2017266V";
 			this.OrderNrLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			this.OrderNrLabel.Click += new System.EventHandler(this.Control_Click);
+			this.OrderNrLabel.Leave += new System.EventHandler(this.RemarksTextBox_Leave);
 			// 
 			// label1
 			// 
@@ -76,6 +77,7 @@
 			this.label1.Text = "121406 schuifpui + 121416";
 			this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			this.label1.Click += new System.EventHandler(this.Control_Click);
+			this.label1.Leave += new System.EventHandler(this.RemarksTextBox_Leave);
 			// 
 			// label2
 			// 
@@ -91,6 +93,7 @@
 			this.label2.Text = "Arcabo";
 			this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			this.label2.Click += new System.EventHandler(this.Control_Click);
+			this.label2.Leave += new System.EventHandler(this.RemarksTextBox_Leave);
 			// 
 			// label3
 			// 
@@ -106,6 +109,7 @@
 			this.label3.Text = "999";
 			this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			this.label3.Click += new System.EventHandler(this.Control_Click);
+			this.label3.Leave += new System.EventHandler(this.RemarksTextBox_Leave);
 			// 
 			// label4
 			// 
@@ -121,6 +125,7 @@
 			this.label4.Text = "999";
 			this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			this.label4.Click += new System.EventHandler(this.Control_Click);
+			this.label4.Leave += new System.EventHandler(this.RemarksTextBox_Leave);
 			// 
 			// label5
 			// 
@@ -136,6 +141,7 @@
 			this.label5.Text = "999";
 			this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			this.label5.Click += new System.EventHandler(this.Control_Click);
+			this.label5.Leave += new System.EventHandler(this.RemarksTextBox_Leave);
 			// 
 			// label6
 			// 
@@ -151,6 +157,7 @@
 			this.label6.Text = "999";
 			this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			this.label6.Click += new System.EventHandler(this.Control_Click);
+			this.label6.Leave += new System.EventHandler(this.RemarksTextBox_Leave);
 			// 
 			// BazTextBox
 			// 
@@ -166,6 +173,7 @@
 			this.BazTextBox.Text = "X";
 			this.BazTextBox.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			this.BazTextBox.Click += new System.EventHandler(this.Control_Click);
+			this.BazTextBox.Leave += new System.EventHandler(this.RemarksTextBox_Leave);
 			this.BazTextBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BazTextBox_MouseDown);
 			// 
 			// LasTextBox
@@ -182,6 +190,7 @@
 			this.LasTextBox.Text = "X";
 			this.LasTextBox.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			this.LasTextBox.Click += new System.EventHandler(this.Control_Click);
+			this.LasTextBox.Leave += new System.EventHandler(this.RemarksTextBox_Leave);
 			this.LasTextBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BazTextBox_MouseDown);
 			// 
 			// AfmTextBox
@@ -198,6 +207,7 @@
 			this.AfmTextBox.Text = "X";
 			this.AfmTextBox.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			this.AfmTextBox.Click += new System.EventHandler(this.Control_Click);
+			this.AfmTextBox.Leave += new System.EventHandler(this.RemarksTextBox_Leave);
 			this.AfmTextBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BazTextBox_MouseDown);
 			// 
 			// CompleteTextBox
@@ -214,6 +224,7 @@
 			this.CompleteTextBox.Text = "X";
 			this.CompleteTextBox.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			this.CompleteTextBox.Click += new System.EventHandler(this.Control_Click);
+			this.CompleteTextBox.Leave += new System.EventHandler(this.RemarksTextBox_Leave);
 			this.CompleteTextBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BazTextBox_MouseDown);
 			// 
 			// GlassTextBox
@@ -229,6 +240,7 @@
 			this.GlassTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 			this.GlassTextBox.Click += new System.EventHandler(this.Control_Click);
 			this.GlassTextBox.Enter += new System.EventHandler(this.textBox_Enter);
+			this.GlassTextBox.Leave += new System.EventHandler(this.RemarksTextBox_Leave);
 			this.GlassTextBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.InzethorTextBox_MouseDown);
 			// 
 			// RoosterTextBox
@@ -244,6 +256,7 @@
 			this.RoosterTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 			this.RoosterTextBox.Click += new System.EventHandler(this.Control_Click);
 			this.RoosterTextBox.Enter += new System.EventHandler(this.textBox_Enter);
+			this.RoosterTextBox.Leave += new System.EventHandler(this.RemarksTextBox_Leave);
 			this.RoosterTextBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.InzethorTextBox_MouseDown);
 			// 
 			// CilindersTextBox
@@ -259,6 +272,7 @@
 			this.CilindersTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 			this.CilindersTextBox.Click += new System.EventHandler(this.Control_Click);
 			this.CilindersTextBox.Enter += new System.EventHandler(this.textBox_Enter);
+			this.CilindersTextBox.Leave += new System.EventHandler(this.RemarksTextBox_Leave);
 			this.CilindersTextBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.InzethorTextBox_MouseDown);
 			// 
 			// InzethorTextBox
@@ -274,6 +288,7 @@
 			this.InzethorTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 			this.InzethorTextBox.Click += new System.EventHandler(this.Control_Click);
 			this.InzethorTextBox.Enter += new System.EventHandler(this.textBox_Enter);
+			this.InzethorTextBox.Leave += new System.EventHandler(this.RemarksTextBox_Leave);
 			this.InzethorTextBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.InzethorTextBox_MouseDown);
 			// 
 			// ProductionNrTextBox
@@ -288,6 +303,7 @@
 			this.ProductionNrTextBox.TabIndex = 1;
 			this.ProductionNrTextBox.Click += new System.EventHandler(this.Control_Click);
 			this.ProductionNrTextBox.Enter += new System.EventHandler(this.textBox_Enter);
+			this.ProductionNrTextBox.Leave += new System.EventHandler(this.RemarksTextBox_Leave);
 			// 
 			// RemarksTextBox
 			// 
@@ -301,6 +317,7 @@
 			this.RemarksTextBox.Name = "RemarksTextBox";
 			this.RemarksTextBox.Size = new System.Drawing.Size(254, 22);
 			this.RemarksTextBox.TabIndex = 16;
+			this.RemarksTextBox.Leave += new System.EventHandler(this.RemarksTextBox_Leave);
 			// 
 			// WorkItemCtrl
 			// 
@@ -327,7 +344,9 @@
 			this.MinimumSize = new System.Drawing.Size(1000, 0);
 			this.Name = "WorkItemCtrl";
 			this.Size = new System.Drawing.Size(1200, 24);
+			this.Load += new System.EventHandler(this.WorkItemCtrl_Load);
 			this.SizeChanged += new System.EventHandler(this.WorkItemCtrl_SizeChanged);
+			this.Validated += new System.EventHandler(this.WorkItemCtrl_Validated);
 			this.ResumeLayout(false);
 			this.PerformLayout();
 

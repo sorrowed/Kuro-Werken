@@ -21,7 +21,7 @@ namespace Werken.DAL
 
 		public Database()
 		{
-			DatabaseFileName = "Werken.sqlite";
+			DatabaseFileName = @"F:\Projects\Prive\TiFaRoes\OverzichtWerken\doc\Werken.sqlite";
 		}
 
 		public void Create()

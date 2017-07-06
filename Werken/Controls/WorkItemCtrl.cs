@@ -36,6 +36,14 @@ namespace Werken.Controls
 			Bind();
 		}
 
+		private void Draw()
+		{
+			if( ProductionNrTextBox.Text.ToLowerInvariant() == "oke" )
+				ProductionNrTextBox.BackColor = Color.DarkGreen;
+			else
+				ProductionNrTextBox.BackColor = SystemColors.Window ;
+		}
+
 		private void Bind()
 		{
 			OrderNrLabel.DataBindings.Add( new Binding( "Text", Item, "OrderNr",false, DataSourceUpdateMode.OnPropertyChanged ) );
@@ -90,7 +98,7 @@ namespace Werken.Controls
 			if( string.IsNullOrEmpty( t.Text ) )
 				t.Text = @"\";
 			else if( t.Text == @"\" )
-				t.Text = @"X";
+				t.Text = @"x";
 			else
 				t.Text = string.Empty;
 		}
@@ -119,6 +127,21 @@ namespace Werken.Controls
 				if( dlg.ShowDialog() == DialogResult.OK )
 					tb.BackColor = dlg.Color;
 			}
+		}
+
+		private void WorkItemCtrl_Load( object sender, EventArgs e )
+		{
+			Draw();
+		}
+
+		private void RemarksTextBox_Leave( object sender, EventArgs e )
+		{
+			Draw();
+		}
+
+		private void WorkItemCtrl_Validated( object sender, EventArgs e )
+		{
+			Draw();
 		}
 	}
 }

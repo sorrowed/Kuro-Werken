@@ -30,8 +30,8 @@ namespace Werken.Forms
 			headerCtrl.Anchor = AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Top;
 
 			MainForm_SizeChanged( null, null );
-			MessageList.Items.Add( "Test message 1" );
-			MessageList.Items.Add( "Test message 2" );
+			RemarksList.Items.Add( "Test message 1" );
+			RemarksList.Items.Add( "Test message 2" );
 		}
 
 		private void MainForm_Load( object sender, EventArgs e )
@@ -105,6 +105,9 @@ namespace Werken.Forms
 			int y = headerCtrl.Bottom;
 			foreach( var item in Items )
 			{
+				if( item.IsRemarkRow() )
+					continue;
+
 				var ctrl = new WorkItemCtrl();
 				ctrl.Assign( item );
 
@@ -121,6 +124,17 @@ namespace Werken.Forms
 			}
 
 			WorkItemsPanel.ResumeLayout();
+
+			RemarksList.SuspendLayout();
+			RemarksList.Items.Clear();
+			foreach( var item in Items )
+			{
+				if( !item.IsRemarkRow() )
+					continue;
+
+				RemarksList.Items.Add( item.Project );
+			}
+			RemarksList.ResumeLayout();
 		}
 
 		private void Ctrl_Clicked( WorkItemCtrl obj )
@@ -136,7 +150,7 @@ namespace Werken.Forms
 
 		private void MainForm_SizeChanged( object sender, EventArgs e )
 		{
-			MessageList.Columns[ 0 ].Width = MessageList.ClientSize.Width;
+			RemarksList.Columns[ 0 ].Width = RemarksList.ClientSize.Width;
 		}
 	}
 }

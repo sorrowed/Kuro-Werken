@@ -50,4 +50,20 @@ namespace Werken
 				PropertyChanged( this, new PropertyChangedEventArgs( name ) );
 		}
 	}
+
+	public static class WorkItemUtils
+	{
+		public static bool IsEmptyRow( this WorkItem item )
+		{
+				return string.IsNullOrEmpty( item.OrderNr ) &&
+					string.IsNullOrEmpty( item.ProductionNr ) &&
+					string.IsNullOrEmpty( item.Customer );
+		}
+
+		public static bool IsRemarkRow( this WorkItem item )
+		{
+				return item.IsEmptyRow() &&
+					!string.IsNullOrEmpty( item.Project );
+		}
+	}
 }

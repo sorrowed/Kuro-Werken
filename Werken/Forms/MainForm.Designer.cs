@@ -39,7 +39,7 @@
 			this.ToLabel = new System.Windows.Forms.Label();
 			this.label1 = new System.Windows.Forms.Label();
 			this.WorkItemsPanel = new System.Windows.Forms.Panel();
-			this.MessageList = new System.Windows.Forms.ListView();
+			this.RemarksList = new System.Windows.Forms.ListView();
 			this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
 			this.SuspendLayout();
 			// 
@@ -174,29 +174,29 @@
 			// 
 			// MessageList
 			// 
-			this.MessageList.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+			this.RemarksList.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-			this.MessageList.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-			this.MessageList.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+			this.RemarksList.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+			this.RemarksList.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1});
-			this.MessageList.Font = new System.Drawing.Font("Calibri", 12F);
-			this.MessageList.ForeColor = System.Drawing.Color.Red;
-			this.MessageList.FullRowSelect = true;
-			this.MessageList.GridLines = true;
-			this.MessageList.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.None;
-			this.MessageList.Location = new System.Drawing.Point(12, 540);
-			this.MessageList.Name = "MessageList";
-			this.MessageList.Size = new System.Drawing.Size(1194, 125);
-			this.MessageList.TabIndex = 12;
-			this.MessageList.UseCompatibleStateImageBehavior = false;
-			this.MessageList.View = System.Windows.Forms.View.Details;
+			this.RemarksList.Font = new System.Drawing.Font("Calibri", 12F);
+			this.RemarksList.ForeColor = System.Drawing.Color.Red;
+			this.RemarksList.FullRowSelect = true;
+			this.RemarksList.GridLines = true;
+			this.RemarksList.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.None;
+			this.RemarksList.Location = new System.Drawing.Point(12, 540);
+			this.RemarksList.Name = "MessageList";
+			this.RemarksList.Size = new System.Drawing.Size(1194, 125);
+			this.RemarksList.TabIndex = 12;
+			this.RemarksList.UseCompatibleStateImageBehavior = false;
+			this.RemarksList.View = System.Windows.Forms.View.Details;
 			// 
 			// MainForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(1218, 729);
-			this.Controls.Add(this.MessageList);
+			this.Controls.Add(this.RemarksList);
 			this.Controls.Add(this.WorkItemsPanel);
 			this.Controls.Add(this.label1);
 			this.Controls.Add(this.ToLabel);
@@ -230,7 +230,7 @@
 		private System.Windows.Forms.Label ToLabel;
 		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.Panel WorkItemsPanel;
-		private System.Windows.Forms.ListView MessageList;
+		private System.Windows.Forms.ListView RemarksList;
 		private System.Windows.Forms.ColumnHeader columnHeader1;
 	}
 }

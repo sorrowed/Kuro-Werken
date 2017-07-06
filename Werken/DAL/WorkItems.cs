@@ -14,7 +14,7 @@ namespace Werken.DAL
 			{
 				cn.Open();
 
-				return cn.Query<WorkItem>( "select * from WorkItems where Year=@Year and Week=@Week", new { Year = week.Year, Week = week.Nr } ).AsList();
+				return cn.Query<WorkItem>( "select * from WorkItems where Year=@Year and Week=@Week order by OrderNr, ProductionNr", new { Year = week.Year, Week = week.Nr } ).AsList();
 			}
 		}
 

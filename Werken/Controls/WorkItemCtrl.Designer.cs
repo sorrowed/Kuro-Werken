@@ -29,12 +29,12 @@
 		private void InitializeComponent()
 		{
 			this.OrderNrLabel = new System.Windows.Forms.Label();
-			this.label1 = new System.Windows.Forms.Label();
-			this.label2 = new System.Windows.Forms.Label();
-			this.label3 = new System.Windows.Forms.Label();
-			this.label4 = new System.Windows.Forms.Label();
-			this.label5 = new System.Windows.Forms.Label();
-			this.label6 = new System.Windows.Forms.Label();
+			this.ProjectLabal = new System.Windows.Forms.Label();
+			this.CustomerLabel = new System.Windows.Forms.Label();
+			this.ChaletsLabel = new System.Windows.Forms.Label();
+			this.KozijnenLabel = new System.Windows.Forms.Label();
+			this.RamenLabel = new System.Windows.Forms.Label();
+			this.DeurenLabel = new System.Windows.Forms.Label();
 			this.BazTextBox = new System.Windows.Forms.Label();
 			this.LasTextBox = new System.Windows.Forms.Label();
 			this.AfmTextBox = new System.Windows.Forms.Label();
@@ -65,99 +65,99 @@
 			// 
 			// label1
 			// 
-			this.label1.BackColor = System.Drawing.SystemColors.Control;
-			this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-			this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.label1.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label1.Location = new System.Drawing.Point(248, 2);
-			this.label1.Margin = new System.Windows.Forms.Padding(0);
-			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(210, 21);
-			this.label1.TabIndex = 2;
-			this.label1.Text = "121406 schuifpui + 121416";
-			this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.label1.Click += new System.EventHandler(this.Control_Click);
-			this.label1.Leave += new System.EventHandler(this.RemarksTextBox_Leave);
+			this.ProjectLabal.BackColor = System.Drawing.SystemColors.Control;
+			this.ProjectLabal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+			this.ProjectLabal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.ProjectLabal.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.ProjectLabal.Location = new System.Drawing.Point(248, 2);
+			this.ProjectLabal.Margin = new System.Windows.Forms.Padding(0);
+			this.ProjectLabal.Name = "label1";
+			this.ProjectLabal.Size = new System.Drawing.Size(210, 21);
+			this.ProjectLabal.TabIndex = 2;
+			this.ProjectLabal.Text = "121406 schuifpui + 121416";
+			this.ProjectLabal.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.ProjectLabal.Click += new System.EventHandler(this.Control_Click);
+			this.ProjectLabal.Leave += new System.EventHandler(this.RemarksTextBox_Leave);
 			// 
 			// label2
 			// 
-			this.label2.BackColor = System.Drawing.SystemColors.Control;
-			this.label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-			this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.label2.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label2.Location = new System.Drawing.Point(457, 2);
-			this.label2.Margin = new System.Windows.Forms.Padding(0);
-			this.label2.Name = "label2";
-			this.label2.Size = new System.Drawing.Size(120, 21);
-			this.label2.TabIndex = 3;
-			this.label2.Text = "Arcabo";
-			this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.label2.Click += new System.EventHandler(this.Control_Click);
-			this.label2.Leave += new System.EventHandler(this.RemarksTextBox_Leave);
+			this.CustomerLabel.BackColor = System.Drawing.SystemColors.Control;
+			this.CustomerLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+			this.CustomerLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.CustomerLabel.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.CustomerLabel.Location = new System.Drawing.Point(457, 2);
+			this.CustomerLabel.Margin = new System.Windows.Forms.Padding(0);
+			this.CustomerLabel.Name = "label2";
+			this.CustomerLabel.Size = new System.Drawing.Size(120, 21);
+			this.CustomerLabel.TabIndex = 3;
+			this.CustomerLabel.Text = "Arcabo";
+			this.CustomerLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.CustomerLabel.Click += new System.EventHandler(this.Control_Click);
+			this.CustomerLabel.Leave += new System.EventHandler(this.RemarksTextBox_Leave);
 			// 
 			// label3
 			// 
-			this.label3.BackColor = System.Drawing.SystemColors.Control;
-			this.label3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-			this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.label3.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label3.Location = new System.Drawing.Point(576, 2);
-			this.label3.Margin = new System.Windows.Forms.Padding(0);
-			this.label3.Name = "label3";
-			this.label3.Size = new System.Drawing.Size(32, 21);
-			this.label3.TabIndex = 4;
-			this.label3.Text = "999";
-			this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-			this.label3.Click += new System.EventHandler(this.Control_Click);
-			this.label3.Leave += new System.EventHandler(this.RemarksTextBox_Leave);
+			this.ChaletsLabel.BackColor = System.Drawing.SystemColors.Control;
+			this.ChaletsLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+			this.ChaletsLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.ChaletsLabel.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.ChaletsLabel.Location = new System.Drawing.Point(576, 2);
+			this.ChaletsLabel.Margin = new System.Windows.Forms.Padding(0);
+			this.ChaletsLabel.Name = "label3";
+			this.ChaletsLabel.Size = new System.Drawing.Size(32, 21);
+			this.ChaletsLabel.TabIndex = 4;
+			this.ChaletsLabel.Text = "999";
+			this.ChaletsLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+			this.ChaletsLabel.Click += new System.EventHandler(this.Control_Click);
+			this.ChaletsLabel.Leave += new System.EventHandler(this.RemarksTextBox_Leave);
 			// 
 			// label4
 			// 
-			this.label4.BackColor = System.Drawing.SystemColors.Control;
-			this.label4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-			this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.label4.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label4.Location = new System.Drawing.Point(607, 2);
-			this.label4.Margin = new System.Windows.Forms.Padding(0);
-			this.label4.Name = "label4";
-			this.label4.Size = new System.Drawing.Size(32, 21);
-			this.label4.TabIndex = 5;
-			this.label4.Text = "999";
-			this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-			this.label4.Click += new System.EventHandler(this.Control_Click);
-			this.label4.Leave += new System.EventHandler(this.RemarksTextBox_Leave);
+			this.KozijnenLabel.BackColor = System.Drawing.SystemColors.Control;
+			this.KozijnenLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+			this.KozijnenLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.KozijnenLabel.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.KozijnenLabel.Location = new System.Drawing.Point(607, 2);
+			this.KozijnenLabel.Margin = new System.Windows.Forms.Padding(0);
+			this.KozijnenLabel.Name = "label4";
+			this.KozijnenLabel.Size = new System.Drawing.Size(32, 21);
+			this.KozijnenLabel.TabIndex = 5;
+			this.KozijnenLabel.Text = "999";
+			this.KozijnenLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+			this.KozijnenLabel.Click += new System.EventHandler(this.Control_Click);
+			this.KozijnenLabel.Leave += new System.EventHandler(this.RemarksTextBox_Leave);
 			// 
 			// label5
 			// 
-			this.label5.BackColor = System.Drawing.SystemColors.Control;
-			this.label5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-			this.label5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.label5.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label5.Location = new System.Drawing.Point(638, 2);
-			this.label5.Margin = new System.Windows.Forms.Padding(0);
-			this.label5.Name = "label5";
-			this.label5.Size = new System.Drawing.Size(32, 21);
-			this.label5.TabIndex = 6;
-			this.label5.Text = "999";
-			this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-			this.label5.Click += new System.EventHandler(this.Control_Click);
-			this.label5.Leave += new System.EventHandler(this.RemarksTextBox_Leave);
+			this.RamenLabel.BackColor = System.Drawing.SystemColors.Control;
+			this.RamenLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+			this.RamenLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.RamenLabel.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.RamenLabel.Location = new System.Drawing.Point(638, 2);
+			this.RamenLabel.Margin = new System.Windows.Forms.Padding(0);
+			this.RamenLabel.Name = "label5";
+			this.RamenLabel.Size = new System.Drawing.Size(32, 21);
+			this.RamenLabel.TabIndex = 6;
+			this.RamenLabel.Text = "999";
+			this.RamenLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+			this.RamenLabel.Click += new System.EventHandler(this.Control_Click);
+			this.RamenLabel.Leave += new System.EventHandler(this.RemarksTextBox_Leave);
 			// 
 			// label6
 			// 
-			this.label6.BackColor = System.Drawing.SystemColors.Control;
-			this.label6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-			this.label6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.label6.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label6.Location = new System.Drawing.Point(669, 2);
-			this.label6.Margin = new System.Windows.Forms.Padding(0);
-			this.label6.Name = "label6";
-			this.label6.Size = new System.Drawing.Size(32, 21);
-			this.label6.TabIndex = 7;
-			this.label6.Text = "999";
-			this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-			this.label6.Click += new System.EventHandler(this.Control_Click);
-			this.label6.Leave += new System.EventHandler(this.RemarksTextBox_Leave);
+			this.DeurenLabel.BackColor = System.Drawing.SystemColors.Control;
+			this.DeurenLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+			this.DeurenLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.DeurenLabel.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.DeurenLabel.Location = new System.Drawing.Point(669, 2);
+			this.DeurenLabel.Margin = new System.Windows.Forms.Padding(0);
+			this.DeurenLabel.Name = "label6";
+			this.DeurenLabel.Size = new System.Drawing.Size(32, 21);
+			this.DeurenLabel.TabIndex = 7;
+			this.DeurenLabel.Text = "999";
+			this.DeurenLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+			this.DeurenLabel.Click += new System.EventHandler(this.Control_Click);
+			this.DeurenLabel.Leave += new System.EventHandler(this.RemarksTextBox_Leave);
 			// 
 			// BazTextBox
 			// 
@@ -325,7 +325,7 @@
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.Controls.Add(this.RemarksTextBox);
 			this.Controls.Add(this.ProductionNrTextBox);
-			this.Controls.Add(this.label1);
+			this.Controls.Add(this.ProjectLabal);
 			this.Controls.Add(this.InzethorTextBox);
 			this.Controls.Add(this.CilindersTextBox);
 			this.Controls.Add(this.RoosterTextBox);
@@ -334,11 +334,11 @@
 			this.Controls.Add(this.AfmTextBox);
 			this.Controls.Add(this.LasTextBox);
 			this.Controls.Add(this.BazTextBox);
-			this.Controls.Add(this.label6);
-			this.Controls.Add(this.label5);
-			this.Controls.Add(this.label4);
-			this.Controls.Add(this.label3);
-			this.Controls.Add(this.label2);
+			this.Controls.Add(this.DeurenLabel);
+			this.Controls.Add(this.RamenLabel);
+			this.Controls.Add(this.KozijnenLabel);
+			this.Controls.Add(this.ChaletsLabel);
+			this.Controls.Add(this.CustomerLabel);
 			this.Controls.Add(this.OrderNrLabel);
 			this.Margin = new System.Windows.Forms.Padding(0);
 			this.MinimumSize = new System.Drawing.Size(1000, 0);
@@ -355,12 +355,12 @@
 		#endregion
 
 		private System.Windows.Forms.Label OrderNrLabel;
-		private System.Windows.Forms.Label label1;
-		private System.Windows.Forms.Label label2;
-		private System.Windows.Forms.Label label3;
-		private System.Windows.Forms.Label label4;
-		private System.Windows.Forms.Label label5;
-		private System.Windows.Forms.Label label6;
+		private System.Windows.Forms.Label ProjectLabal;
+		private System.Windows.Forms.Label CustomerLabel;
+		private System.Windows.Forms.Label ChaletsLabel;
+		private System.Windows.Forms.Label KozijnenLabel;
+		private System.Windows.Forms.Label RamenLabel;
+		private System.Windows.Forms.Label DeurenLabel;
 		private System.Windows.Forms.Label BazTextBox;
 		private System.Windows.Forms.Label LasTextBox;
 		private System.Windows.Forms.Label AfmTextBox;

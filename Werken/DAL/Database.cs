@@ -57,7 +57,11 @@ namespace Werken.DAL
 										LAS varchar default '', 
 										AFM varchar default '', 
 										Complete varchar default '',
-										Remarks varchar )";
+										Remarks varchar,
+										GlasColor integer default 0,
+										RoostersColor integer default 0,
+										CilindersColor integer default 0,
+										InzethorColor integer default 0 )";
 
 					using( var cmd = new SQLiteCommand( sql, cn ) )
 					{
@@ -66,7 +70,7 @@ namespace Werken.DAL
 
 					tr.Commit();
 
-					InsertTest( cn );
+					//InsertTest( cn );
 				}
 
 				cn.Close();

@@ -42,6 +42,15 @@ namespace Werken
 		private string remarks;
 		public string Remarks { get { return remarks; } set { if( remarks != value ) { remarks = value; Notify( "Remarks" ); } } }
 
+		private int glasColor;
+		public int GlasColor { get { return glasColor; } set { if( glasColor != value ) { glasColor = value; Notify( "GlasColor" ); } } }
+		private int roostersColor;
+		public int RoostersColor { get { return roostersColor; } set { if( roostersColor != value ) { roostersColor = value; Notify( "RoostersColor" ); } } }
+		private int cilindersColor;
+		public int CilindersColor { get { return cilindersColor; } set { if( cilindersColor != value ) { cilindersColor = value; Notify( "CilindersColor" ); } } }
+		private int inzethorColor;
+		public int InzethorColor { get { return inzethorColor; } set { if( inzethorColor != value ) { inzethorColor = value; Notify( "InzethorColor" ); } } }
+
 
 		public event PropertyChangedEventHandler PropertyChanged;
 		private void Notify(string name )

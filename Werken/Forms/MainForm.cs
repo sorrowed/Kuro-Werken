@@ -22,6 +22,9 @@ namespace Werken.Forms
 			InitializeComponent();
 
 			Items = new List<WorkItem>();
+			WorkItemControls = new List<WorkItemCtrl>();
+
+			Week = new Week( DateTime.Today );
 
 			headerCtrl = new WorkItemHdrCtrl();
 			WorkItemsPanel.Controls.Add( headerCtrl );
@@ -30,21 +33,19 @@ namespace Werken.Forms
 			headerCtrl.Anchor = AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Top;
 
 			MainForm_SizeChanged( null, null );
-			RemarksList.Items.Add( "Test message 1" );
-			RemarksList.Items.Add( "Test message 2" );
 		}
 
 		private void MainForm_Load( object sender, EventArgs e )
 		{
-			Week = new Week( DateTime.Today );
-			WorkItemControls = new List<WorkItemCtrl>();
-
 			UpdateView();
 			UpdateWorkItems();
 		}
 
 		private void UpdateButton_Click( object sender, EventArgs e )
 		{
+			UpdateView();
+			UpdateWorkItems();
+			UpdateControls();
 		}
 
 		private void CreateButton_Click( object sender, EventArgs e )
@@ -58,6 +59,7 @@ namespace Werken.Forms
 			Week.Previous();
 			UpdateView();
 			UpdateWorkItems();
+			UpdateControls();
 		}
 
 		private void NextWeekButton_Click( object sender, EventArgs e )
@@ -66,6 +68,7 @@ namespace Werken.Forms
 
 			UpdateView();
 			UpdateWorkItems();
+			UpdateControls();
 		}
 
 		private void WeekNrLabel_Click( object sender, EventArgs e )
@@ -73,6 +76,7 @@ namespace Werken.Forms
 			Week.To( DateTime.Today );
 			UpdateView();
 			UpdateWorkItems();
+			UpdateControls();
 		}
 
 		private void UpdateView()
@@ -114,9 +118,9 @@ namespace Werken.Forms
 				WorkItemsPanel.Controls.Add( ctrl );
 
 				ctrl.Location = new Point( 0, y );
-				ctrl.Anchor = AnchorStyles.Left | AnchorStyles.Top | AnchorStyles.Right;
-				ctrl.Size = new Size( WorkItemsPanel.Width, ctrl.Height );
-
+				ctrl.Anchor = AnchorStyles.Left | AnchorStyles.Top;
+				//ctrl.Size = new Size( ctrl.Width, ctrl.Height );
+				//ctrl.Width = 5000;
 				y += ( ctrl.Height + 1 );
 
 				ctrl.Clicked += Ctrl_Clicked;
@@ -137,6 +141,13 @@ namespace Werken.Forms
 			RemarksList.ResumeLayout();
 		}
 
+		private void UpdateControls()
+		{
+			RemarksList.Columns[ 0 ].Width = RemarksList.ClientSize.Width;
+
+			foreach( var ctrl in WorkItemControls )
+				ctrl.Width = WorkItemsPanel.Width - 6;		}
+
 		private void Ctrl_Clicked( WorkItemCtrl obj )
 		{
 			foreach( var ctrl in WorkItemControls )
@@ -150,7 +161,7 @@ namespace Werken.Forms
 
 		private void MainForm_SizeChanged( object sender, EventArgs e )
 		{
-			RemarksList.Columns[ 0 ].Width = RemarksList.ClientSize.Width;
+			UpdateControls();
 		}
 	}
 }

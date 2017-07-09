@@ -100,7 +100,7 @@
 			this.label1.Size = new System.Drawing.Size(252, 48);
 			this.label1.TabIndex = 33;
 			this.label1.Text = "Opmerkingen";
-			this.label1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+			this.label1.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
 			// 
 			// label2
 			// 

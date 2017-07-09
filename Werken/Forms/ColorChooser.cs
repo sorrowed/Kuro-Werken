@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Werken.Support;
+using static Werken.Support.ColorUtils;
 
 namespace Werken.Forms
 {
@@ -16,6 +18,15 @@ namespace Werken.Forms
 		public ColorChooser( Color color )
 		{
 			InitializeComponent();
+
+			label6.BackColor = Color.White;
+			label1.BackColor = Color.Red;
+
+			label2.BackColor = Color.Yellow;
+			label3.BackColor = Color.Green;
+
+			label4.BackColor = Color.OrangeRed;
+			label5.BackColor = Color.Blue;
 
 			SelectLabel( Color = color );
 		}

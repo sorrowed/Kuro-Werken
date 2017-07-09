@@ -33,7 +33,6 @@
 			this.WeekNrLabel = new System.Windows.Forms.Label();
 			this.NextWeekButton = new System.Windows.Forms.Button();
 			this.PreviousWeekButton = new System.Windows.Forms.Button();
-			this.CancelButton = new System.Windows.Forms.Button();
 			this.YearLabel = new System.Windows.Forms.Label();
 			this.FromLabel = new System.Windows.Forms.Label();
 			this.ToLabel = new System.Windows.Forms.Label();
@@ -51,7 +50,7 @@
 			this.UpdateButton.Name = "UpdateButton";
 			this.UpdateButton.Size = new System.Drawing.Size(138, 46);
 			this.UpdateButton.TabIndex = 0;
-			this.UpdateButton.Text = "Bijwerken";
+			this.UpdateButton.Text = "Ophalen";
 			this.UpdateButton.UseVisualStyleBackColor = true;
 			this.UpdateButton.Click += new System.EventHandler(this.UpdateButton_Click);
 			// 
@@ -104,17 +103,6 @@
 			this.PreviousWeekButton.Text = "<";
 			this.PreviousWeekButton.UseVisualStyleBackColor = false;
 			this.PreviousWeekButton.Click += new System.EventHandler(this.PreviousWeekButton_Click);
-			// 
-			// CancelButton
-			// 
-			this.CancelButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-			this.CancelButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.CancelButton.Location = new System.Drawing.Point(924, 671);
-			this.CancelButton.Name = "CancelButton";
-			this.CancelButton.Size = new System.Drawing.Size(138, 46);
-			this.CancelButton.TabIndex = 5;
-			this.CancelButton.Text = "Annuleren";
-			this.CancelButton.UseVisualStyleBackColor = true;
 			// 
 			// YearLabel
 			// 
@@ -172,7 +160,7 @@
 			this.WorkItemsPanel.Size = new System.Drawing.Size(1194, 469);
 			this.WorkItemsPanel.TabIndex = 11;
 			// 
-			// MessageList
+			// RemarksList
 			// 
 			this.RemarksList.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -185,7 +173,7 @@
 			this.RemarksList.GridLines = true;
 			this.RemarksList.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.None;
 			this.RemarksList.Location = new System.Drawing.Point(12, 540);
-			this.RemarksList.Name = "MessageList";
+			this.RemarksList.Name = "RemarksList";
 			this.RemarksList.Size = new System.Drawing.Size(1194, 125);
 			this.RemarksList.TabIndex = 12;
 			this.RemarksList.UseCompatibleStateImageBehavior = false;
@@ -202,7 +190,6 @@
 			this.Controls.Add(this.ToLabel);
 			this.Controls.Add(this.FromLabel);
 			this.Controls.Add(this.YearLabel);
-			this.Controls.Add(this.CancelButton);
 			this.Controls.Add(this.PreviousWeekButton);
 			this.Controls.Add(this.NextWeekButton);
 			this.Controls.Add(this.WeekNrLabel);
@@ -224,7 +211,6 @@
 		private System.Windows.Forms.Label WeekNrLabel;
 		private System.Windows.Forms.Button NextWeekButton;
 		private System.Windows.Forms.Button PreviousWeekButton;
-		private System.Windows.Forms.Button CancelButton;
 		private System.Windows.Forms.Label YearLabel;
 		private System.Windows.Forms.Label FromLabel;
 		private System.Windows.Forms.Label ToLabel;

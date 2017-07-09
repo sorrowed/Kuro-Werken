@@ -2,6 +2,7 @@
 using System.Drawing;
 using System.Windows.Forms;
 using Werken.Forms;
+using Werken.Support;
 
 namespace Werken.Controls
 {
@@ -59,18 +60,35 @@ namespace Werken.Controls
 			var binding = new Binding( "Text", Item, "Glas", false, DataSourceUpdateMode.OnValidation );
 			binding.Format += Binding_TryFormatDate;
 			GlassTextBox.DataBindings.Add( binding );
+			binding = new Binding( "BackColor", Item, "GlasColor", false, DataSourceUpdateMode.OnPropertyChanged );
+			binding.Format += Binding_TryFormatColor;
+			binding.Parse += Binding_TryParseColor;
+			GlassTextBox.DataBindings.Add( binding );
 
 			binding = new Binding( "Text", Item, "Roosters", false, DataSourceUpdateMode.OnValidation );
 			binding.Format += Binding_TryFormatDate;
+			RoosterTextBox.DataBindings.Add( binding );
+			binding = new Binding( "BackColor", Item, "RoostersColor", false, DataSourceUpdateMode.OnPropertyChanged );
+			binding.Format += Binding_TryFormatColor;
+			binding.Parse += Binding_TryParseColor;
 			RoosterTextBox.DataBindings.Add( binding );
 
 			binding = new Binding( "Text", Item, "Cilinders", false, DataSourceUpdateMode.OnValidation );
 			binding.Format += Binding_TryFormatDate;
 			CilindersTextBox.DataBindings.Add( binding );
+			binding = new Binding( "BackColor", Item, "CilindersColor", false, DataSourceUpdateMode.OnPropertyChanged );
+			binding.Format += Binding_TryFormatColor;
+			binding.Parse += Binding_TryParseColor;
+			CilindersTextBox.DataBindings.Add( binding );
 
 			binding = new Binding( "Text", Item, "Inzethor", false, DataSourceUpdateMode.OnValidation );
 			binding.Format += Binding_TryFormatDate;
 			InzethorTextBox.DataBindings.Add( binding );
+			binding = new Binding( "BackColor", Item, "InzethorColor", false, DataSourceUpdateMode.OnPropertyChanged );
+			binding.Format += Binding_TryFormatColor;
+			binding.Parse += Binding_TryParseColor;
+			InzethorTextBox.DataBindings.Add( binding );
+
 
 			BazTextBox.DataBindings.Add( new Binding( "Text", Item, "BAZ", false, DataSourceUpdateMode.OnPropertyChanged ) );
 			LasTextBox.DataBindings.Add( new Binding( "Text", Item, "LAS", false, DataSourceUpdateMode.OnPropertyChanged ) );
@@ -78,6 +96,26 @@ namespace Werken.Controls
 			CompleteTextBox.DataBindings.Add( new Binding( "Text", Item, "Complete", false, DataSourceUpdateMode.OnPropertyChanged ) );
 
 			RemarksTextBox.DataBindings.Add( new Binding( "Text", Item, "Remarks", false, DataSourceUpdateMode.OnPropertyChanged ) );
+		}
+
+		private void Binding_TryFormatColor( object sender, ConvertEventArgs e )
+		{
+			if( e.DesiredType != typeof( Color ) )
+				return;
+
+			int c = (int)e.Value;
+			if( c == 0 )
+				e.Value = SystemColors.Window;
+			else
+				e.Value = ColorUtils.ExcelToNet( c );
+		}
+
+		private void Binding_TryParseColor( object sender, ConvertEventArgs e )
+		{
+			if( e.DesiredType != typeof( int ) )
+				return;
+
+			e.Value = ColorUtils.NetToExcel( (Color)e.Value );
 		}
 
 		private void Binding_TryFormatDate( object sender, ConvertEventArgs e )
@@ -155,6 +193,7 @@ namespace Werken.Controls
 
 		private void WorkItemCtrl_Load( object sender, EventArgs e )
 		{
+			WorkItemCtrl_SizeChanged(null,null);
 			Draw();
 		}
 

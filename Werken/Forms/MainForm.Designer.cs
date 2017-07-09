@@ -29,7 +29,7 @@
 		private void InitializeComponent()
 		{
 			this.UpdateButton = new System.Windows.Forms.Button();
-			this.CreateButton = new System.Windows.Forms.Button();
+			this.CreateDatabasePathButton = new System.Windows.Forms.Button();
 			this.WeekNrLabel = new System.Windows.Forms.Label();
 			this.NextWeekButton = new System.Windows.Forms.Button();
 			this.PreviousWeekButton = new System.Windows.Forms.Button();
@@ -40,6 +40,7 @@
 			this.WorkItemsPanel = new System.Windows.Forms.Panel();
 			this.RemarksList = new System.Windows.Forms.ListView();
 			this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+			this.SetDatabasePathButton = new System.Windows.Forms.Button();
 			this.SuspendLayout();
 			// 
 			// UpdateButton
@@ -54,17 +55,17 @@
 			this.UpdateButton.UseVisualStyleBackColor = true;
 			this.UpdateButton.Click += new System.EventHandler(this.UpdateButton_Click);
 			// 
-			// CreateButton
+			// CreateDatabasePathButton
 			// 
-			this.CreateButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-			this.CreateButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.CreateButton.Location = new System.Drawing.Point(12, 671);
-			this.CreateButton.Name = "CreateButton";
-			this.CreateButton.Size = new System.Drawing.Size(138, 46);
-			this.CreateButton.TabIndex = 1;
-			this.CreateButton.Text = "Database maken";
-			this.CreateButton.UseVisualStyleBackColor = true;
-			this.CreateButton.Click += new System.EventHandler(this.CreateButton_Click);
+			this.CreateDatabasePathButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+			this.CreateDatabasePathButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.CreateDatabasePathButton.Location = new System.Drawing.Point(156, 671);
+			this.CreateDatabasePathButton.Name = "CreateDatabasePathButton";
+			this.CreateDatabasePathButton.Size = new System.Drawing.Size(138, 46);
+			this.CreateDatabasePathButton.TabIndex = 1;
+			this.CreateDatabasePathButton.Text = "Database maken";
+			this.CreateDatabasePathButton.UseVisualStyleBackColor = true;
+			this.CreateDatabasePathButton.Click += new System.EventHandler(this.CreateButton_Click);
 			// 
 			// WeekNrLabel
 			// 
@@ -179,11 +180,24 @@
 			this.RemarksList.UseCompatibleStateImageBehavior = false;
 			this.RemarksList.View = System.Windows.Forms.View.Details;
 			// 
+			// SetDatabasePathButton
+			// 
+			this.SetDatabasePathButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+			this.SetDatabasePathButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.SetDatabasePathButton.Location = new System.Drawing.Point(12, 671);
+			this.SetDatabasePathButton.Name = "SetDatabasePathButton";
+			this.SetDatabasePathButton.Size = new System.Drawing.Size(138, 46);
+			this.SetDatabasePathButton.TabIndex = 13;
+			this.SetDatabasePathButton.Text = "Database pad";
+			this.SetDatabasePathButton.UseVisualStyleBackColor = true;
+			this.SetDatabasePathButton.Click += new System.EventHandler(this.SetDatabasePath_Click);
+			// 
 			// MainForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(1218, 729);
+			this.Controls.Add(this.SetDatabasePathButton);
 			this.Controls.Add(this.RemarksList);
 			this.Controls.Add(this.WorkItemsPanel);
 			this.Controls.Add(this.label1);
@@ -193,13 +207,15 @@
 			this.Controls.Add(this.PreviousWeekButton);
 			this.Controls.Add(this.NextWeekButton);
 			this.Controls.Add(this.WeekNrLabel);
-			this.Controls.Add(this.CreateButton);
+			this.Controls.Add(this.CreateDatabasePathButton);
 			this.Controls.Add(this.UpdateButton);
 			this.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.KeyPreview = true;
 			this.Name = "MainForm";
 			this.Text = "Overzicht werken";
 			this.Load += new System.EventHandler(this.MainForm_Load);
 			this.SizeChanged += new System.EventHandler(this.MainForm_SizeChanged);
+			this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MainForm_KeyDown);
 			this.ResumeLayout(false);
 
 		}
@@ -207,7 +223,7 @@
 		#endregion
 
 		private System.Windows.Forms.Button UpdateButton;
-		private System.Windows.Forms.Button CreateButton;
+		private System.Windows.Forms.Button CreateDatabasePathButton;
 		private System.Windows.Forms.Label WeekNrLabel;
 		private System.Windows.Forms.Button NextWeekButton;
 		private System.Windows.Forms.Button PreviousWeekButton;
@@ -218,6 +234,7 @@
 		private System.Windows.Forms.Panel WorkItemsPanel;
 		private System.Windows.Forms.ListView RemarksList;
 		private System.Windows.Forms.ColumnHeader columnHeader1;
+		private System.Windows.Forms.Button SetDatabasePathButton;
 	}
 }
 

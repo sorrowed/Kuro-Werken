@@ -1,14 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using Werken.Support;
-using static Werken.Support.ColorUtils;
 
 namespace Werken.Forms
 {
@@ -25,7 +17,7 @@ namespace Werken.Forms
 			label2.BackColor = Color.Yellow;
 			label3.BackColor = Color.Green;
 
-			label4.BackColor = Color.OrangeRed;
+			label4.BackColor = Color.Orange;
 			label5.BackColor = Color.Blue;
 
 			SelectLabel( Color = color );

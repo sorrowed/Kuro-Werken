@@ -19,9 +19,9 @@ namespace Werken.DAL
 			}
 		}
 
-		public Database()
+		public Database( string path )
 		{
-			DatabaseFileName = @"F:\Projects\Prive\TiFaRoes\OverzichtWerken\doc\Werken.sqlite";
+			DatabaseFileName = Path.Combine( path, "Werken.sqlite" );
 		}
 
 		public void Create()

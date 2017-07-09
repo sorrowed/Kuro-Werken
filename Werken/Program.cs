@@ -16,9 +16,6 @@ namespace Werken
 		[STAThread]
 		static void Main()
 		{
-			var db = new Database();
-			db.Create();
-
 			Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault( false );
 			Application.Run( new MainForm() );

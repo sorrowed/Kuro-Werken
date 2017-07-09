@@ -94,6 +94,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Support\ColorUtils.cs" />
+    <Compile Include="Support\Settings.cs" />
     <Compile Include="Support\TimeUtils.cs" />
     <Compile Include="Support\Week.cs" />
     <Compile Include="WorkItem\WorkItem.cs" />

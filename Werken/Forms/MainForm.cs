@@ -17,6 +17,10 @@ namespace Werken.Forms
 
 		private WorkItemHdrCtrl headerCtrl;
 
+		private Settings settings;
+
+		private bool configurationView;
+
 		public MainForm()
 		{
 			InitializeComponent();
@@ -25,6 +29,8 @@ namespace Werken.Forms
 			WorkItemControls = new List<WorkItemCtrl>();
 
 			Week = new Week( DateTime.Today );
+
+			settings = new Settings( Properties.Settings.Default );
 
 			headerCtrl = new WorkItemHdrCtrl();
 			WorkItemsPanel.Controls.Add( headerCtrl );
@@ -37,9 +43,13 @@ namespace Werken.Forms
 
 		private void MainForm_Load( object sender, EventArgs e )
 		{
+			var db = new Database( settings.DatabasePath );
+			db.Create();
+
 			UpdateView();
 			UpdateWorkItems();
 		}
+
 
 		private void UpdateButton_Click( object sender, EventArgs e )
 		{
@@ -50,7 +60,7 @@ namespace Werken.Forms
 
 		private void CreateButton_Click( object sender, EventArgs e )
 		{
-			var db = new Database();
+			var db = new Database( settings.DatabasePath );
 			db.Create();
 		}
 
@@ -81,6 +91,9 @@ namespace Werken.Forms
 
 		private void UpdateView()
 		{
+			SetDatabasePathButton.Visible = 
+				CreateDatabasePathButton.Visible = configurationView;
+			
 			YearLabel.Text = Week.Year.ToString();
 			WeekNrLabel.Text = Week.Nr.ToString();
 			FromLabel.Text = Week.Get( DayOfWeek.Monday ).ToShortDateString();
@@ -92,7 +105,7 @@ namespace Werken.Forms
 			foreach( var item in Items )
 				item.PropertyChanged -= Item_PropertyChanged;
 
-			Items = WorkItems.GetWorkItems( new Database(), Week );
+			Items = WorkItems.GetWorkItems( new Database( settings.DatabasePath ), Week );
 			foreach( var item in Items )
 				item.PropertyChanged += Item_PropertyChanged;
 
@@ -156,12 +169,35 @@ namespace Werken.Forms
 
 		private void Item_PropertyChanged( object sender, PropertyChangedEventArgs e )
 		{
-			WorkItems.Update( new Database(), sender as WorkItem );
+			WorkItems.Update( new Database( settings.DatabasePath ), sender as WorkItem );
 		}
 
 		private void MainForm_SizeChanged( object sender, EventArgs e )
 		{
 			UpdateControls();
+		}
+
+		private void SetDatabasePath_Click( object sender, EventArgs e )
+		{
+			using( var dlg = new FolderBrowserDialog () )
+			{
+				dlg.SelectedPath = settings.DatabasePath;
+
+				if( dlg.ShowDialog( this ) != DialogResult.OK )
+					return;
+
+				settings.DatabasePath = dlg.SelectedPath;
+
+				settings.Save();
+
+			}
+		}
+
+		private void MainForm_KeyDown( object sender, KeyEventArgs e )
+		{
+			if( e.KeyCode == Keys.C && e.Alt && e.Control )
+				configurationView = !configurationView;
+			UpdateView();
 		}
 	}
 }

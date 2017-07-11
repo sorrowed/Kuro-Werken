@@ -28,9 +28,15 @@ namespace Werken.Support
 
 		public void To( DateTime date )
 		{
-			var d = TimeUtils.FirstDayOfWeek( date );
-			Year = d.Year;
-			Nr = TimeUtils.IsoWeekNumber( d );
+			Nr = TimeUtils.IsoWeekNumber( date );
+			int year = date.Year;
+			if( date.Month == 12 && Nr == 1 )
+				++year;
+			else
+			if( date.Month == 1 && Nr == 53 )
+				;
+
+			Year = year;
 			WeekDates = TimeUtils.DaysOfWeek( Year, Nr );
 		}
 

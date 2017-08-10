@@ -43,8 +43,8 @@ namespace Werken.Forms
 
 		private void MainForm_Load( object sender, EventArgs e )
 		{
-			var db = new Database();
-			db.Create();
+			//var db = new Database();
+			//db.Create();
 
 			UpdateView();
 			UpdateWorkItems();

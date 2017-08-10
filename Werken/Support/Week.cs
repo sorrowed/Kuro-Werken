@@ -5,9 +5,16 @@ namespace Werken.Support
 {
 	class Week
 	{
-		public int Year { get; set; }
-		public int Nr { get; set; }
+		public int Y { get; set; }
+		public int W { get; set; }
 		public List<DateTime> WeekDates { get; private set; }
+
+		public Week( int year, int nr )
+		{
+			Y = year;
+			W = nr;
+			WeekDates = TimeUtil.DaysOfWeek( Y, W );
+		}
 
 		public Week( DateTime date )
 		{
@@ -28,10 +35,13 @@ namespace Werken.Support
 
 		public void To( DateTime date )
 		{
-			var d = TimeUtils.FirstDayOfWeek( date );
-			Year = d.Year;
-			Nr = TimeUtils.IsoWeekNumber( d );
-			WeekDates = TimeUtils.DaysOfWeek( Year, Nr );
+			W = TimeUtil.IsoWeekNumber( date );
+			int year = date.Year;
+			if( date.Month == 12 && W == 1 )
+				++year;
+
+			Y = year;
+			WeekDates = TimeUtil.DaysOfWeek( Y, W );
 		}
 
 		public DateTime Get( DayOfWeek day )

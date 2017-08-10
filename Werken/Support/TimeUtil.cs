@@ -4,7 +4,7 @@ using System.Globalization;
 
 namespace Werken.Support
 {
-	public static class TimeUtils
+	public static class TimeUtil
 	{
 		public static int DayIndex( DayOfWeek day )
 		{

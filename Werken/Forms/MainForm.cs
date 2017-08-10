@@ -94,8 +94,8 @@ namespace Werken.Forms
 			SetDatabasePathButton.Visible = 
 				CreateDatabasePathButton.Visible = configurationView;
 			
-			YearLabel.Text = Week.Year.ToString();
-			WeekNrLabel.Text = Week.Nr.ToString();
+			YearLabel.Text = Week.Y.ToString();
+			WeekNrLabel.Text = Week.W.ToString();
 			FromLabel.Text = Week.Get( DayOfWeek.Monday ).ToShortDateString();
 			ToLabel.Text = Week.Get( DayOfWeek.Friday ).ToShortDateString();
 		}

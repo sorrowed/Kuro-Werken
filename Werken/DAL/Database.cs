@@ -1,44 +1,32 @@
 ﻿using System;
-using System.Data.SQLite;
+using System.Data.SqlClient;
 using System.IO;
 using Dapper;
 
 namespace Werken.DAL
 {
-	public delegate void Reader( SQLiteDataReader reader );
+	public delegate void Reader( SqlDataReader reader );
 
 	class Database
 	{
-		public string DatabaseFileName { get; set; }
-
 		public string ConnectionString
 		{
 			get
 			{
-				return string.Format( @"Data Source={0};foreign keys=true;", DatabaseFileName );
+				return @"Server=SORROWEDMAN3\SQLEXPRESS;Database=ProjectView-V1;User Id=operator; Password=operator;";
 			}
-		}
-
-		public Database( string path )
-		{
-			DatabaseFileName = Path.Combine( path, "Werken.sqlite" );
 		}
 
 		public void Create()
 		{
-			if( File.Exists( DatabaseFileName ) )
-				return;
-
-			SQLiteConnection.CreateFile( DatabaseFileName );	
-
-			using( var cn = new SQLiteConnection( ConnectionString ) )
+			using( var cn = new SqlConnection( ConnectionString ) )
 			{
 				cn.Open();
 
 				using( var tr = cn.BeginTransaction() )
 				{
 					string sql = @"create table WorkItems ( 
-										Id integer primary key asc,
+										Id integer primary key,
 										Year integer not null,
 										Week integer not null,
 										OrderNr varchar not null,
@@ -63,7 +51,7 @@ namespace Werken.DAL
 										CilindersColor integer default 0,
 										InzethorColor integer default 0 )";
 
-					using( var cmd = new SQLiteCommand( sql, cn ) )
+					using( var cmd = new SqlCommand( sql, cn, tr ) )
 					{
 						cmd.ExecuteScalar();
 					}
@@ -77,7 +65,7 @@ namespace Werken.DAL
 			}
 		}
 
-		private void InsertTest( SQLiteConnection cn )
+		private void InsertTest( SqlConnection cn )
 		{
 			for( int i = 0; i < 25; ++i )
 			{

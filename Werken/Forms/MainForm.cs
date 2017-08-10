@@ -43,8 +43,8 @@ namespace Werken.Forms
 
 		private void MainForm_Load( object sender, EventArgs e )
 		{
-			var db = new Database( settings.DatabasePath );
-			db.Create();
+			//var db = new Database();
+			//db.Create();
 
 			UpdateView();
 			UpdateWorkItems();
@@ -60,7 +60,7 @@ namespace Werken.Forms
 
 		private void CreateButton_Click( object sender, EventArgs e )
 		{
-			var db = new Database( settings.DatabasePath );
+			var db = new Database();
 			db.Create();
 		}
 
@@ -105,7 +105,7 @@ namespace Werken.Forms
 			foreach( var item in Items )
 				item.PropertyChanged -= Item_PropertyChanged;
 
-			Items = WorkItems.GetWorkItems( new Database( settings.DatabasePath ), Week );
+			Items = WorkItems.GetWorkItems( new Database(), Week );
 			foreach( var item in Items )
 				item.PropertyChanged += Item_PropertyChanged;
 
@@ -169,7 +169,7 @@ namespace Werken.Forms
 
 		private void Item_PropertyChanged( object sender, PropertyChangedEventArgs e )
 		{
-			WorkItems.Update( new Database( settings.DatabasePath ), sender as WorkItem );
+			WorkItems.Update( new Database(), sender as WorkItem );
 		}
 
 		private void MainForm_SizeChanged( object sender, EventArgs e )

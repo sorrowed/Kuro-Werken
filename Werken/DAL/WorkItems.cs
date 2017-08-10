@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using System.Data.SQLite;
+using System.Data.SqlClient;
 using Dapper;
 using Dapper.Contrib.Extensions;
 using Werken.Support;
@@ -10,7 +10,7 @@ namespace Werken.DAL
 	{
 		public static List<WorkItem> GetWorkItems( Database db, Week week )
 		{
-			using( var cn = new SQLiteConnection( db.ConnectionString ) )
+			using( var cn = new SqlConnection( db.ConnectionString ) )
 			{
 				cn.Open();
 
@@ -20,7 +20,7 @@ namespace Werken.DAL
 
 		public static void Update( Database db, WorkItem item )
 		{
-			using( var cn = new SQLiteConnection( db.ConnectionString ) )
+			using( var cn = new SqlConnection( db.ConnectionString ) )
 			{
 				cn.Open();
 

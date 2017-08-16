@@ -30,7 +30,7 @@
 		{
 			this.components = new System.ComponentModel.Container();
 			this.OrderNrLabel = new System.Windows.Forms.Label();
-			this.ProjectLabal = new System.Windows.Forms.Label();
+			this.ProjectLabel = new System.Windows.Forms.Label();
 			this.CustomerLabel = new System.Windows.Forms.Label();
 			this.ChaletsLabel = new System.Windows.Forms.Label();
 			this.KozijnenLabel = new System.Windows.Forms.Label();
@@ -50,6 +50,7 @@
 			this.LocationLabel = new System.Windows.Forms.Label();
 			this.SelectedCheckBox = new System.Windows.Forms.CheckBox();
 			this.workItemBindingSource = new System.Windows.Forms.BindingSource(this.components);
+			this.toolTip = new System.Windows.Forms.ToolTip(this.components);
 			((System.ComponentModel.ISupportInitialize)(this.workItemBindingSource)).BeginInit();
 			this.SuspendLayout();
 			// 
@@ -71,19 +72,19 @@
 			// 
 			// ProjectLabal
 			// 
-			this.ProjectLabal.BackColor = System.Drawing.SystemColors.Control;
-			this.ProjectLabal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-			this.ProjectLabal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.ProjectLabal.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.ProjectLabal.Location = new System.Drawing.Point(181, 2);
-			this.ProjectLabal.Margin = new System.Windows.Forms.Padding(0);
-			this.ProjectLabal.Name = "ProjectLabal";
-			this.ProjectLabal.Size = new System.Drawing.Size(210, 21);
-			this.ProjectLabal.TabIndex = 2;
-			this.ProjectLabal.Text = "121406 schuifpui + 121416";
-			this.ProjectLabal.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.ProjectLabal.Click += new System.EventHandler(this.Control_Click);
-			this.ProjectLabal.Leave += new System.EventHandler(this.RemarksTextBox_Leave);
+			this.ProjectLabel.BackColor = System.Drawing.SystemColors.Control;
+			this.ProjectLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+			this.ProjectLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.ProjectLabel.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.ProjectLabel.Location = new System.Drawing.Point(181, 2);
+			this.ProjectLabel.Margin = new System.Windows.Forms.Padding(0);
+			this.ProjectLabel.Name = "ProjectLabal";
+			this.ProjectLabel.Size = new System.Drawing.Size(210, 21);
+			this.ProjectLabel.TabIndex = 2;
+			this.ProjectLabel.Text = "121406 schuifpui + 121416";
+			this.ProjectLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.ProjectLabel.Click += new System.EventHandler(this.Control_Click);
+			this.ProjectLabel.Leave += new System.EventHandler(this.RemarksTextBox_Leave);
 			// 
 			// CustomerLabel
 			// 
@@ -377,7 +378,7 @@
 			this.Controls.Add(this.LeverWeekLabel);
 			this.Controls.Add(this.RemarksTextBox);
 			this.Controls.Add(this.ProductionNrTextBox);
-			this.Controls.Add(this.ProjectLabal);
+			this.Controls.Add(this.ProjectLabel);
 			this.Controls.Add(this.InzethorTextBox);
 			this.Controls.Add(this.CilindersTextBox);
 			this.Controls.Add(this.RoosterTextBox);
@@ -408,7 +409,7 @@
 		#endregion
 
 		private System.Windows.Forms.Label OrderNrLabel;
-		private System.Windows.Forms.Label ProjectLabal;
+		private System.Windows.Forms.Label ProjectLabel;
 		private System.Windows.Forms.Label CustomerLabel;
 		private System.Windows.Forms.Label ChaletsLabel;
 		private System.Windows.Forms.Label KozijnenLabel;
@@ -428,5 +429,6 @@
 		private System.Windows.Forms.Label LeverWeekLabel;
 		private System.Windows.Forms.Label LocationLabel;
 		private System.Windows.Forms.CheckBox SelectedCheckBox;
+		private System.Windows.Forms.ToolTip toolTip;
 	}
 }

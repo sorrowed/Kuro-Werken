@@ -40,6 +40,7 @@ namespace Werken.Controls
 		public WorkItemCtrl()
 		{
 			InitializeComponent();
+
 		}
 
 		public void Assign( WorkItem item )
@@ -47,6 +48,18 @@ namespace Werken.Controls
 			Item = item;
 
 			Bind();
+
+			Tooltips();
+		}
+
+		private void Tooltips()
+		{
+			toolTip.RemoveAll();
+			toolTip.SetToolTip( ProjectLabel, Item.Project );
+			toolTip.SetToolTip( LocationLabel , Item.Locatie);
+			toolTip.SetToolTip( RemarksTextBox , Item.Remarks );
+			toolTip.SetToolTip( CustomerLabel, Item.Customer );
+			toolTip.SetToolTip( OrderNrLabel , Item.OrderNr );
 		}
 
 		private void Draw()
@@ -61,7 +74,7 @@ namespace Werken.Controls
 		{
 			OrderNrLabel.DataBindings.Add( new Binding( "Text", Item, "OrderNr",false, DataSourceUpdateMode.OnPropertyChanged ) );
 			ProductionNrTextBox.DataBindings.Add( new Binding( "Text", Item, "ProductionNr", false, DataSourceUpdateMode.OnValidation ) );
-			ProjectLabal.DataBindings.Add( new Binding( "Text", Item, "Project", false, DataSourceUpdateMode.OnPropertyChanged ) );
+			ProjectLabel.DataBindings.Add( new Binding( "Text", Item, "Project", false, DataSourceUpdateMode.OnPropertyChanged ) );
 			CustomerLabel.DataBindings.Add( new Binding( "Text", Item, "Customer", false, DataSourceUpdateMode.OnPropertyChanged ) );
 
 			ChaletsLabel.DataBindings.Add( new Binding( "Text", Item, "Chalets", false, DataSourceUpdateMode.OnPropertyChanged ) );

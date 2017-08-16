@@ -13,7 +13,7 @@ namespace Werken.DAL
 		{
 			get
 			{
-				return @"Server=SORROWEDMAN3\SQLEXPRESS;Database=ProjectView-V1;User Id=operator; Password=operator;";
+				return @"Server=KUROSERVER;Database=ProjectView-V1;User Id=productie; Password=productie;";
 			}
 		}
 
@@ -45,6 +45,8 @@ namespace Werken.DAL
 										LAS varchar(128) default '', 
 										AFM varchar(128) default '', 
 										Complete varchar(128) default '',
+										LeverWeek integer,
+										Locatie varchar(2048),
 										Remarks varchar(2048),
 										GlasColor integer default 0,
 										RoostersColor integer default 0,

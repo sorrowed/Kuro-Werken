@@ -28,6 +28,7 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
+			this.components = new System.ComponentModel.Container();
 			this.OrderNrLabel = new System.Windows.Forms.Label();
 			this.ProjectLabal = new System.Windows.Forms.Label();
 			this.CustomerLabel = new System.Windows.Forms.Label();
@@ -45,6 +46,11 @@
 			this.InzethorTextBox = new System.Windows.Forms.TextBox();
 			this.ProductionNrTextBox = new System.Windows.Forms.TextBox();
 			this.RemarksTextBox = new System.Windows.Forms.TextBox();
+			this.LeverWeekLabel = new System.Windows.Forms.Label();
+			this.LocationLabel = new System.Windows.Forms.Label();
+			this.SelectedCheckBox = new System.Windows.Forms.CheckBox();
+			this.workItemBindingSource = new System.Windows.Forms.BindingSource(this.components);
+			((System.ComponentModel.ISupportInitialize)(this.workItemBindingSource)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// OrderNrLabel
@@ -53,25 +59,25 @@
 			this.OrderNrLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
 			this.OrderNrLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.OrderNrLabel.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.OrderNrLabel.Location = new System.Drawing.Point(1, 2);
+			this.OrderNrLabel.Location = new System.Drawing.Point(17, 2);
 			this.OrderNrLabel.Margin = new System.Windows.Forms.Padding(0);
 			this.OrderNrLabel.Name = "OrderNrLabel";
-			this.OrderNrLabel.Size = new System.Drawing.Size(102, 21);
+			this.OrderNrLabel.Size = new System.Drawing.Size(86, 21);
 			this.OrderNrLabel.TabIndex = 0;
 			this.OrderNrLabel.Text = "2017266V";
 			this.OrderNrLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			this.OrderNrLabel.Click += new System.EventHandler(this.Control_Click);
 			this.OrderNrLabel.Leave += new System.EventHandler(this.RemarksTextBox_Leave);
 			// 
-			// label1
+			// ProjectLabal
 			// 
 			this.ProjectLabal.BackColor = System.Drawing.SystemColors.Control;
 			this.ProjectLabal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
 			this.ProjectLabal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.ProjectLabal.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.ProjectLabal.Location = new System.Drawing.Point(248, 2);
+			this.ProjectLabal.Location = new System.Drawing.Point(181, 2);
 			this.ProjectLabal.Margin = new System.Windows.Forms.Padding(0);
-			this.ProjectLabal.Name = "label1";
+			this.ProjectLabal.Name = "ProjectLabal";
 			this.ProjectLabal.Size = new System.Drawing.Size(210, 21);
 			this.ProjectLabal.TabIndex = 2;
 			this.ProjectLabal.Text = "121406 schuifpui + 121416";
@@ -79,15 +85,15 @@
 			this.ProjectLabal.Click += new System.EventHandler(this.Control_Click);
 			this.ProjectLabal.Leave += new System.EventHandler(this.RemarksTextBox_Leave);
 			// 
-			// label2
+			// CustomerLabel
 			// 
 			this.CustomerLabel.BackColor = System.Drawing.SystemColors.Control;
 			this.CustomerLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
 			this.CustomerLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.CustomerLabel.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.CustomerLabel.Location = new System.Drawing.Point(457, 2);
+			this.CustomerLabel.Location = new System.Drawing.Point(390, 2);
 			this.CustomerLabel.Margin = new System.Windows.Forms.Padding(0);
-			this.CustomerLabel.Name = "label2";
+			this.CustomerLabel.Name = "CustomerLabel";
 			this.CustomerLabel.Size = new System.Drawing.Size(120, 21);
 			this.CustomerLabel.TabIndex = 3;
 			this.CustomerLabel.Text = "Arcabo";
@@ -95,15 +101,15 @@
 			this.CustomerLabel.Click += new System.EventHandler(this.Control_Click);
 			this.CustomerLabel.Leave += new System.EventHandler(this.RemarksTextBox_Leave);
 			// 
-			// label3
+			// ChaletsLabel
 			// 
 			this.ChaletsLabel.BackColor = System.Drawing.SystemColors.Control;
 			this.ChaletsLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
 			this.ChaletsLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.ChaletsLabel.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.ChaletsLabel.Location = new System.Drawing.Point(576, 2);
+			this.ChaletsLabel.Location = new System.Drawing.Point(509, 2);
 			this.ChaletsLabel.Margin = new System.Windows.Forms.Padding(0);
-			this.ChaletsLabel.Name = "label3";
+			this.ChaletsLabel.Name = "ChaletsLabel";
 			this.ChaletsLabel.Size = new System.Drawing.Size(32, 21);
 			this.ChaletsLabel.TabIndex = 4;
 			this.ChaletsLabel.Text = "999";
@@ -111,15 +117,15 @@
 			this.ChaletsLabel.Click += new System.EventHandler(this.Control_Click);
 			this.ChaletsLabel.Leave += new System.EventHandler(this.RemarksTextBox_Leave);
 			// 
-			// label4
+			// KozijnenLabel
 			// 
 			this.KozijnenLabel.BackColor = System.Drawing.SystemColors.Control;
 			this.KozijnenLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
 			this.KozijnenLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.KozijnenLabel.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.KozijnenLabel.Location = new System.Drawing.Point(607, 2);
+			this.KozijnenLabel.Location = new System.Drawing.Point(540, 2);
 			this.KozijnenLabel.Margin = new System.Windows.Forms.Padding(0);
-			this.KozijnenLabel.Name = "label4";
+			this.KozijnenLabel.Name = "KozijnenLabel";
 			this.KozijnenLabel.Size = new System.Drawing.Size(32, 21);
 			this.KozijnenLabel.TabIndex = 5;
 			this.KozijnenLabel.Text = "999";
@@ -127,15 +133,15 @@
 			this.KozijnenLabel.Click += new System.EventHandler(this.Control_Click);
 			this.KozijnenLabel.Leave += new System.EventHandler(this.RemarksTextBox_Leave);
 			// 
-			// label5
+			// RamenLabel
 			// 
 			this.RamenLabel.BackColor = System.Drawing.SystemColors.Control;
 			this.RamenLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
 			this.RamenLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.RamenLabel.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.RamenLabel.Location = new System.Drawing.Point(638, 2);
+			this.RamenLabel.Location = new System.Drawing.Point(571, 2);
 			this.RamenLabel.Margin = new System.Windows.Forms.Padding(0);
-			this.RamenLabel.Name = "label5";
+			this.RamenLabel.Name = "RamenLabel";
 			this.RamenLabel.Size = new System.Drawing.Size(32, 21);
 			this.RamenLabel.TabIndex = 6;
 			this.RamenLabel.Text = "999";
@@ -143,15 +149,15 @@
 			this.RamenLabel.Click += new System.EventHandler(this.Control_Click);
 			this.RamenLabel.Leave += new System.EventHandler(this.RemarksTextBox_Leave);
 			// 
-			// label6
+			// DeurenLabel
 			// 
 			this.DeurenLabel.BackColor = System.Drawing.SystemColors.Control;
 			this.DeurenLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
 			this.DeurenLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.DeurenLabel.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.DeurenLabel.Location = new System.Drawing.Point(669, 2);
+			this.DeurenLabel.Location = new System.Drawing.Point(602, 2);
 			this.DeurenLabel.Margin = new System.Windows.Forms.Padding(0);
-			this.DeurenLabel.Name = "label6";
+			this.DeurenLabel.Name = "DeurenLabel";
 			this.DeurenLabel.Size = new System.Drawing.Size(32, 21);
 			this.DeurenLabel.TabIndex = 7;
 			this.DeurenLabel.Text = "999";
@@ -165,7 +171,7 @@
 			this.BazTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
 			this.BazTextBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.BazTextBox.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.BazTextBox.Location = new System.Drawing.Point(863, 2);
+			this.BazTextBox.Location = new System.Drawing.Point(796, 2);
 			this.BazTextBox.Margin = new System.Windows.Forms.Padding(0);
 			this.BazTextBox.Name = "BazTextBox";
 			this.BazTextBox.Size = new System.Drawing.Size(22, 21);
@@ -182,7 +188,7 @@
 			this.LasTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
 			this.LasTextBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.LasTextBox.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.LasTextBox.Location = new System.Drawing.Point(884, 2);
+			this.LasTextBox.Location = new System.Drawing.Point(817, 2);
 			this.LasTextBox.Margin = new System.Windows.Forms.Padding(0);
 			this.LasTextBox.Name = "LasTextBox";
 			this.LasTextBox.Size = new System.Drawing.Size(22, 21);
@@ -199,7 +205,7 @@
 			this.AfmTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
 			this.AfmTextBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.AfmTextBox.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.AfmTextBox.Location = new System.Drawing.Point(904, 2);
+			this.AfmTextBox.Location = new System.Drawing.Point(837, 2);
 			this.AfmTextBox.Margin = new System.Windows.Forms.Padding(0);
 			this.AfmTextBox.Name = "AfmTextBox";
 			this.AfmTextBox.Size = new System.Drawing.Size(22, 21);
@@ -216,7 +222,7 @@
 			this.CompleteTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
 			this.CompleteTextBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.CompleteTextBox.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.CompleteTextBox.Location = new System.Drawing.Point(924, 2);
+			this.CompleteTextBox.Location = new System.Drawing.Point(857, 2);
 			this.CompleteTextBox.Margin = new System.Windows.Forms.Padding(0);
 			this.CompleteTextBox.Name = "CompleteTextBox";
 			this.CompleteTextBox.Size = new System.Drawing.Size(22, 21);
@@ -232,7 +238,7 @@
 			this.GlassTextBox.BackColor = System.Drawing.SystemColors.Window;
 			this.GlassTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
 			this.GlassTextBox.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.GlassTextBox.Location = new System.Drawing.Point(699, 1);
+			this.GlassTextBox.Location = new System.Drawing.Point(632, 1);
 			this.GlassTextBox.Margin = new System.Windows.Forms.Padding(0);
 			this.GlassTextBox.Name = "GlassTextBox";
 			this.GlassTextBox.Size = new System.Drawing.Size(42, 22);
@@ -248,7 +254,7 @@
 			this.RoosterTextBox.BackColor = System.Drawing.SystemColors.Window;
 			this.RoosterTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
 			this.RoosterTextBox.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.RoosterTextBox.Location = new System.Drawing.Point(740, 1);
+			this.RoosterTextBox.Location = new System.Drawing.Point(673, 1);
 			this.RoosterTextBox.Margin = new System.Windows.Forms.Padding(0);
 			this.RoosterTextBox.Name = "RoosterTextBox";
 			this.RoosterTextBox.Size = new System.Drawing.Size(42, 22);
@@ -264,7 +270,7 @@
 			this.CilindersTextBox.BackColor = System.Drawing.SystemColors.Window;
 			this.CilindersTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
 			this.CilindersTextBox.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.CilindersTextBox.Location = new System.Drawing.Point(781, 1);
+			this.CilindersTextBox.Location = new System.Drawing.Point(714, 1);
 			this.CilindersTextBox.Margin = new System.Windows.Forms.Padding(0);
 			this.CilindersTextBox.Name = "CilindersTextBox";
 			this.CilindersTextBox.Size = new System.Drawing.Size(42, 22);
@@ -280,7 +286,7 @@
 			this.InzethorTextBox.BackColor = System.Drawing.SystemColors.Window;
 			this.InzethorTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
 			this.InzethorTextBox.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.InzethorTextBox.Location = new System.Drawing.Point(822, 1);
+			this.InzethorTextBox.Location = new System.Drawing.Point(755, 1);
 			this.InzethorTextBox.Margin = new System.Windows.Forms.Padding(0);
 			this.InzethorTextBox.Name = "InzethorTextBox";
 			this.InzethorTextBox.Size = new System.Drawing.Size(42, 22);
@@ -299,7 +305,7 @@
 			this.ProductionNrTextBox.Location = new System.Drawing.Point(102, 1);
 			this.ProductionNrTextBox.Margin = new System.Windows.Forms.Padding(0);
 			this.ProductionNrTextBox.Name = "ProductionNrTextBox";
-			this.ProductionNrTextBox.Size = new System.Drawing.Size(147, 22);
+			this.ProductionNrTextBox.Size = new System.Drawing.Size(80, 22);
 			this.ProductionNrTextBox.TabIndex = 1;
 			this.ProductionNrTextBox.Click += new System.EventHandler(this.Control_Click);
 			this.ProductionNrTextBox.Enter += new System.EventHandler(this.textBox_Enter);
@@ -312,17 +318,63 @@
 			this.RemarksTextBox.BackColor = System.Drawing.SystemColors.Window;
 			this.RemarksTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
 			this.RemarksTextBox.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.RemarksTextBox.Location = new System.Drawing.Point(945, 1);
+			this.RemarksTextBox.Location = new System.Drawing.Point(1028, 1);
 			this.RemarksTextBox.Margin = new System.Windows.Forms.Padding(0);
 			this.RemarksTextBox.Name = "RemarksTextBox";
-			this.RemarksTextBox.Size = new System.Drawing.Size(254, 22);
+			this.RemarksTextBox.Size = new System.Drawing.Size(172, 22);
 			this.RemarksTextBox.TabIndex = 16;
 			this.RemarksTextBox.Leave += new System.EventHandler(this.RemarksTextBox_Leave);
+			// 
+			// LeverWeekLabel
+			// 
+			this.LeverWeekLabel.BackColor = System.Drawing.SystemColors.Control;
+			this.LeverWeekLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+			this.LeverWeekLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.LeverWeekLabel.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.LeverWeekLabel.Location = new System.Drawing.Point(878, 2);
+			this.LeverWeekLabel.Margin = new System.Windows.Forms.Padding(0);
+			this.LeverWeekLabel.Name = "LeverWeekLabel";
+			this.LeverWeekLabel.Size = new System.Drawing.Size(32, 21);
+			this.LeverWeekLabel.TabIndex = 17;
+			this.LeverWeekLabel.Text = "999";
+			this.LeverWeekLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+			// 
+			// LocationLabel
+			// 
+			this.LocationLabel.BackColor = System.Drawing.SystemColors.Control;
+			this.LocationLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+			this.LocationLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.LocationLabel.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.LocationLabel.Location = new System.Drawing.Point(908, 2);
+			this.LocationLabel.Margin = new System.Windows.Forms.Padding(0);
+			this.LocationLabel.Name = "LocationLabel";
+			this.LocationLabel.Size = new System.Drawing.Size(122, 21);
+			this.LocationLabel.TabIndex = 18;
+			this.LocationLabel.Text = "999";
+			this.LocationLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			// 
+			// SelectedCheckBox
+			// 
+			this.SelectedCheckBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+			this.SelectedCheckBox.Location = new System.Drawing.Point(2, 6);
+			this.SelectedCheckBox.Name = "SelectedCheckBox";
+			this.SelectedCheckBox.Size = new System.Drawing.Size(15, 14);
+			this.SelectedCheckBox.TabIndex = 19;
+			this.SelectedCheckBox.UseVisualStyleBackColor = true;
+			this.SelectedCheckBox.CheckedChanged += new System.EventHandler(this.SelectedCheckBox_CheckedChanged);
+			// 
+			// workItemBindingSource
+			// 
+			this.workItemBindingSource.DataSource = typeof(Werken.WorkItem);
 			// 
 			// WorkItemCtrl
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.Controls.Add(this.SelectedCheckBox);
+			this.Controls.Add(this.LocationLabel);
+			this.Controls.Add(this.LeverWeekLabel);
 			this.Controls.Add(this.RemarksTextBox);
 			this.Controls.Add(this.ProductionNrTextBox);
 			this.Controls.Add(this.ProjectLabal);
@@ -347,6 +399,7 @@
 			this.Load += new System.EventHandler(this.WorkItemCtrl_Load);
 			this.SizeChanged += new System.EventHandler(this.WorkItemCtrl_SizeChanged);
 			this.Validated += new System.EventHandler(this.WorkItemCtrl_Validated);
+			((System.ComponentModel.ISupportInitialize)(this.workItemBindingSource)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -371,5 +424,9 @@
 		private System.Windows.Forms.TextBox InzethorTextBox;
 		private System.Windows.Forms.TextBox ProductionNrTextBox;
 		private System.Windows.Forms.TextBox RemarksTextBox;
+		private System.Windows.Forms.BindingSource workItemBindingSource;
+		private System.Windows.Forms.Label LeverWeekLabel;
+		private System.Windows.Forms.Label LocationLabel;
+		private System.Windows.Forms.CheckBox SelectedCheckBox;
 	}
 }

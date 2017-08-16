@@ -39,6 +39,11 @@ namespace Werken
 		private string complete;
 		public string Complete { get { return complete; } set { if( complete != value ) { complete = value; Notify( "Complete" ); } } }
 
+		private int leverWeek;
+		public int LeverWeek { get { return leverWeek; } set { if( leverWeek != value ) { leverWeek = value; Notify( "LeverWeek" ); } } }
+		private string locatie;
+		public string Locatie { get { return locatie; } set { if( locatie != value ) { locatie = value; Notify( "Locatie" ); } } }
+
 		private string remarks;
 		public string Remarks { get { return remarks; } set { if( remarks != value ) { remarks = value; Notify( "Remarks" ); } } }
 
@@ -50,6 +55,7 @@ namespace Werken
 		public int CilindersColor { get { return cilindersColor; } set { if( cilindersColor != value ) { cilindersColor = value; Notify( "CilindersColor" ); } } }
 		private int inzethorColor;
 		public int InzethorColor { get { return inzethorColor; } set { if( inzethorColor != value ) { inzethorColor = value; Notify( "InzethorColor" ); } } }
+
 
 
 		public event PropertyChangedEventHandler PropertyChanged;

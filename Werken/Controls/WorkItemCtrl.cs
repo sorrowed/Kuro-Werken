@@ -12,6 +12,12 @@ namespace Werken.Controls
 
 		private bool emphasize;
 
+		public bool IsSelected
+		{
+			get { return SelectedCheckBox.Checked; }
+			set { SelectedCheckBox.Checked = value; }
+		}
+
 		public bool Emphasize
 		{
 			get { return emphasize; }
@@ -20,7 +26,13 @@ namespace Werken.Controls
 
 		private void SetBackGround()
 		{
-			BackColor = emphasize ? SystemColors.ControlDarkDark : SystemColors.Control;
+			if( emphasize )
+				BackColor = SystemColors.ControlDarkDark;
+			else
+			if( IsSelected )
+				BackColor = SystemColors.ControlDark;
+			else
+				BackColor = SystemColors.Control;
 		}
 
 		public WorkItem Item { get; private set; }
@@ -94,6 +106,9 @@ namespace Werken.Controls
 			LasTextBox.DataBindings.Add( new Binding( "Text", Item, "LAS", false, DataSourceUpdateMode.OnPropertyChanged ) );
 			AfmTextBox.DataBindings.Add( new Binding( "Text", Item, "AFM", false, DataSourceUpdateMode.OnPropertyChanged ) );
 			CompleteTextBox.DataBindings.Add( new Binding( "Text", Item, "Complete", false, DataSourceUpdateMode.OnPropertyChanged ) );
+
+			LeverWeekLabel.DataBindings.Add( new Binding( "Text", Item, "LeverWeek", false, DataSourceUpdateMode.OnPropertyChanged ) );
+			LocationLabel.DataBindings.Add( new Binding( "Text", Item, "Locatie", false, DataSourceUpdateMode.OnPropertyChanged ) );
 
 			RemarksTextBox.DataBindings.Add( new Binding( "Text", Item, "Remarks", false, DataSourceUpdateMode.OnPropertyChanged ) );
 		}
@@ -205,6 +220,11 @@ namespace Werken.Controls
 		private void WorkItemCtrl_Validated( object sender, EventArgs e )
 		{
 			Draw();
+		}
+
+		private void SelectedCheckBox_CheckedChanged( object sender, EventArgs e )
+		{
+			SetBackGround();
 		}
 	}
 }

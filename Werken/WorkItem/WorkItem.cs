@@ -22,7 +22,14 @@ namespace Werken
 		public string Glas { get { return glas; } set { if( glas != value ) { glas = value; Notify( "Glas" ); } } }
 		private string roosters;
 		public string Roosters { get { return roosters; } set { if( roosters != value ) { roosters = value; Notify( "Roosters" ); } } }
-		private string cilinders;
+
+        private string profielem;
+        public string Profielen { get { return profielem; } set { if (profielem != value) { profielem = value; Notify("Profielen"); } } }
+        private string panelen;
+        public string Panelen { get { return panelen; } set { if (panelen != value) { panelen = value; Notify("Panelen"); } } }
+
+
+        private string cilinders;
 		public string Cilinders { get { return cilinders; } set { if( cilinders != value ) { cilinders = value; Notify( "Cilinders" ); } } }
 		private string inzethor;
 		public string Inzethor { get { return inzethor; } set { if( inzethor != value ) { inzethor = value; Notify( "Inzethor" ); } } }
@@ -39,8 +46,8 @@ namespace Werken
 		private string complete;
 		public string Complete { get { return complete; } set { if( complete != value ) { complete = value; Notify( "Complete" ); } } }
 
-		private int leverWeek;
-		public int LeverWeek { get { return leverWeek; } set { if( leverWeek != value ) { leverWeek = value; Notify( "LeverWeek" ); } } }
+		private string leverWeek;
+		public string LeverWeek { get { return leverWeek; } set { if( leverWeek != value ) { leverWeek = value; Notify( "LeverWeek" ); } } }
 		private string locatie;
 		public string Locatie { get { return locatie; } set { if( locatie != value ) { locatie = value; Notify( "Locatie" ); } } }
 
@@ -55,10 +62,12 @@ namespace Werken
 		public int CilindersColor { get { return cilindersColor; } set { if( cilindersColor != value ) { cilindersColor = value; Notify( "CilindersColor" ); } } }
 		private int inzethorColor;
 		public int InzethorColor { get { return inzethorColor; } set { if( inzethorColor != value ) { inzethorColor = value; Notify( "InzethorColor" ); } } }
+        private int remarksColor;
+        public int RemarksColor { get { return remarksColor; } set { if (remarksColor != value) { remarksColor = value; Notify("RemarksColor"); } } }
 
 
 
-		public event PropertyChangedEventHandler PropertyChanged;
+        public event PropertyChangedEventHandler PropertyChanged;
 		private void Notify(string name )
 		{
 			if( PropertyChanged != null )

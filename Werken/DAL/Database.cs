@@ -13,11 +13,19 @@ namespace Werken.DAL
 		{
 			get
 			{
-				return @"Server=KUROSERVER;Database=ProjectView-V1;User Id=productie; Password=productie;";
+                return @"Server=LAPTOP-TOM\SQLEXPRESS;Database=ProjectView-V1;Trusted_Connection=True;";
 			}
 		}
 
-		public void Create()
+        //public string ConnectionString
+        //{
+        //    get
+        //    {
+        //        return @"Server =KUROSERVER;Database=ProjectView-V1;User Id=productie; Password=productie;";
+        //    }
+        //}
+
+        public void Create()
 		{
 			using( var cn = new SqlConnection( ConnectionString ) )
 			{
@@ -25,33 +33,38 @@ namespace Werken.DAL
 
 				using( var tr = cn.BeginTransaction() )
 				{
-					string sql = @"create table WorkItems ( 
-										Id integer primary key identity(1,1),
-										Year integer not null,
-										Week integer not null,
-										OrderNr varchar(128) not null,
-										ProductionNr varchar(128) default '',
-										Project varchar(128) default '',
-										Customer varchar(128) default '',
-										Chalets integer default 0,
-										Kozijnen integer default 0,
-										Ramen integer default 0,
-										Deuren integer default 0,
-										Glas varchar(128) default '',
-										Roosters varchar(128) default '',
-										Cilinders varchar(128) default '',
-										Inzethor varchar(128) default '',
-										BAZ varchar(128) default '', 
-										LAS varchar(128) default '', 
-										AFM varchar(128) default '', 
-										Complete varchar(128) default '',
-										LeverWeek integer,
-										Locatie varchar(2048),
-										Remarks varchar(2048),
-										GlasColor integer default 0,
-										RoostersColor integer default 0,
-										CilindersColor integer default 0,
-										InzethorColor integer default 0 )";
+					string sql = @"create table WorkItems ( Id integer primary key identity(1,1),
+	                                Year integer not null,
+	                                Week integer not null,
+	                                OrderNr varchar(128) not null,
+	                                ProductionNr varchar(128) default '',
+	                                Project varchar(128) default '',
+	                                Customer varchar(128) default '',
+	                                Chalets integer default 0,
+	                                Kozijnen integer default 0,
+	                                Ramen integer default 0,
+	                                Deuren integer default 0,
+	                                Glas varchar(128) default '',
+	                                Roosters varchar(128) default '',
+	                                Profielen varchar(128) default '',
+	                                Panelen varchar(128) default '',
+	                                Cilinders varchar(128) default '',
+	                                Inzethor varchar(128) default '',
+	                                BAZ varchar(128) default '', 
+	                                LAS varchar(128) default '', 
+	                                AFM varchar(128) default '', 
+	                                AWL varchar(128) default '', 
+	                                Complete varchar(128) default '',
+	                                LeverWeek varchar(128) default '',
+	                                Locatie varchar(2048),
+	                                Remarks varchar(2048),
+	                                GlasColor integer default 0,
+	                                RoostersColor integer default 0,
+	                                CilindersColor integer default 0,
+	                                InzetHorColor integer default 0,
+	                                RemarksColor integer default 0 ,
+	                                ProfielenColor integer default 0,
+	                                PanelenColor integer default 0 )";
 
 					using( var cmd = new SqlCommand( sql, cn, tr ) )
 					{

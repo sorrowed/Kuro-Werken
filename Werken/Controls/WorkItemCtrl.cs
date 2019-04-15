@@ -114,11 +114,29 @@ namespace Werken.Controls
 			binding.Parse += Binding_TryParseColor;
 			InzethorTextBox.DataBindings.Add( binding );
 
+            //FIXME:
+            //binding = new Binding("Text", Item, "Profielen", false, DataSourceUpdateMode.OnValidation);
+            //binding.Format += Binding_TryFormatDate;
+            //ProfielenTextBox.DataBindings.Add(binding);
+            //binding = new Binding("BackColor", Item, "ProfielenColor", false, DataSourceUpdateMode.OnPropertyChanged);
+            //binding.Format += Binding_TryFormatColor;
+            //binding.Parse += Binding_TryParseColor;
+            //ProfielenTextBox.DataBindings.Add(binding);
 
-			BazTextBox.DataBindings.Add( new Binding( "Text", Item, "BAZ", false, DataSourceUpdateMode.OnPropertyChanged ) );
+            //binding = new Binding("Text", Item, "Panelen", false, DataSourceUpdateMode.OnValidation);
+            //binding.Format += Binding_TryFormatDate;
+            //PanelenTextBox.DataBindings.Add(binding);
+            //binding = new Binding("BackColor", Item, "PanelenColor", false, DataSourceUpdateMode.OnPropertyChanged);
+            //binding.Format += Binding_TryFormatColor;
+            //binding.Parse += Binding_TryParseColor;
+            //PanelenTextBox.DataBindings.Add(binding);
+
+            BazTextBox.DataBindings.Add( new Binding( "Text", Item, "BAZ", false, DataSourceUpdateMode.OnPropertyChanged ) );
 			LasTextBox.DataBindings.Add( new Binding( "Text", Item, "LAS", false, DataSourceUpdateMode.OnPropertyChanged ) );
 			AfmTextBox.DataBindings.Add( new Binding( "Text", Item, "AFM", false, DataSourceUpdateMode.OnPropertyChanged ) );
-			CompleteTextBox.DataBindings.Add( new Binding( "Text", Item, "Complete", false, DataSourceUpdateMode.OnPropertyChanged ) );
+            AwlTextBox.DataBindings.Add(new Binding("Text", Item, "AWL", false, DataSourceUpdateMode.OnPropertyChanged));
+
+            CompleteTextBox.DataBindings.Add( new Binding( "Text", Item, "Complete", false, DataSourceUpdateMode.OnPropertyChanged ) );
 
 			LeverWeekLabel.DataBindings.Add( new Binding( "Text", Item, "LeverWeek", false, DataSourceUpdateMode.OnPropertyChanged ) );
 			LocationLabel.DataBindings.Add( new Binding( "Text", Item, "Locatie", false, DataSourceUpdateMode.OnPropertyChanged ) );
@@ -239,5 +257,5 @@ namespace Werken.Controls
 		{
 			SetBackGround();
 		}
-	}
+    }
 }

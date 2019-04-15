@@ -42,8 +42,10 @@ namespace Werken
 
 		private string afm;
 		public string AFM { get { return afm; } set { if( afm != value ) { afm = value; Notify( "AFM" ); } } }
+        private string awl;
+        public string AWL { get { return awl; } set { if (awl != value) { awl = value; Notify("AWL"); } } }
 
-		private string complete;
+        private string complete;
 		public string Complete { get { return complete; } set { if( complete != value ) { complete = value; Notify( "Complete" ); } } }
 
 		private string leverWeek;
@@ -64,6 +66,10 @@ namespace Werken
 		public int InzethorColor { get { return inzethorColor; } set { if( inzethorColor != value ) { inzethorColor = value; Notify( "InzethorColor" ); } } }
         private int remarksColor;
         public int RemarksColor { get { return remarksColor; } set { if (remarksColor != value) { remarksColor = value; Notify("RemarksColor"); } } }
+        private int profielenColor;
+        public int ProfielenColor { get { return profielenColor; } set { if (profielenColor != value) { profielenColor = value; Notify("ProfielenColor"); } } }
+        private int panelenColor;
+        public int PanelenColor { get { return panelenColor; } set { if (panelenColor != value) { panelenColor = value; Notify("PanelenColor"); } } }
 
 
 

@@ -51,6 +51,8 @@
             this.SelectedCheckBox = new System.Windows.Forms.CheckBox();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.AwlTextBox = new System.Windows.Forms.Label();
+            this.ProfilesTextBox = new System.Windows.Forms.TextBox();
+            this.PanelsTextBox = new System.Windows.Forms.TextBox();
             this.workItemBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.workItemBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -69,7 +71,7 @@
             this.OrderNrLabel.Text = "2017266V";
             this.OrderNrLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.OrderNrLabel.Click += new System.EventHandler(this.Control_Click);
-            this.OrderNrLabel.Leave += new System.EventHandler(this.RemarksTextBox_Leave);
+            this.OrderNrLabel.Leave += new System.EventHandler(this.TextBox_Leave);
             // 
             // ProjectLabel
             // 
@@ -85,7 +87,7 @@
             this.ProjectLabel.Text = "121406 schuifpui + 121416";
             this.ProjectLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.ProjectLabel.Click += new System.EventHandler(this.Control_Click);
-            this.ProjectLabel.Leave += new System.EventHandler(this.RemarksTextBox_Leave);
+            this.ProjectLabel.Leave += new System.EventHandler(this.TextBox_Leave);
             // 
             // CustomerLabel
             // 
@@ -101,7 +103,7 @@
             this.CustomerLabel.Text = "Arcabo";
             this.CustomerLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.CustomerLabel.Click += new System.EventHandler(this.Control_Click);
-            this.CustomerLabel.Leave += new System.EventHandler(this.RemarksTextBox_Leave);
+            this.CustomerLabel.Leave += new System.EventHandler(this.TextBox_Leave);
             // 
             // ChaletsLabel
             // 
@@ -117,7 +119,7 @@
             this.ChaletsLabel.Text = "999";
             this.ChaletsLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.ChaletsLabel.Click += new System.EventHandler(this.Control_Click);
-            this.ChaletsLabel.Leave += new System.EventHandler(this.RemarksTextBox_Leave);
+            this.ChaletsLabel.Leave += new System.EventHandler(this.TextBox_Leave);
             // 
             // KozijnenLabel
             // 
@@ -133,7 +135,7 @@
             this.KozijnenLabel.Text = "999";
             this.KozijnenLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.KozijnenLabel.Click += new System.EventHandler(this.Control_Click);
-            this.KozijnenLabel.Leave += new System.EventHandler(this.RemarksTextBox_Leave);
+            this.KozijnenLabel.Leave += new System.EventHandler(this.TextBox_Leave);
             // 
             // RamenLabel
             // 
@@ -149,7 +151,7 @@
             this.RamenLabel.Text = "999";
             this.RamenLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.RamenLabel.Click += new System.EventHandler(this.Control_Click);
-            this.RamenLabel.Leave += new System.EventHandler(this.RemarksTextBox_Leave);
+            this.RamenLabel.Leave += new System.EventHandler(this.TextBox_Leave);
             // 
             // DeurenLabel
             // 
@@ -165,7 +167,7 @@
             this.DeurenLabel.Text = "999";
             this.DeurenLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.DeurenLabel.Click += new System.EventHandler(this.Control_Click);
-            this.DeurenLabel.Leave += new System.EventHandler(this.RemarksTextBox_Leave);
+            this.DeurenLabel.Leave += new System.EventHandler(this.TextBox_Leave);
             // 
             // BazTextBox
             // 
@@ -173,7 +175,7 @@
             this.BazTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.BazTextBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BazTextBox.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BazTextBox.Location = new System.Drawing.Point(796, 2);
+            this.BazTextBox.Location = new System.Drawing.Point(877, 2);
             this.BazTextBox.Margin = new System.Windows.Forms.Padding(0);
             this.BazTextBox.Name = "BazTextBox";
             this.BazTextBox.Size = new System.Drawing.Size(22, 21);
@@ -181,8 +183,8 @@
             this.BazTextBox.Text = "X";
             this.BazTextBox.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.BazTextBox.Click += new System.EventHandler(this.Control_Click);
-            this.BazTextBox.Leave += new System.EventHandler(this.RemarksTextBox_Leave);
-            this.BazTextBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BazTextBox_MouseDown);
+            this.BazTextBox.Leave += new System.EventHandler(this.TextBox_Leave);
+            this.BazTextBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ProductionPhaseTextBox_MouseDown);
             // 
             // LasTextBox
             // 
@@ -190,7 +192,7 @@
             this.LasTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.LasTextBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.LasTextBox.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LasTextBox.Location = new System.Drawing.Point(817, 2);
+            this.LasTextBox.Location = new System.Drawing.Point(897, 2);
             this.LasTextBox.Margin = new System.Windows.Forms.Padding(0);
             this.LasTextBox.Name = "LasTextBox";
             this.LasTextBox.Size = new System.Drawing.Size(22, 21);
@@ -198,8 +200,8 @@
             this.LasTextBox.Text = "X";
             this.LasTextBox.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.LasTextBox.Click += new System.EventHandler(this.Control_Click);
-            this.LasTextBox.Leave += new System.EventHandler(this.RemarksTextBox_Leave);
-            this.LasTextBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BazTextBox_MouseDown);
+            this.LasTextBox.Leave += new System.EventHandler(this.TextBox_Leave);
+            this.LasTextBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ProductionPhaseTextBox_MouseDown);
             // 
             // AfmTextBox
             // 
@@ -207,7 +209,7 @@
             this.AfmTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.AfmTextBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AfmTextBox.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AfmTextBox.Location = new System.Drawing.Point(837, 2);
+            this.AfmTextBox.Location = new System.Drawing.Point(917, 2);
             this.AfmTextBox.Margin = new System.Windows.Forms.Padding(0);
             this.AfmTextBox.Name = "AfmTextBox";
             this.AfmTextBox.Size = new System.Drawing.Size(22, 21);
@@ -215,8 +217,8 @@
             this.AfmTextBox.Text = "X";
             this.AfmTextBox.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.AfmTextBox.Click += new System.EventHandler(this.Control_Click);
-            this.AfmTextBox.Leave += new System.EventHandler(this.RemarksTextBox_Leave);
-            this.AfmTextBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BazTextBox_MouseDown);
+            this.AfmTextBox.Leave += new System.EventHandler(this.TextBox_Leave);
+            this.AfmTextBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ProductionPhaseTextBox_MouseDown);
             // 
             // CompleteTextBox
             // 
@@ -224,7 +226,7 @@
             this.CompleteTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.CompleteTextBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CompleteTextBox.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CompleteTextBox.Location = new System.Drawing.Point(878, 2);
+            this.CompleteTextBox.Location = new System.Drawing.Point(957, 2);
             this.CompleteTextBox.Margin = new System.Windows.Forms.Padding(0);
             this.CompleteTextBox.Name = "CompleteTextBox";
             this.CompleteTextBox.Size = new System.Drawing.Size(22, 21);
@@ -232,8 +234,8 @@
             this.CompleteTextBox.Text = "X";
             this.CompleteTextBox.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.CompleteTextBox.Click += new System.EventHandler(this.Control_Click);
-            this.CompleteTextBox.Leave += new System.EventHandler(this.RemarksTextBox_Leave);
-            this.CompleteTextBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BazTextBox_MouseDown);
+            this.CompleteTextBox.Leave += new System.EventHandler(this.TextBox_Leave);
+            this.CompleteTextBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ProductionPhaseTextBox_MouseDown);
             // 
             // GlassTextBox
             // 
@@ -248,8 +250,8 @@
             this.GlassTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.GlassTextBox.Click += new System.EventHandler(this.Control_Click);
             this.GlassTextBox.Enter += new System.EventHandler(this.textBox_Enter);
-            this.GlassTextBox.Leave += new System.EventHandler(this.RemarksTextBox_Leave);
-            this.GlassTextBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.InzethorTextBox_MouseDown);
+            this.GlassTextBox.Leave += new System.EventHandler(this.TextBox_Leave);
+            this.GlassTextBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.TextBox_MouseDown);
             // 
             // RoosterTextBox
             // 
@@ -264,15 +266,15 @@
             this.RoosterTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.RoosterTextBox.Click += new System.EventHandler(this.Control_Click);
             this.RoosterTextBox.Enter += new System.EventHandler(this.textBox_Enter);
-            this.RoosterTextBox.Leave += new System.EventHandler(this.RemarksTextBox_Leave);
-            this.RoosterTextBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.InzethorTextBox_MouseDown);
+            this.RoosterTextBox.Leave += new System.EventHandler(this.TextBox_Leave);
+            this.RoosterTextBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.TextBox_MouseDown);
             // 
             // CilindersTextBox
             // 
             this.CilindersTextBox.BackColor = System.Drawing.SystemColors.Window;
             this.CilindersTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.CilindersTextBox.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CilindersTextBox.Location = new System.Drawing.Point(714, 1);
+            this.CilindersTextBox.Location = new System.Drawing.Point(795, 1);
             this.CilindersTextBox.Margin = new System.Windows.Forms.Padding(0);
             this.CilindersTextBox.Name = "CilindersTextBox";
             this.CilindersTextBox.Size = new System.Drawing.Size(42, 22);
@@ -280,15 +282,15 @@
             this.CilindersTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.CilindersTextBox.Click += new System.EventHandler(this.Control_Click);
             this.CilindersTextBox.Enter += new System.EventHandler(this.textBox_Enter);
-            this.CilindersTextBox.Leave += new System.EventHandler(this.RemarksTextBox_Leave);
-            this.CilindersTextBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.InzethorTextBox_MouseDown);
+            this.CilindersTextBox.Leave += new System.EventHandler(this.TextBox_Leave);
+            this.CilindersTextBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.TextBox_MouseDown);
             // 
             // InzethorTextBox
             // 
             this.InzethorTextBox.BackColor = System.Drawing.SystemColors.Window;
             this.InzethorTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.InzethorTextBox.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.InzethorTextBox.Location = new System.Drawing.Point(755, 1);
+            this.InzethorTextBox.Location = new System.Drawing.Point(836, 1);
             this.InzethorTextBox.Margin = new System.Windows.Forms.Padding(0);
             this.InzethorTextBox.Name = "InzethorTextBox";
             this.InzethorTextBox.Size = new System.Drawing.Size(42, 22);
@@ -296,8 +298,8 @@
             this.InzethorTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.InzethorTextBox.Click += new System.EventHandler(this.Control_Click);
             this.InzethorTextBox.Enter += new System.EventHandler(this.textBox_Enter);
-            this.InzethorTextBox.Leave += new System.EventHandler(this.RemarksTextBox_Leave);
-            this.InzethorTextBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.InzethorTextBox_MouseDown);
+            this.InzethorTextBox.Leave += new System.EventHandler(this.TextBox_Leave);
+            this.InzethorTextBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.TextBox_MouseDown);
             // 
             // ProductionNrTextBox
             // 
@@ -311,7 +313,7 @@
             this.ProductionNrTextBox.TabIndex = 1;
             this.ProductionNrTextBox.Click += new System.EventHandler(this.Control_Click);
             this.ProductionNrTextBox.Enter += new System.EventHandler(this.textBox_Enter);
-            this.ProductionNrTextBox.Leave += new System.EventHandler(this.RemarksTextBox_Leave);
+            this.ProductionNrTextBox.Leave += new System.EventHandler(this.TextBox_Leave);
             // 
             // RemarksTextBox
             // 
@@ -320,12 +322,15 @@
             this.RemarksTextBox.BackColor = System.Drawing.SystemColors.Window;
             this.RemarksTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.RemarksTextBox.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RemarksTextBox.Location = new System.Drawing.Point(1049, 1);
+            this.RemarksTextBox.Location = new System.Drawing.Point(1127, 1);
             this.RemarksTextBox.Margin = new System.Windows.Forms.Padding(0);
             this.RemarksTextBox.Name = "RemarksTextBox";
-            this.RemarksTextBox.Size = new System.Drawing.Size(149, 22);
+            this.RemarksTextBox.Size = new System.Drawing.Size(73, 22);
             this.RemarksTextBox.TabIndex = 16;
-            this.RemarksTextBox.Leave += new System.EventHandler(this.RemarksTextBox_Leave);
+            this.RemarksTextBox.Click += new System.EventHandler(this.Control_Click);
+            this.RemarksTextBox.Enter += new System.EventHandler(this.textBox_Enter);
+            this.RemarksTextBox.Leave += new System.EventHandler(this.TextBox_Leave);
+            this.RemarksTextBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.TextBox_MouseDown);
             // 
             // LeverWeekLabel
             // 
@@ -333,7 +338,7 @@
             this.LeverWeekLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.LeverWeekLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.LeverWeekLabel.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LeverWeekLabel.Location = new System.Drawing.Point(898, 2);
+            this.LeverWeekLabel.Location = new System.Drawing.Point(977, 2);
             this.LeverWeekLabel.Margin = new System.Windows.Forms.Padding(0);
             this.LeverWeekLabel.Name = "LeverWeekLabel";
             this.LeverWeekLabel.Size = new System.Drawing.Size(32, 21);
@@ -347,7 +352,7 @@
             this.LocationLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.LocationLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.LocationLabel.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LocationLabel.Location = new System.Drawing.Point(928, 2);
+            this.LocationLabel.Location = new System.Drawing.Point(1007, 2);
             this.LocationLabel.Margin = new System.Windows.Forms.Padding(0);
             this.LocationLabel.Name = "LocationLabel";
             this.LocationLabel.Size = new System.Drawing.Size(122, 21);
@@ -372,7 +377,7 @@
             this.AwlTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.AwlTextBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AwlTextBox.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AwlTextBox.Location = new System.Drawing.Point(857, 2);
+            this.AwlTextBox.Location = new System.Drawing.Point(937, 2);
             this.AwlTextBox.Margin = new System.Windows.Forms.Padding(0);
             this.AwlTextBox.Name = "AwlTextBox";
             this.AwlTextBox.Size = new System.Drawing.Size(22, 21);
@@ -380,8 +385,40 @@
             this.AwlTextBox.Text = "X";
             this.AwlTextBox.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.AwlTextBox.Click += new System.EventHandler(this.Control_Click);
-            this.AwlTextBox.Leave += new System.EventHandler(this.RemarksTextBox_Leave);
-            this.AwlTextBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BazTextBox_MouseDown);
+            this.AwlTextBox.Leave += new System.EventHandler(this.TextBox_Leave);
+            this.AwlTextBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ProductionPhaseTextBox_MouseDown);
+            // 
+            // ProfilesTextBox
+            // 
+            this.ProfilesTextBox.BackColor = System.Drawing.SystemColors.Window;
+            this.ProfilesTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ProfilesTextBox.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ProfilesTextBox.Location = new System.Drawing.Point(714, 1);
+            this.ProfilesTextBox.Margin = new System.Windows.Forms.Padding(0);
+            this.ProfilesTextBox.Name = "ProfilesTextBox";
+            this.ProfilesTextBox.Size = new System.Drawing.Size(42, 22);
+            this.ProfilesTextBox.TabIndex = 21;
+            this.ProfilesTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.ProfilesTextBox.Click += new System.EventHandler(this.Control_Click);
+            this.ProfilesTextBox.Enter += new System.EventHandler(this.textBox_Enter);
+            this.ProfilesTextBox.Leave += new System.EventHandler(this.TextBox_Leave);
+            this.ProfilesTextBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.TextBox_MouseDown);
+            // 
+            // PanelsTextBox
+            // 
+            this.PanelsTextBox.BackColor = System.Drawing.SystemColors.Window;
+            this.PanelsTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.PanelsTextBox.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PanelsTextBox.Location = new System.Drawing.Point(754, 1);
+            this.PanelsTextBox.Margin = new System.Windows.Forms.Padding(0);
+            this.PanelsTextBox.Name = "PanelsTextBox";
+            this.PanelsTextBox.Size = new System.Drawing.Size(42, 22);
+            this.PanelsTextBox.TabIndex = 22;
+            this.PanelsTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.PanelsTextBox.Click += new System.EventHandler(this.Control_Click);
+            this.PanelsTextBox.Enter += new System.EventHandler(this.textBox_Enter);
+            this.PanelsTextBox.Leave += new System.EventHandler(this.TextBox_Leave);
+            this.PanelsTextBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.TextBox_MouseDown);
             // 
             // workItemBindingSource
             // 
@@ -391,6 +428,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.PanelsTextBox);
+            this.Controls.Add(this.ProfilesTextBox);
             this.Controls.Add(this.AwlTextBox);
             this.Controls.Add(this.SelectedCheckBox);
             this.Controls.Add(this.LocationLabel);
@@ -450,5 +489,7 @@
 		private System.Windows.Forms.CheckBox SelectedCheckBox;
 		private System.Windows.Forms.ToolTip toolTip;
         private System.Windows.Forms.Label AwlTextBox;
+        private System.Windows.Forms.TextBox ProfilesTextBox;
+        private System.Windows.Forms.TextBox PanelsTextBox;
     }
 }

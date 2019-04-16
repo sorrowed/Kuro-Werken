@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
+using System.Text;
 using System.Windows.Forms;
 using Werken.Controls;
 using Werken.DAL;
@@ -43,8 +44,10 @@ namespace Werken.Forms
 
 		private void MainForm_Load( object sender, EventArgs e )
 		{
-			var db = new Database( settings.DatabasePath );
-			db.Create();
+
+			//var db = new Database();
+			//db.Create();
+
 
 			UpdateView();
 			UpdateWorkItems();
@@ -60,7 +63,7 @@ namespace Werken.Forms
 
 		private void CreateButton_Click( object sender, EventArgs e )
 		{
-			var db = new Database( settings.DatabasePath );
+			var db = new Database();
 			db.Create();
 		}
 
@@ -94,8 +97,8 @@ namespace Werken.Forms
 			SetDatabasePathButton.Visible = 
 				CreateDatabasePathButton.Visible = configurationView;
 			
-			YearLabel.Text = Week.Year.ToString();
-			WeekNrLabel.Text = Week.Nr.ToString();
+			YearLabel.Text = Week.Y.ToString();
+			WeekNrLabel.Text = Week.W.ToString();
 			FromLabel.Text = Week.Get( DayOfWeek.Monday ).ToShortDateString();
 			ToLabel.Text = Week.Get( DayOfWeek.Friday ).ToShortDateString();
 		}
@@ -105,7 +108,7 @@ namespace Werken.Forms
 			foreach( var item in Items )
 				item.PropertyChanged -= Item_PropertyChanged;
 
-			Items = WorkItems.GetWorkItems( new Database( settings.DatabasePath ), Week );
+			Items = WorkItems.GetWorkItems( new Database(), Week );
 			foreach( var item in Items )
 				item.PropertyChanged += Item_PropertyChanged;
 
@@ -134,7 +137,7 @@ namespace Werken.Forms
 				ctrl.Anchor = AnchorStyles.Left | AnchorStyles.Top;
 				//ctrl.Size = new Size( ctrl.Width, ctrl.Height );
 				//ctrl.Width = 5000;
-				y += ( ctrl.Height + 1 );
+				y += ( ctrl.Height );
 
 				ctrl.Clicked += Ctrl_Clicked;
 				WorkItemControls.Add( ctrl );
@@ -169,7 +172,7 @@ namespace Werken.Forms
 
 		private void Item_PropertyChanged( object sender, PropertyChangedEventArgs e )
 		{
-			WorkItems.Update( new Database( settings.DatabasePath ), sender as WorkItem );
+			WorkItems.Update( new Database(), sender as WorkItem );
 		}
 
 		private void MainForm_SizeChanged( object sender, EventArgs e )
@@ -198,6 +201,55 @@ namespace Werken.Forms
 			if( e.KeyCode == Keys.C && e.Alt && e.Control )
 				configurationView = !configurationView;
 			UpdateView();
+
+			if( e.KeyCode == Keys.C && !e.Alt && e.Control )
+				CopyItems();
+
+			if( e.KeyCode == Keys.A && !e.Alt && e.Control )
+				SelectAllItems();
+			if( e.KeyCode == Keys.N && !e.Alt && e.Control )
+				SelectNoItems();
+			if( e.KeyCode == Keys.I && !e.Alt && e.Control )
+				SelectInvertItems();
+		}
+
+		private void SelectNoItems()
+		{
+			foreach( var ctrl in WorkItemControls )
+				ctrl.IsSelected = false;
+		}
+
+		private void SelectAllItems()
+		{
+			foreach( var ctrl in WorkItemControls )
+				ctrl.IsSelected = true;
+		}
+
+		private void SelectInvertItems()
+		{
+			foreach( var ctrl in WorkItemControls )
+				ctrl.IsSelected = !ctrl.IsSelected;
+		}
+
+		private void CopyItems()
+		{
+			var selectedItems = new List<WorkItem>();
+			foreach( var ctrl in WorkItemControls )
+			{
+				if( ctrl.IsSelected )
+					selectedItems.Add( ctrl.Item );
+			}
+
+			if( selectedItems.Count < 1 )
+				return;
+
+			var builder = new StringBuilder();
+			foreach( var item in selectedItems )
+			{
+				builder.AppendLine( string.Join( "\t", item.OrderNr, item.ProductionNr, item.Project, item.Customer, item.LeverWeek, item.Locatie ) );
+			}
+
+			Clipboard.SetText( builder.ToString() );
 		}
 	}
 }

@@ -9,21 +9,21 @@ namespace Werken.DAL
 
 	class Database
 	{
-		public string ConnectionString
-		{
-			get
-			{
-                return @"Server=LAPTOP-TOM\SQLEXPRESS;Database=ProjectView-V1;Trusted_Connection=True;";
-			}
-		}
-
         //public string ConnectionString
         //{
-        //    get
-        //    {
-        //        return @"Server =KUROSERVER;Database=ProjectView-V1;User Id=productie; Password=productie;";
-        //    }
+        //	get
+        //	{
+        //              return @"Server=LAPTOP-TOM\SQLEXPRESS;Database=ProjectView-V1;Trusted_Connection=True;";
+        //	}
         //}
+
+        public string ConnectionString
+        {
+            get
+            {
+                return @"Server =KUROSERVER;Database=ProjectView-V1;User Id=productie; Password=productie;";
+            }
+        }
 
         public void Create()
 		{

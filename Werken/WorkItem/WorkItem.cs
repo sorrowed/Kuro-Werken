@@ -18,7 +18,10 @@ namespace Werken
 		public int Ramen { get; set; }
 		public int Deuren { get; set; }
 
-		private string glas;
+        public int losseOnderdelen { get; set; }
+        public int LosseOnderdelen { get { return losseOnderdelen; } set { if (losseOnderdelen != value) { losseOnderdelen = value; Notify("LosseOnderdelen"); } } }
+
+        private string glas;
 		public string Glas { get { return glas; } set { if( glas != value ) { glas = value; Notify( "Glas" ); } } }
 		private string roosters;
 		public string Roosters { get { return roosters; } set { if( roosters != value ) { roosters = value; Notify( "Roosters" ); } } }

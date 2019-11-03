@@ -40,7 +40,25 @@ namespace Werken.Controls
         public WorkItemCtrl()
         {
             InitializeComponent();
+            LayoutControls();
+        }
 
+        private void LayoutControls()
+        {
+            Control[] controls =
+            {
+                /*OrderNrLabel,*/ProductionNrTextBox,ProjectLabel,CustomerLabel,ChaletsLabel,KozijnenLabel,
+                RamenLabel,DeurenLabel, LosseOnderdelenLabel,GlassTextBox,RoosterTextBox,ProfilesTextBox,
+                PanelsTextBox,CilindersTextBox,InzethorTextBox,BazTextBox, LasTextBox,
+                AfmTextBox, AwlTextBox, CompleteTextBox, LeverWeekLabel,LocationLabel,RemarksTextBox
+            };
+
+            int x = OrderNrLabel.Left + OrderNrLabel.Width;
+            foreach (var label in controls)
+            {
+                label.Left = x;
+                x += label.Width - 2;
+            }
         }
 
         public void Assign(WorkItem item)
@@ -82,6 +100,9 @@ namespace Werken.Controls
             KozijnenLabel.DataBindings.Add(new Binding("Text", Item, "Kozijnen", false, DataSourceUpdateMode.OnPropertyChanged));
             RamenLabel.DataBindings.Add(new Binding("Text", Item, "Ramen", false, DataSourceUpdateMode.OnPropertyChanged));
             DeurenLabel.DataBindings.Add(new Binding("Text", Item, "Deuren", false, DataSourceUpdateMode.OnPropertyChanged));
+
+            LosseOnderdelenLabel.DataBindings.Add(new Binding("Text", Item, "LosseOnderdelen", false, DataSourceUpdateMode.OnPropertyChanged));
+
 
             var binding = new Binding("Text", Item, "Glas", false, DataSourceUpdateMode.OnValidation);
             binding.Format += Binding_TryFormatDate;
@@ -260,6 +281,16 @@ namespace Werken.Controls
         private void SelectedCheckBox_CheckedChanged(object sender, EventArgs e)
         {
             SetBackGround();
+        }
+
+        private void RemarksTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LocationLabel_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

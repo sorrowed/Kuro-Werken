@@ -9,21 +9,21 @@ namespace Werken.DAL
 
 	class Database
 	{
-        //public string ConnectionString
-        //{
-        //	get
-        //	{
-        //              return @"Server=LAPTOP-TOM\SQLEXPRESS;Database=ProjectView-V1;Trusted_Connection=True;";
-        //	}
-        //}
-
         public string ConnectionString
         {
             get
             {
-                return @"Server =KUROSERVER;Database=ProjectView-V1;User Id=productie; Password=productie;";
+                return @"Server=LAPTOP-TOM\SQLEXPRESS;Database=ProjectView-V1;Trusted_Connection=True;";
             }
         }
+
+        //public string ConnectionString
+        //{
+        //    get
+        //    {
+        //        return @"Server =KUROSERVER;Database=ProjectView-V1;User Id=productie; Password=productie;";
+        //    }
+        //}
 
         public void Create()
 		{
@@ -44,6 +44,7 @@ namespace Werken.DAL
 	                                Kozijnen integer default 0,
 	                                Ramen integer default 0,
 	                                Deuren integer default 0,
+                                    LosseOnderdelen integer default 0,
 	                                Glas varchar(128) default '',
 	                                Roosters varchar(128) default '',
 	                                Profielen varchar(128) default '',
@@ -91,7 +92,7 @@ namespace Werken.DAL
 						ProductionNr,
 						Project,
 						Customer,
-						Chalets,Kozijnen,Ramen,Deuren,
+						Chalets,Kozijnen,Ramen,Deuren,LosseOnderdelen,
 						Glas,Roosters,Cilinders,Inzethor,
 						BAZ,LAS,AFM,Complete,Remarks
 					) VALUES (
@@ -100,7 +101,7 @@ namespace Werken.DAL
 					121414,
 					'Herlevering VEK oude order 2017449',
 					'Euro Recreatiebouw',
-					0,1,0,0,
+					1,2,3,4,5,
 					'5-7','5-7','-','X',
 					'\','','','', 'Testopmerking')" );
 			}

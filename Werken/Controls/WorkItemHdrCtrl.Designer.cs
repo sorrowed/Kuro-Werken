@@ -31,26 +31,27 @@
             this.OrderNrLabel = new System.Windows.Forms.Label();
             this.ProjectLabel = new System.Windows.Forms.Label();
             this.ProductionNrLabel = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.rotatableLabel6 = new Werken.Controls.RotatableLabel();
-            this.rotatableLabel12 = new Werken.Controls.RotatableLabel();
-            this.rotatableLabel11 = new Werken.Controls.RotatableLabel();
-            this.rotatableLabel10 = new Werken.Controls.RotatableLabel();
-            this.rotatableLabel9 = new Werken.Controls.RotatableLabel();
-            this.rotatableLabel8 = new Werken.Controls.RotatableLabel();
-            this.rotatableLabel7 = new Werken.Controls.RotatableLabel();
-            this.label11 = new Werken.Controls.RotatableLabel();
-            this.rotatableLabel5 = new Werken.Controls.RotatableLabel();
-            this.rotatableLabel4 = new Werken.Controls.RotatableLabel();
-            this.rotatableLabel3 = new Werken.Controls.RotatableLabel();
-            this.rotatableLabel2 = new Werken.Controls.RotatableLabel();
-            this.rotatableLabel1 = new Werken.Controls.RotatableLabel();
+            this.OpmerkingenLabel = new System.Windows.Forms.Label();
+            this.OpdrachtGeverLabel = new System.Windows.Forms.Label();
+            this.LocatieLabel = new System.Windows.Forms.Label();
+            this.WeekLabel = new Werken.Controls.RotatableLabel();
+            this.GereedLabel = new Werken.Controls.RotatableLabel();
+            this.AfmLabel = new Werken.Controls.RotatableLabel();
+            this.Laslabel = new Werken.Controls.RotatableLabel();
+            this.BazLabel = new Werken.Controls.RotatableLabel();
+            this.InzetHorLabel = new Werken.Controls.RotatableLabel();
+            this.CilindersLabel = new Werken.Controls.RotatableLabel();
+            this.RoostersLabel = new Werken.Controls.RotatableLabel();
+            this.GlasLabel = new Werken.Controls.RotatableLabel();
+            this.DeurenLabel = new Werken.Controls.RotatableLabel();
+            this.RamenLabel = new Werken.Controls.RotatableLabel();
+            this.KozijnenLabel = new Werken.Controls.RotatableLabel();
+            this.ChaletsLabel = new Werken.Controls.RotatableLabel();
             this.label3 = new Werken.Controls.RotatableLabel();
-            this.rotatableLabel13 = new Werken.Controls.RotatableLabel();
-            this.rotatableLabel14 = new Werken.Controls.RotatableLabel();
-            this.rotatableLabel15 = new Werken.Controls.RotatableLabel();
+            this.AwlLabel = new Werken.Controls.RotatableLabel();
+            this.ProfielenLabel = new Werken.Controls.RotatableLabel();
+            this.PanelenLabel = new Werken.Controls.RotatableLabel();
+            this.OnderdelenLabel = new Werken.Controls.RotatableLabel();
             this.SuspendLayout();
             // 
             // OrderNrLabel
@@ -92,176 +93,176 @@
             this.ProductionNrLabel.Text = "Productienr.";
             this.ProductionNrLabel.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             // 
-            // label1
+            // OpmerkingenLabel
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.OpmerkingenLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.BackColor = System.Drawing.SystemColors.Control;
-            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label1.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.label1.Location = new System.Drawing.Point(1127, 2);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(73, 48);
-            this.label1.TabIndex = 33;
-            this.label1.Text = "Opmerkingen";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.OpmerkingenLabel.BackColor = System.Drawing.SystemColors.Control;
+            this.OpmerkingenLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.OpmerkingenLabel.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OpmerkingenLabel.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.OpmerkingenLabel.Location = new System.Drawing.Point(1157, 2);
+            this.OpmerkingenLabel.Name = "OpmerkingenLabel";
+            this.OpmerkingenLabel.Size = new System.Drawing.Size(41, 48);
+            this.OpmerkingenLabel.TabIndex = 33;
+            this.OpmerkingenLabel.Text = "Opmerkingen";
+            this.OpmerkingenLabel.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
-            // label2
+            // OpdrachtGeverLabel
             // 
-            this.label2.BackColor = System.Drawing.SystemColors.Control;
-            this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label2.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.label2.Location = new System.Drawing.Point(393, 2);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(120, 48);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Opdrachtgever";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.OpdrachtGeverLabel.BackColor = System.Drawing.SystemColors.Control;
+            this.OpdrachtGeverLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.OpdrachtGeverLabel.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OpdrachtGeverLabel.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.OpdrachtGeverLabel.Location = new System.Drawing.Point(393, 2);
+            this.OpdrachtGeverLabel.Name = "OpdrachtGeverLabel";
+            this.OpdrachtGeverLabel.Size = new System.Drawing.Size(120, 48);
+            this.OpdrachtGeverLabel.TabIndex = 5;
+            this.OpdrachtGeverLabel.Text = "Opdrachtgever";
+            this.OpdrachtGeverLabel.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             // 
-            // label4
+            // LocatieLabel
             // 
-            this.label4.BackColor = System.Drawing.SystemColors.Control;
-            this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label4.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.label4.Location = new System.Drawing.Point(1007, 3);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(122, 48);
-            this.label4.TabIndex = 35;
-            this.label4.Text = "Locatie";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.LocatieLabel.BackColor = System.Drawing.SystemColors.Control;
+            this.LocatieLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.LocatieLabel.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LocatieLabel.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.LocatieLabel.Location = new System.Drawing.Point(1037, 3);
+            this.LocatieLabel.Name = "LocatieLabel";
+            this.LocatieLabel.Size = new System.Drawing.Size(122, 48);
+            this.LocatieLabel.TabIndex = 35;
+            this.LocatieLabel.Text = "Locatie";
+            this.LocatieLabel.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
-            // rotatableLabel6
+            // WeekLabel
             // 
-            this.rotatableLabel6.BackColor = System.Drawing.SystemColors.Control;
-            this.rotatableLabel6.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rotatableLabel6.Location = new System.Drawing.Point(977, 3);
-            this.rotatableLabel6.Name = "rotatableLabel6";
-            this.rotatableLabel6.Size = new System.Drawing.Size(22, 48);
-            this.rotatableLabel6.TabIndex = 34;
-            this.rotatableLabel6.Text = "Week";
+            this.WeekLabel.BackColor = System.Drawing.SystemColors.Control;
+            this.WeekLabel.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.WeekLabel.Location = new System.Drawing.Point(1007, 3);
+            this.WeekLabel.Name = "WeekLabel";
+            this.WeekLabel.Size = new System.Drawing.Size(32, 48);
+            this.WeekLabel.TabIndex = 34;
+            this.WeekLabel.Text = "Week";
             // 
-            // rotatableLabel12
+            // GereedLabel
             // 
-            this.rotatableLabel12.BackColor = System.Drawing.SystemColors.Control;
-            this.rotatableLabel12.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rotatableLabel12.Location = new System.Drawing.Point(957, 3);
-            this.rotatableLabel12.Name = "rotatableLabel12";
-            this.rotatableLabel12.Size = new System.Drawing.Size(22, 48);
-            this.rotatableLabel12.TabIndex = 32;
-            this.rotatableLabel12.Text = "GEREED";
+            this.GereedLabel.BackColor = System.Drawing.SystemColors.Control;
+            this.GereedLabel.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GereedLabel.Location = new System.Drawing.Point(987, 3);
+            this.GereedLabel.Name = "GereedLabel";
+            this.GereedLabel.Size = new System.Drawing.Size(22, 48);
+            this.GereedLabel.TabIndex = 32;
+            this.GereedLabel.Text = "GEREED";
             // 
-            // rotatableLabel11
+            // AfmLabel
             // 
-            this.rotatableLabel11.BackColor = System.Drawing.SystemColors.Control;
-            this.rotatableLabel11.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rotatableLabel11.Location = new System.Drawing.Point(917, 3);
-            this.rotatableLabel11.Name = "rotatableLabel11";
-            this.rotatableLabel11.Size = new System.Drawing.Size(22, 48);
-            this.rotatableLabel11.TabIndex = 31;
-            this.rotatableLabel11.Text = "AFM";
+            this.AfmLabel.BackColor = System.Drawing.SystemColors.Control;
+            this.AfmLabel.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AfmLabel.Location = new System.Drawing.Point(947, 3);
+            this.AfmLabel.Name = "AfmLabel";
+            this.AfmLabel.Size = new System.Drawing.Size(22, 48);
+            this.AfmLabel.TabIndex = 31;
+            this.AfmLabel.Text = "AFM";
             // 
-            // rotatableLabel10
+            // Laslabel
             // 
-            this.rotatableLabel10.BackColor = System.Drawing.SystemColors.Control;
-            this.rotatableLabel10.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rotatableLabel10.Location = new System.Drawing.Point(897, 3);
-            this.rotatableLabel10.Name = "rotatableLabel10";
-            this.rotatableLabel10.Size = new System.Drawing.Size(22, 48);
-            this.rotatableLabel10.TabIndex = 30;
-            this.rotatableLabel10.Text = "LAS";
+            this.Laslabel.BackColor = System.Drawing.SystemColors.Control;
+            this.Laslabel.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Laslabel.Location = new System.Drawing.Point(927, 3);
+            this.Laslabel.Name = "Laslabel";
+            this.Laslabel.Size = new System.Drawing.Size(22, 48);
+            this.Laslabel.TabIndex = 30;
+            this.Laslabel.Text = "LAS";
             // 
-            // rotatableLabel9
+            // BazLabel
             // 
-            this.rotatableLabel9.BackColor = System.Drawing.SystemColors.Control;
-            this.rotatableLabel9.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rotatableLabel9.Location = new System.Drawing.Point(877, 3);
-            this.rotatableLabel9.Name = "rotatableLabel9";
-            this.rotatableLabel9.Size = new System.Drawing.Size(22, 48);
-            this.rotatableLabel9.TabIndex = 29;
-            this.rotatableLabel9.Text = "BAZ";
+            this.BazLabel.BackColor = System.Drawing.SystemColors.Control;
+            this.BazLabel.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BazLabel.Location = new System.Drawing.Point(907, 3);
+            this.BazLabel.Name = "BazLabel";
+            this.BazLabel.Size = new System.Drawing.Size(22, 48);
+            this.BazLabel.TabIndex = 29;
+            this.BazLabel.Text = "BAZ";
             // 
-            // rotatableLabel8
+            // InzetHorLabel
             // 
-            this.rotatableLabel8.BackColor = System.Drawing.SystemColors.Control;
-            this.rotatableLabel8.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rotatableLabel8.Location = new System.Drawing.Point(836, 2);
-            this.rotatableLabel8.Name = "rotatableLabel8";
-            this.rotatableLabel8.Size = new System.Drawing.Size(42, 48);
-            this.rotatableLabel8.TabIndex = 28;
-            this.rotatableLabel8.Text = "Inzethor";
+            this.InzetHorLabel.BackColor = System.Drawing.SystemColors.Control;
+            this.InzetHorLabel.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.InzetHorLabel.Location = new System.Drawing.Point(866, 2);
+            this.InzetHorLabel.Name = "InzetHorLabel";
+            this.InzetHorLabel.Size = new System.Drawing.Size(42, 48);
+            this.InzetHorLabel.TabIndex = 28;
+            this.InzetHorLabel.Text = "Inzethor";
             // 
-            // rotatableLabel7
+            // CilindersLabel
             // 
-            this.rotatableLabel7.BackColor = System.Drawing.SystemColors.Control;
-            this.rotatableLabel7.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rotatableLabel7.Location = new System.Drawing.Point(795, 2);
-            this.rotatableLabel7.Name = "rotatableLabel7";
-            this.rotatableLabel7.Size = new System.Drawing.Size(42, 48);
-            this.rotatableLabel7.TabIndex = 27;
-            this.rotatableLabel7.Text = "Cilinders/PSK";
+            this.CilindersLabel.BackColor = System.Drawing.SystemColors.Control;
+            this.CilindersLabel.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CilindersLabel.Location = new System.Drawing.Point(825, 2);
+            this.CilindersLabel.Name = "CilindersLabel";
+            this.CilindersLabel.Size = new System.Drawing.Size(42, 48);
+            this.CilindersLabel.TabIndex = 27;
+            this.CilindersLabel.Text = "Cilinders/PSK";
             // 
-            // label11
+            // RoostersLabel
             // 
-            this.label11.BackColor = System.Drawing.SystemColors.Control;
-            this.label11.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(676, 1);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(42, 48);
-            this.label11.TabIndex = 28;
-            this.label11.Text = "Roosters";
+            this.RoostersLabel.BackColor = System.Drawing.SystemColors.Control;
+            this.RoostersLabel.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RoostersLabel.Location = new System.Drawing.Point(706, 1);
+            this.RoostersLabel.Name = "RoostersLabel";
+            this.RoostersLabel.Size = new System.Drawing.Size(42, 48);
+            this.RoostersLabel.TabIndex = 28;
+            this.RoostersLabel.Text = "Roosters";
             // 
-            // rotatableLabel5
+            // GlasLabel
             // 
-            this.rotatableLabel5.BackColor = System.Drawing.SystemColors.Control;
-            this.rotatableLabel5.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rotatableLabel5.Location = new System.Drawing.Point(635, 1);
-            this.rotatableLabel5.Name = "rotatableLabel5";
-            this.rotatableLabel5.Size = new System.Drawing.Size(42, 48);
-            this.rotatableLabel5.TabIndex = 25;
-            this.rotatableLabel5.Text = "Glas";
+            this.GlasLabel.BackColor = System.Drawing.SystemColors.Control;
+            this.GlasLabel.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GlasLabel.Location = new System.Drawing.Point(668, 2);
+            this.GlasLabel.Name = "GlasLabel";
+            this.GlasLabel.Size = new System.Drawing.Size(42, 48);
+            this.GlasLabel.TabIndex = 25;
+            this.GlasLabel.Text = "Glas";
             // 
-            // rotatableLabel4
+            // DeurenLabel
             // 
-            this.rotatableLabel4.BackColor = System.Drawing.SystemColors.Control;
-            this.rotatableLabel4.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rotatableLabel4.Location = new System.Drawing.Point(605, 2);
-            this.rotatableLabel4.Name = "rotatableLabel4";
-            this.rotatableLabel4.Size = new System.Drawing.Size(32, 48);
-            this.rotatableLabel4.TabIndex = 9;
-            this.rotatableLabel4.Text = "Deuren";
+            this.DeurenLabel.BackColor = System.Drawing.SystemColors.Control;
+            this.DeurenLabel.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DeurenLabel.Location = new System.Drawing.Point(605, 2);
+            this.DeurenLabel.Name = "DeurenLabel";
+            this.DeurenLabel.Size = new System.Drawing.Size(32, 48);
+            this.DeurenLabel.TabIndex = 9;
+            this.DeurenLabel.Text = "Deuren";
             // 
-            // rotatableLabel3
+            // RamenLabel
             // 
-            this.rotatableLabel3.BackColor = System.Drawing.SystemColors.Control;
-            this.rotatableLabel3.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rotatableLabel3.Location = new System.Drawing.Point(574, 2);
-            this.rotatableLabel3.Name = "rotatableLabel3";
-            this.rotatableLabel3.Size = new System.Drawing.Size(32, 48);
-            this.rotatableLabel3.TabIndex = 8;
-            this.rotatableLabel3.Text = "Ramen";
+            this.RamenLabel.BackColor = System.Drawing.SystemColors.Control;
+            this.RamenLabel.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RamenLabel.Location = new System.Drawing.Point(574, 2);
+            this.RamenLabel.Name = "RamenLabel";
+            this.RamenLabel.Size = new System.Drawing.Size(32, 48);
+            this.RamenLabel.TabIndex = 8;
+            this.RamenLabel.Text = "Ramen";
             // 
-            // rotatableLabel2
+            // KozijnenLabel
             // 
-            this.rotatableLabel2.BackColor = System.Drawing.SystemColors.Control;
-            this.rotatableLabel2.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rotatableLabel2.Location = new System.Drawing.Point(543, 2);
-            this.rotatableLabel2.Name = "rotatableLabel2";
-            this.rotatableLabel2.Size = new System.Drawing.Size(32, 48);
-            this.rotatableLabel2.TabIndex = 7;
-            this.rotatableLabel2.Text = "Kozijnen";
+            this.KozijnenLabel.BackColor = System.Drawing.SystemColors.Control;
+            this.KozijnenLabel.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.KozijnenLabel.Location = new System.Drawing.Point(543, 2);
+            this.KozijnenLabel.Name = "KozijnenLabel";
+            this.KozijnenLabel.Size = new System.Drawing.Size(32, 48);
+            this.KozijnenLabel.TabIndex = 7;
+            this.KozijnenLabel.Text = "Kozijnen";
             // 
-            // rotatableLabel1
+            // ChaletsLabel
             // 
-            this.rotatableLabel1.BackColor = System.Drawing.SystemColors.Control;
-            this.rotatableLabel1.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rotatableLabel1.Location = new System.Drawing.Point(512, 2);
-            this.rotatableLabel1.Name = "rotatableLabel1";
-            this.rotatableLabel1.Size = new System.Drawing.Size(32, 48);
-            this.rotatableLabel1.TabIndex = 6;
-            this.rotatableLabel1.Text = "Chalets";
+            this.ChaletsLabel.BackColor = System.Drawing.SystemColors.Control;
+            this.ChaletsLabel.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ChaletsLabel.Location = new System.Drawing.Point(512, 2);
+            this.ChaletsLabel.Name = "ChaletsLabel";
+            this.ChaletsLabel.Size = new System.Drawing.Size(32, 48);
+            this.ChaletsLabel.TabIndex = 6;
+            this.ChaletsLabel.Text = "Chalets";
             // 
             // label3
             // 
@@ -273,61 +274,72 @@
             this.label3.TabIndex = 6;
             this.label3.Text = "Chalets";
             // 
-            // rotatableLabel13
+            // AwlLabel
             // 
-            this.rotatableLabel13.BackColor = System.Drawing.SystemColors.Control;
-            this.rotatableLabel13.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rotatableLabel13.Location = new System.Drawing.Point(937, 3);
-            this.rotatableLabel13.Name = "rotatableLabel13";
-            this.rotatableLabel13.Size = new System.Drawing.Size(22, 48);
-            this.rotatableLabel13.TabIndex = 36;
-            this.rotatableLabel13.Text = "AWL";
+            this.AwlLabel.BackColor = System.Drawing.SystemColors.Control;
+            this.AwlLabel.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AwlLabel.Location = new System.Drawing.Point(967, 3);
+            this.AwlLabel.Name = "AwlLabel";
+            this.AwlLabel.Size = new System.Drawing.Size(22, 48);
+            this.AwlLabel.TabIndex = 36;
+            this.AwlLabel.Text = "AWL";
             // 
-            // rotatableLabel14
+            // ProfielenLabel
             // 
-            this.rotatableLabel14.BackColor = System.Drawing.SystemColors.Control;
-            this.rotatableLabel14.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rotatableLabel14.Location = new System.Drawing.Point(714, 2);
-            this.rotatableLabel14.Name = "rotatableLabel14";
-            this.rotatableLabel14.Size = new System.Drawing.Size(42, 48);
-            this.rotatableLabel14.TabIndex = 37;
-            this.rotatableLabel14.Text = "Profielen";
+            this.ProfielenLabel.BackColor = System.Drawing.SystemColors.Control;
+            this.ProfielenLabel.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ProfielenLabel.Location = new System.Drawing.Point(744, 2);
+            this.ProfielenLabel.Name = "ProfielenLabel";
+            this.ProfielenLabel.Size = new System.Drawing.Size(42, 48);
+            this.ProfielenLabel.TabIndex = 37;
+            this.ProfielenLabel.Text = "Profielen";
             // 
-            // rotatableLabel15
+            // PanelenLabel
             // 
-            this.rotatableLabel15.BackColor = System.Drawing.SystemColors.Control;
-            this.rotatableLabel15.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rotatableLabel15.Location = new System.Drawing.Point(754, 2);
-            this.rotatableLabel15.Name = "rotatableLabel15";
-            this.rotatableLabel15.Size = new System.Drawing.Size(42, 48);
-            this.rotatableLabel15.TabIndex = 38;
-            this.rotatableLabel15.Text = "Panelen";
+            this.PanelenLabel.BackColor = System.Drawing.SystemColors.Control;
+            this.PanelenLabel.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PanelenLabel.Location = new System.Drawing.Point(784, 2);
+            this.PanelenLabel.Name = "PanelenLabel";
+            this.PanelenLabel.Size = new System.Drawing.Size(42, 48);
+            this.PanelenLabel.TabIndex = 38;
+            this.PanelenLabel.Text = "Panelen";
+            // 
+            // OnderdelenLabel
+            // 
+            this.OnderdelenLabel.BackColor = System.Drawing.SystemColors.Control;
+            this.OnderdelenLabel.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OnderdelenLabel.Location = new System.Drawing.Point(636, 2);
+            this.OnderdelenLabel.Name = "OnderdelenLabel";
+            this.OnderdelenLabel.Size = new System.Drawing.Size(32, 48);
+            this.OnderdelenLabel.TabIndex = 39;
+            this.OnderdelenLabel.Text = "Ond.";
             // 
             // WorkItemHdrCtrl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.rotatableLabel15);
-            this.Controls.Add(this.rotatableLabel14);
-            this.Controls.Add(this.rotatableLabel13);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.rotatableLabel6);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.rotatableLabel12);
-            this.Controls.Add(this.rotatableLabel11);
-            this.Controls.Add(this.rotatableLabel10);
-            this.Controls.Add(this.rotatableLabel9);
-            this.Controls.Add(this.rotatableLabel8);
-            this.Controls.Add(this.rotatableLabel7);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.rotatableLabel5);
+            this.Controls.Add(this.OnderdelenLabel);
+            this.Controls.Add(this.PanelenLabel);
+            this.Controls.Add(this.ProfielenLabel);
+            this.Controls.Add(this.AwlLabel);
+            this.Controls.Add(this.LocatieLabel);
+            this.Controls.Add(this.WeekLabel);
+            this.Controls.Add(this.OpmerkingenLabel);
+            this.Controls.Add(this.GereedLabel);
+            this.Controls.Add(this.AfmLabel);
+            this.Controls.Add(this.Laslabel);
+            this.Controls.Add(this.BazLabel);
+            this.Controls.Add(this.InzetHorLabel);
+            this.Controls.Add(this.CilindersLabel);
+            this.Controls.Add(this.RoostersLabel);
+            this.Controls.Add(this.GlasLabel);
             this.Controls.Add(this.ProductionNrLabel);
-            this.Controls.Add(this.rotatableLabel4);
+            this.Controls.Add(this.DeurenLabel);
             this.Controls.Add(this.ProjectLabel);
-            this.Controls.Add(this.rotatableLabel3);
-            this.Controls.Add(this.rotatableLabel2);
-            this.Controls.Add(this.rotatableLabel1);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.RamenLabel);
+            this.Controls.Add(this.KozijnenLabel);
+            this.Controls.Add(this.ChaletsLabel);
+            this.Controls.Add(this.OpdrachtGeverLabel);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.OrderNrLabel);
             this.Margin = new System.Windows.Forms.Padding(0);
@@ -344,24 +356,25 @@
 		private System.Windows.Forms.Label ProjectLabel;
 		private RotatableLabel label3;
 		private System.Windows.Forms.Label ProductionNrLabel;
-		private RotatableLabel label11;
-		private System.Windows.Forms.Label label1;
-		private System.Windows.Forms.Label label2;
-		private RotatableLabel rotatableLabel1;
-		private RotatableLabel rotatableLabel2;
-		private RotatableLabel rotatableLabel3;
-		private RotatableLabel rotatableLabel4;
-		private RotatableLabel rotatableLabel5;
-		private RotatableLabel rotatableLabel7;
-		private RotatableLabel rotatableLabel8;
-		private RotatableLabel rotatableLabel9;
-		private RotatableLabel rotatableLabel10;
-		private RotatableLabel rotatableLabel11;
-		private RotatableLabel rotatableLabel12;
-		private RotatableLabel rotatableLabel6;
-		private System.Windows.Forms.Label label4;
-        private RotatableLabel rotatableLabel13;
-        private RotatableLabel rotatableLabel14;
-        private RotatableLabel rotatableLabel15;
+		private RotatableLabel RoostersLabel;
+		private System.Windows.Forms.Label OpmerkingenLabel;
+		private System.Windows.Forms.Label OpdrachtGeverLabel;
+		private RotatableLabel ChaletsLabel;
+		private RotatableLabel KozijnenLabel;
+		private RotatableLabel RamenLabel;
+		private RotatableLabel DeurenLabel;
+		private RotatableLabel GlasLabel;
+		private RotatableLabel CilindersLabel;
+		private RotatableLabel InzetHorLabel;
+		private RotatableLabel BazLabel;
+		private RotatableLabel Laslabel;
+		private RotatableLabel AfmLabel;
+		private RotatableLabel GereedLabel;
+		private RotatableLabel WeekLabel;
+		private System.Windows.Forms.Label LocatieLabel;
+        private RotatableLabel AwlLabel;
+        private RotatableLabel ProfielenLabel;
+        private RotatableLabel PanelenLabel;
+        private RotatableLabel OnderdelenLabel;
     }
 }

@@ -135,17 +135,15 @@ namespace Werken.Forms
 
 				ctrl.Location = new Point( 0, y );
 				ctrl.Anchor = AnchorStyles.Left | AnchorStyles.Top;
-				//ctrl.Size = new Size( ctrl.Width, ctrl.Height );
-				//ctrl.Width = 5000;
 				y += ( ctrl.Height );
 
 				ctrl.Clicked += Ctrl_Clicked;
 				WorkItemControls.Add( ctrl );
-			}
+            }
 
 			WorkItemsPanel.ResumeLayout();
 
-			RemarksList.SuspendLayout();
+            RemarksList.SuspendLayout();
 			RemarksList.Items.Clear();
 			foreach( var item in Items )
 			{
@@ -161,8 +159,9 @@ namespace Werken.Forms
 		{
 			RemarksList.Columns[ 0 ].Width = RemarksList.ClientSize.Width;
 
-			foreach( var ctrl in WorkItemControls )
-				ctrl.Width = WorkItemsPanel.Width - 6;		}
+            foreach (var ctrl in WorkItemControls)
+                ctrl.Width = WorkItemsPanel.ClientSize.Width;
+        }
 
 		private void Ctrl_Clicked( WorkItemCtrl obj )
 		{

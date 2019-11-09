@@ -55,6 +55,7 @@
             this.PanelsTextBox = new System.Windows.Forms.TextBox();
             this.LosseOnderdelenLabel = new System.Windows.Forms.Label();
             this.workItemBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.UrenLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.workItemBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -326,7 +327,7 @@
             this.RemarksTextBox.Location = new System.Drawing.Point(1159, 1);
             this.RemarksTextBox.Margin = new System.Windows.Forms.Padding(0);
             this.RemarksTextBox.Name = "RemarksTextBox";
-            this.RemarksTextBox.Size = new System.Drawing.Size(41, 22);
+            this.RemarksTextBox.Size = new System.Drawing.Size(165, 22);
             this.RemarksTextBox.TabIndex = 16;
             this.RemarksTextBox.Click += new System.EventHandler(this.Control_Click);
             this.RemarksTextBox.TextChanged += new System.EventHandler(this.RemarksTextBox_TextChanged);
@@ -436,15 +437,35 @@
             this.LosseOnderdelenLabel.TabIndex = 23;
             this.LosseOnderdelenLabel.Text = "999";
             this.LosseOnderdelenLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LosseOnderdelenLabel.Click += new System.EventHandler(this.Control_Click);
+            this.LosseOnderdelenLabel.Leave += new System.EventHandler(this.TextBox_Leave);
             // 
             // workItemBindingSource
             // 
             this.workItemBindingSource.DataSource = typeof(Werken.WorkItem);
             // 
+            // UrenLabel
+            // 
+            this.UrenLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.UrenLabel.BackColor = System.Drawing.SystemColors.Control;
+            this.UrenLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.UrenLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.UrenLabel.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UrenLabel.Location = new System.Drawing.Point(1324, 1);
+            this.UrenLabel.Margin = new System.Windows.Forms.Padding(0);
+            this.UrenLabel.Name = "UrenLabel";
+            this.UrenLabel.Size = new System.Drawing.Size(32, 21);
+            this.UrenLabel.TabIndex = 24;
+            this.UrenLabel.Text = "999";
+            this.UrenLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.UrenLabel.Click += new System.EventHandler(this.Control_Click);
+            this.UrenLabel.Leave += new System.EventHandler(this.TextBox_Leave);
+            // 
             // WorkItemCtrl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.UrenLabel);
             this.Controls.Add(this.LosseOnderdelenLabel);
             this.Controls.Add(this.PanelsTextBox);
             this.Controls.Add(this.ProfilesTextBox);
@@ -472,7 +493,7 @@
             this.Margin = new System.Windows.Forms.Padding(0);
             this.MinimumSize = new System.Drawing.Size(1000, 2);
             this.Name = "WorkItemCtrl";
-            this.Size = new System.Drawing.Size(1200, 24);
+            this.Size = new System.Drawing.Size(1356, 24);
             this.Load += new System.EventHandler(this.WorkItemCtrl_Load);
             this.SizeChanged += new System.EventHandler(this.WorkItemCtrl_SizeChanged);
             this.Validated += new System.EventHandler(this.WorkItemCtrl_Validated);
@@ -510,5 +531,6 @@
         private System.Windows.Forms.TextBox ProfilesTextBox;
         private System.Windows.Forms.TextBox PanelsTextBox;
         private System.Windows.Forms.Label LosseOnderdelenLabel;
+        private System.Windows.Forms.Label UrenLabel;
     }
 }

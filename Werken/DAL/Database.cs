@@ -9,6 +9,7 @@ namespace Werken.DAL
 
 	class Database
 	{
+#if DEBUG
         public string ConnectionString
         {
             get
@@ -16,15 +17,15 @@ namespace Werken.DAL
                 return @"Server=LAPTOP-TOM\SQLEXPRESS;Database=ProjectView-V1;Trusted_Connection=True;";
             }
         }
-
-        //public string ConnectionString
-        //{
-        //    get
-        //    {
-        //        return @"Server =KUROSERVER;Database=ProjectView-V1;User Id=productie; Password=productie;";
-        //    }
-        //}
-
+#else
+        public string ConnectionString
+        {
+            get
+            {
+                return @"Server =KUROSERVER;Database=ProjectView-V1;User Id=productie; Password=productie;";
+            }
+        }
+#endif
         public void Create()
 		{
 			using( var cn = new SqlConnection( ConnectionString ) )

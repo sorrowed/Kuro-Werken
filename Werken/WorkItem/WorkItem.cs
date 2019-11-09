@@ -17,10 +17,9 @@ namespace Werken
 		public int Kozijnen { get; set; }
 		public int Ramen { get; set; }
 		public int Deuren { get; set; }
+        public int LosseOnderdelen { get; set; }
 
-        public int losseOnderdelen { get; set; }
-        public int LosseOnderdelen { get { return losseOnderdelen; } set { if (losseOnderdelen != value) { losseOnderdelen = value; Notify("LosseOnderdelen"); } } }
-
+ 
         private string glas;
 		public string Glas { get { return glas; } set { if( glas != value ) { glas = value; Notify( "Glas" ); } } }
 		private string roosters;
@@ -73,6 +72,8 @@ namespace Werken
         public int ProfielenColor { get { return profielenColor; } set { if (profielenColor != value) { profielenColor = value; Notify("ProfielenColor"); } } }
         private int panelenColor;
         public int PanelenColor { get { return panelenColor; } set { if (panelenColor != value) { panelenColor = value; Notify("PanelenColor"); } } }
+
+        public decimal Uren { get; set; }
 
 
 

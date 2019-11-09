@@ -50,7 +50,7 @@ namespace Werken.Controls
                 /*OrderNrLabel,*/ProductionNrTextBox,ProjectLabel,CustomerLabel,ChaletsLabel,KozijnenLabel,
                 RamenLabel,DeurenLabel, LosseOnderdelenLabel,GlassTextBox,RoosterTextBox,ProfilesTextBox,
                 PanelsTextBox,CilindersTextBox,InzethorTextBox,BazTextBox, LasTextBox,
-                AfmTextBox, AwlTextBox, CompleteTextBox, LeverWeekLabel,LocationLabel,RemarksTextBox
+                AfmTextBox, AwlTextBox, CompleteTextBox, LeverWeekLabel,LocationLabel,RemarksTextBox, UrenLabel
             };
 
             int x = OrderNrLabel.Left + OrderNrLabel.Width;
@@ -167,6 +167,8 @@ namespace Werken.Controls
             binding.Format += Binding_TryFormatColor;
             binding.Parse += Binding_TryParseColor;
             RemarksTextBox.DataBindings.Add(binding);
+
+            UrenLabel.DataBindings.Add(new Binding("Text", Item, "Uren", false, DataSourceUpdateMode.OnPropertyChanged));
         }
 
         private void Binding_TryFormatColor(object sender, ConvertEventArgs e)

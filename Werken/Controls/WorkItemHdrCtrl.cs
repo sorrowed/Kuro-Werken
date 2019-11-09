@@ -17,7 +17,7 @@ namespace Werken.Controls
                 /*OrderNrLabel,*/ProductionNrLabel,ProjectLabel,OpdrachtGeverLabel,ChaletsLabel,KozijnenLabel,
                 RamenLabel,DeurenLabel, OnderdelenLabel,GlasLabel,RoostersLabel,ProfielenLabel,
                 PanelenLabel,CilindersLabel,InzetHorLabel,BazLabel, Laslabel,
-                AfmLabel, AwlLabel, GereedLabel, WeekLabel,LocatieLabel,OpmerkingenLabel    
+                AfmLabel, AwlLabel, GereedLabel, WeekLabel,LocatieLabel,OpmerkingenLabel,UrenLabel    
             };
 
             int x = OrderNrLabel.Left + OrderNrLabel.Width;

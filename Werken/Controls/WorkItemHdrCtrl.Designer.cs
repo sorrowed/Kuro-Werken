@@ -34,6 +34,10 @@
             this.OpmerkingenLabel = new System.Windows.Forms.Label();
             this.OpdrachtGeverLabel = new System.Windows.Forms.Label();
             this.LocatieLabel = new System.Windows.Forms.Label();
+            this.OnderdelenLabel = new Werken.Controls.RotatableLabel();
+            this.PanelenLabel = new Werken.Controls.RotatableLabel();
+            this.ProfielenLabel = new Werken.Controls.RotatableLabel();
+            this.AwlLabel = new Werken.Controls.RotatableLabel();
             this.WeekLabel = new Werken.Controls.RotatableLabel();
             this.GereedLabel = new Werken.Controls.RotatableLabel();
             this.AfmLabel = new Werken.Controls.RotatableLabel();
@@ -48,10 +52,7 @@
             this.KozijnenLabel = new Werken.Controls.RotatableLabel();
             this.ChaletsLabel = new Werken.Controls.RotatableLabel();
             this.label3 = new Werken.Controls.RotatableLabel();
-            this.AwlLabel = new Werken.Controls.RotatableLabel();
-            this.ProfielenLabel = new Werken.Controls.RotatableLabel();
-            this.PanelenLabel = new Werken.Controls.RotatableLabel();
-            this.OnderdelenLabel = new Werken.Controls.RotatableLabel();
+            this.UrenLabel = new Werken.Controls.RotatableLabel();
             this.SuspendLayout();
             // 
             // OrderNrLabel
@@ -103,7 +104,7 @@
             this.OpmerkingenLabel.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.OpmerkingenLabel.Location = new System.Drawing.Point(1157, 2);
             this.OpmerkingenLabel.Name = "OpmerkingenLabel";
-            this.OpmerkingenLabel.Size = new System.Drawing.Size(41, 48);
+            this.OpmerkingenLabel.Size = new System.Drawing.Size(124, 48);
             this.OpmerkingenLabel.TabIndex = 33;
             this.OpmerkingenLabel.Text = "Opmerkingen";
             this.OpmerkingenLabel.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
@@ -133,6 +134,46 @@
             this.LocatieLabel.TabIndex = 35;
             this.LocatieLabel.Text = "Locatie";
             this.LocatieLabel.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            // 
+            // OnderdelenLabel
+            // 
+            this.OnderdelenLabel.BackColor = System.Drawing.SystemColors.Control;
+            this.OnderdelenLabel.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OnderdelenLabel.Location = new System.Drawing.Point(636, 2);
+            this.OnderdelenLabel.Name = "OnderdelenLabel";
+            this.OnderdelenLabel.Size = new System.Drawing.Size(32, 48);
+            this.OnderdelenLabel.TabIndex = 39;
+            this.OnderdelenLabel.Text = "Ond.";
+            // 
+            // PanelenLabel
+            // 
+            this.PanelenLabel.BackColor = System.Drawing.SystemColors.Control;
+            this.PanelenLabel.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PanelenLabel.Location = new System.Drawing.Point(784, 2);
+            this.PanelenLabel.Name = "PanelenLabel";
+            this.PanelenLabel.Size = new System.Drawing.Size(42, 48);
+            this.PanelenLabel.TabIndex = 38;
+            this.PanelenLabel.Text = "Panelen";
+            // 
+            // ProfielenLabel
+            // 
+            this.ProfielenLabel.BackColor = System.Drawing.SystemColors.Control;
+            this.ProfielenLabel.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ProfielenLabel.Location = new System.Drawing.Point(744, 2);
+            this.ProfielenLabel.Name = "ProfielenLabel";
+            this.ProfielenLabel.Size = new System.Drawing.Size(42, 48);
+            this.ProfielenLabel.TabIndex = 37;
+            this.ProfielenLabel.Text = "Profielen";
+            // 
+            // AwlLabel
+            // 
+            this.AwlLabel.BackColor = System.Drawing.SystemColors.Control;
+            this.AwlLabel.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AwlLabel.Location = new System.Drawing.Point(967, 3);
+            this.AwlLabel.Name = "AwlLabel";
+            this.AwlLabel.Size = new System.Drawing.Size(22, 48);
+            this.AwlLabel.TabIndex = 36;
+            this.AwlLabel.Text = "AWL";
             // 
             // WeekLabel
             // 
@@ -274,50 +315,22 @@
             this.label3.TabIndex = 6;
             this.label3.Text = "Chalets";
             // 
-            // AwlLabel
+            // UrenLabel
             // 
-            this.AwlLabel.BackColor = System.Drawing.SystemColors.Control;
-            this.AwlLabel.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AwlLabel.Location = new System.Drawing.Point(967, 3);
-            this.AwlLabel.Name = "AwlLabel";
-            this.AwlLabel.Size = new System.Drawing.Size(22, 48);
-            this.AwlLabel.TabIndex = 36;
-            this.AwlLabel.Text = "AWL";
-            // 
-            // ProfielenLabel
-            // 
-            this.ProfielenLabel.BackColor = System.Drawing.SystemColors.Control;
-            this.ProfielenLabel.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ProfielenLabel.Location = new System.Drawing.Point(744, 2);
-            this.ProfielenLabel.Name = "ProfielenLabel";
-            this.ProfielenLabel.Size = new System.Drawing.Size(42, 48);
-            this.ProfielenLabel.TabIndex = 37;
-            this.ProfielenLabel.Text = "Profielen";
-            // 
-            // PanelenLabel
-            // 
-            this.PanelenLabel.BackColor = System.Drawing.SystemColors.Control;
-            this.PanelenLabel.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PanelenLabel.Location = new System.Drawing.Point(784, 2);
-            this.PanelenLabel.Name = "PanelenLabel";
-            this.PanelenLabel.Size = new System.Drawing.Size(42, 48);
-            this.PanelenLabel.TabIndex = 38;
-            this.PanelenLabel.Text = "Panelen";
-            // 
-            // OnderdelenLabel
-            // 
-            this.OnderdelenLabel.BackColor = System.Drawing.SystemColors.Control;
-            this.OnderdelenLabel.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.OnderdelenLabel.Location = new System.Drawing.Point(636, 2);
-            this.OnderdelenLabel.Name = "OnderdelenLabel";
-            this.OnderdelenLabel.Size = new System.Drawing.Size(32, 48);
-            this.OnderdelenLabel.TabIndex = 39;
-            this.OnderdelenLabel.Text = "Ond.";
+            this.UrenLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.UrenLabel.BackColor = System.Drawing.SystemColors.Control;
+            this.UrenLabel.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UrenLabel.Location = new System.Drawing.Point(1287, 3);
+            this.UrenLabel.Name = "UrenLabel";
+            this.UrenLabel.Size = new System.Drawing.Size(32, 48);
+            this.UrenLabel.TabIndex = 40;
+            this.UrenLabel.Text = "Uren";
             // 
             // WorkItemHdrCtrl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.UrenLabel);
             this.Controls.Add(this.OnderdelenLabel);
             this.Controls.Add(this.PanelenLabel);
             this.Controls.Add(this.ProfielenLabel);
@@ -345,7 +358,7 @@
             this.Margin = new System.Windows.Forms.Padding(0);
             this.MinimumSize = new System.Drawing.Size(1000, 0);
             this.Name = "WorkItemHdrCtrl";
-            this.Size = new System.Drawing.Size(1200, 52);
+            this.Size = new System.Drawing.Size(1321, 52);
             this.ResumeLayout(false);
 
 		}
@@ -376,5 +389,6 @@
         private RotatableLabel ProfielenLabel;
         private RotatableLabel PanelenLabel;
         private RotatableLabel OnderdelenLabel;
+        private RotatableLabel UrenLabel;
     }
 }

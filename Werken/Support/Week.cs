@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Werken.Support
 {
-	class Week
+	public class Week
 	{
 		public int Y { get; set; }
 		public int W { get; set; }

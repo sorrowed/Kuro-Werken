@@ -63,22 +63,33 @@ namespace Werken.Controls
 
         public void Assign(WorkItem item)
         {
+
             Item = item;
-
             Bind();
-
             Tooltips();
+        }
+
+        /// <summary>
+        /// Make sure that all eventhandlers and tooltips are cleaned up as this control is dynamically created and destroyed
+        /// </summary>
+        public void Deassign()
+        {
+            Unbind();
+            toolTip.RemoveAll();
         }
 
         private void Tooltips()
         {
             toolTip.RemoveAll();
-            toolTip.SetToolTip(ProductionNrTextBox, Item.ProductionNr);
-            toolTip.SetToolTip(ProjectLabel, Item.Project);
-            toolTip.SetToolTip(LocationLabel, Item.Locatie);
-            toolTip.SetToolTip(RemarksTextBox, Item.Remarks);
-            toolTip.SetToolTip(CustomerLabel, Item.Customer);
-            toolTip.SetToolTip(OrderNrLabel, Item.OrderNr);
+            if (Item != null)
+            {
+                toolTip.SetToolTip(ProductionNrTextBox, Item.ProductionNr);
+                toolTip.SetToolTip(ProjectLabel, Item.Project);
+                toolTip.SetToolTip(LocationLabel, Item.Locatie);
+                toolTip.SetToolTip(RemarksTextBox, Item.Remarks);
+                toolTip.SetToolTip(CustomerLabel, Item.Customer);
+                toolTip.SetToolTip(OrderNrLabel, Item.OrderNr);
+            }
         }
 
         private void Draw()
@@ -87,6 +98,14 @@ namespace Werken.Controls
                 ProductionNrTextBox.BackColor = Color.DarkGreen;
             else
                 ProductionNrTextBox.BackColor = SystemColors.Window;
+        }
+
+        private void Unbind()
+        {
+            foreach (Control control in Controls)
+            {
+                control.DataBindings.Clear();
+            }
         }
 
         private void Bind()

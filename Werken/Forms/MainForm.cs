@@ -117,7 +117,8 @@ namespace Werken.Forms
 			foreach( var ctrl in WorkItemControls )
 			{
 				ctrl.Clicked -= Ctrl_Clicked;
-				WorkItemsPanel.Controls.Remove( ctrl );
+                ctrl.Deassign();
+                WorkItemsPanel.Controls.Remove( ctrl );
 			}
 
 			WorkItemControls.Clear();

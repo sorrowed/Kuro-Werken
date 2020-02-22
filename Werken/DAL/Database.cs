@@ -22,7 +22,7 @@ namespace Werken.DAL
         {
             get
             {
-                return @"Server =KUROSERVER;Database=ProjectView-V1;User Id=productie; Password=productie;";
+                return @"Server=KURO-SQL\SQL2016;Database=ProjectView-V1;User Id=productie; Password=productie;";
             }
         }
 #endif

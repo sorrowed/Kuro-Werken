@@ -49,7 +49,7 @@ namespace Werken.Controls
             {
                 /*OrderNrLabel,*/ProductionNrTextBox,ProjectLabel,CustomerLabel,ChaletsLabel,KozijnenLabel,
                 RamenLabel,DeurenLabel, LosseOnderdelenLabel,GlassTextBox,RoosterTextBox,ProfilesTextBox,
-                PanelsTextBox,CilindersTextBox,InzethorTextBox,BazTextBox, LasTextBox,
+                PanelsTextBox,CilindersTextBox,InzethorTextBox,InkoopKozijnenTextBox, BazTextBox, LasTextBox,
                 AfmTextBox, AwlTextBox, CompleteTextBox, LeverWeekLabel,LocationLabel,RemarksTextBox, UrenLabel
             };
 
@@ -154,6 +154,15 @@ namespace Werken.Controls
             binding.Format += Binding_TryFormatColor;
             binding.Parse += Binding_TryParseColor;
             InzethorTextBox.DataBindings.Add(binding);
+
+
+            binding = new Binding("Text", Item, "InkoopKozijnen", false, DataSourceUpdateMode.OnValidation);
+            binding.Format += Binding_TryFormatDate;
+            InkoopKozijnenTextBox.DataBindings.Add(binding);
+            binding = new Binding("BackColor", Item, "InkoopKozijnenColor", false, DataSourceUpdateMode.OnPropertyChanged);
+            binding.Format += Binding_TryFormatColor;
+            binding.Parse += Binding_TryParseColor;
+            InkoopKozijnenTextBox.DataBindings.Add(binding);
 
             binding = new Binding("Text", Item, "Profielen", false, DataSourceUpdateMode.OnValidation);
             binding.Format += Binding_TryFormatDate;

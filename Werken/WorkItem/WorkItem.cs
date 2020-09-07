@@ -35,8 +35,10 @@ namespace Werken
 		public string Cilinders { get { return cilinders; } set { if( cilinders != value ) { cilinders = value; Notify( "Cilinders" ); } } }
 		private string inzethor;
 		public string Inzethor { get { return inzethor; } set { if( inzethor != value ) { inzethor = value; Notify( "Inzethor" ); } } }
+        private string inkoopKozijnen;
+        public string InkoopKozijnen { get { return inkoopKozijnen; } set { if (inkoopKozijnen != value) { inkoopKozijnen = value; Notify("InkoopKozijnen"); } } }
 
-		private string baz;
+        private string baz;
 		public string BAZ { get { return baz; } set { if( baz != value ) { baz = value; Notify( "BAZ" ); } } }
 
 		private string las;
@@ -66,6 +68,8 @@ namespace Werken
 		public int CilindersColor { get { return cilindersColor; } set { if( cilindersColor != value ) { cilindersColor = value; Notify( "CilindersColor" ); } } }
 		private int inzethorColor;
 		public int InzethorColor { get { return inzethorColor; } set { if( inzethorColor != value ) { inzethorColor = value; Notify( "InzethorColor" ); } } }
+        private int inkoopKozijnenColor;
+        public int InkoopKozijnenColor { get { return inkoopKozijnenColor; } set { if (inkoopKozijnenColor != value) { inkoopKozijnenColor = value; Notify("InkoopKozijnenColor"); } } }
         private int remarksColor;
         public int RemarksColor { get { return remarksColor; } set { if (remarksColor != value) { remarksColor = value; Notify("RemarksColor"); } } }
         private int profielenColor;

@@ -44,16 +44,13 @@ namespace Werken.Forms
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-
             //var db = new Database();
             //db.Create();
-
-
             UpdateView();
             UpdateWorkItems();
         }
 
-        private void Update()
+        private void UpdateAll()
         {
             UpdateView();
             UpdateWorkItems();
@@ -62,7 +59,7 @@ namespace Werken.Forms
 
         private void UpdateButton_Click(object sender, EventArgs e)
         {
-            Update();
+            UpdateAll();
         }
 
         private void CreateButton_Click(object sender, EventArgs e)
@@ -74,13 +71,13 @@ namespace Werken.Forms
         private void PreviousWeekButton_Click(object sender, EventArgs e)
         {
             Week.Previous();
-            Update();
+            UpdateAll();
         }
 
         private void NextWeekButton_Click(object sender, EventArgs e)
         {
             Week.Next();
-            Update();
+            UpdateAll();
         }
 
         private void WeekNrLabel_Click(object sender, EventArgs e)
@@ -301,7 +298,7 @@ namespace Werken.Forms
                     Week = dlg.Week;
                 }
             }
-            Update();
+            UpdateAll();
         }
     }
 }

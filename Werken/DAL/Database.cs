@@ -52,6 +52,7 @@ namespace Werken.DAL
 	                                Panelen varchar(128) default '',
 	                                Cilinders varchar(128) default '',
 	                                Inzethor varchar(128) default '',
+                                    InkoopKozijnen varchar(128) default '',
 	                                BAZ varchar(128) default '', 
 	                                LAS varchar(128) default '', 
 	                                AFM varchar(128) default '', 
@@ -64,6 +65,7 @@ namespace Werken.DAL
 	                                RoostersColor integer default 0,
 	                                CilindersColor integer default 0,
 	                                InzetHorColor integer default 0,
+                                    InkoopKozijnenColor integer default 0,
 	                                RemarksColor integer default 0 ,
 	                                ProfielenColor integer default 0,
 	                                PanelenColor integer default 0 )";

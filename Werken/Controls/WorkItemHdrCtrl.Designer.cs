@@ -54,6 +54,7 @@
             this.KozijnenLabel = new Werken.Controls.RotatableLabel();
             this.ChaletsLabel = new Werken.Controls.RotatableLabel();
             this.label3 = new Werken.Controls.RotatableLabel();
+            this.inkoopDTSDorpelsLabel = new Werken.Controls.RotatableLabel();
             this.SuspendLayout();
             // 
             // OrderNrLabel
@@ -103,9 +104,9 @@
             this.OpmerkingenLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.OpmerkingenLabel.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.OpmerkingenLabel.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.OpmerkingenLabel.Location = new System.Drawing.Point(1212, 2);
+            this.OpmerkingenLabel.Location = new System.Drawing.Point(1308, 2);
             this.OpmerkingenLabel.Name = "OpmerkingenLabel";
-            this.OpmerkingenLabel.Size = new System.Drawing.Size(266, 48);
+            this.OpmerkingenLabel.Size = new System.Drawing.Size(234, 48);
             this.OpmerkingenLabel.TabIndex = 33;
             this.OpmerkingenLabel.Text = "Opmerkingen";
             this.OpmerkingenLabel.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
@@ -129,7 +130,7 @@
             this.LocatieLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.LocatieLabel.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LocatieLabel.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.LocatieLabel.Location = new System.Drawing.Point(1084, 2);
+            this.LocatieLabel.Location = new System.Drawing.Point(1180, 3);
             this.LocatieLabel.Name = "LocatieLabel";
             this.LocatieLabel.Size = new System.Drawing.Size(122, 48);
             this.LocatieLabel.TabIndex = 35;
@@ -151,7 +152,7 @@
             this.UrenLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.UrenLabel.BackColor = System.Drawing.SystemColors.Control;
             this.UrenLabel.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UrenLabel.Location = new System.Drawing.Point(1473, 3);
+            this.UrenLabel.Location = new System.Drawing.Point(1537, 3);
             this.UrenLabel.Name = "UrenLabel";
             this.UrenLabel.Size = new System.Drawing.Size(25, 48);
             this.UrenLabel.TabIndex = 40;
@@ -191,7 +192,7 @@
             // 
             this.AwlLabel.BackColor = System.Drawing.SystemColors.Control;
             this.AwlLabel.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AwlLabel.Location = new System.Drawing.Point(1014, 2);
+            this.AwlLabel.Location = new System.Drawing.Point(1086, 4);
             this.AwlLabel.Name = "AwlLabel";
             this.AwlLabel.Size = new System.Drawing.Size(22, 48);
             this.AwlLabel.TabIndex = 36;
@@ -201,7 +202,7 @@
             // 
             this.WeekLabel.BackColor = System.Drawing.SystemColors.Control;
             this.WeekLabel.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.WeekLabel.Location = new System.Drawing.Point(1054, 2);
+            this.WeekLabel.Location = new System.Drawing.Point(1142, 4);
             this.WeekLabel.Name = "WeekLabel";
             this.WeekLabel.Size = new System.Drawing.Size(32, 48);
             this.WeekLabel.TabIndex = 34;
@@ -211,7 +212,7 @@
             // 
             this.GereedLabel.BackColor = System.Drawing.SystemColors.Control;
             this.GereedLabel.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GereedLabel.Location = new System.Drawing.Point(1034, 2);
+            this.GereedLabel.Location = new System.Drawing.Point(1114, 4);
             this.GereedLabel.Name = "GereedLabel";
             this.GereedLabel.Size = new System.Drawing.Size(22, 48);
             this.GereedLabel.TabIndex = 32;
@@ -221,7 +222,7 @@
             // 
             this.AfmLabel.BackColor = System.Drawing.SystemColors.Control;
             this.AfmLabel.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AfmLabel.Location = new System.Drawing.Point(994, 2);
+            this.AfmLabel.Location = new System.Drawing.Point(1058, 2);
             this.AfmLabel.Name = "AfmLabel";
             this.AfmLabel.Size = new System.Drawing.Size(22, 48);
             this.AfmLabel.TabIndex = 31;
@@ -231,7 +232,7 @@
             // 
             this.Laslabel.BackColor = System.Drawing.SystemColors.Control;
             this.Laslabel.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Laslabel.Location = new System.Drawing.Point(974, 2);
+            this.Laslabel.Location = new System.Drawing.Point(1030, 4);
             this.Laslabel.Name = "Laslabel";
             this.Laslabel.Size = new System.Drawing.Size(22, 48);
             this.Laslabel.TabIndex = 30;
@@ -241,7 +242,7 @@
             // 
             this.BazLabel.BackColor = System.Drawing.SystemColors.Control;
             this.BazLabel.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BazLabel.Location = new System.Drawing.Point(954, 2);
+            this.BazLabel.Location = new System.Drawing.Point(1002, 3);
             this.BazLabel.Name = "BazLabel";
             this.BazLabel.Size = new System.Drawing.Size(22, 48);
             this.BazLabel.TabIndex = 29;
@@ -337,10 +338,21 @@
             this.label3.TabIndex = 6;
             this.label3.Text = "Chalets";
             // 
+            // inkoopDTSDorpelsLabel
+            // 
+            this.inkoopDTSDorpelsLabel.BackColor = System.Drawing.SystemColors.Control;
+            this.inkoopDTSDorpelsLabel.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inkoopDTSDorpelsLabel.Location = new System.Drawing.Point(954, 3);
+            this.inkoopDTSDorpelsLabel.Name = "inkoopDTSDorpelsLabel";
+            this.inkoopDTSDorpelsLabel.Size = new System.Drawing.Size(42, 48);
+            this.inkoopDTSDorpelsLabel.TabIndex = 42;
+            this.inkoopDTSDorpelsLabel.Text = "Inkoop DTS Dorpels";
+            // 
             // WorkItemHdrCtrl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.inkoopDTSDorpelsLabel);
             this.Controls.Add(this.InkoopKozijnenLabel);
             this.Controls.Add(this.UrenLabel);
             this.Controls.Add(this.OnderdelenLabel);
@@ -370,7 +382,7 @@
             this.Margin = new System.Windows.Forms.Padding(0);
             this.MinimumSize = new System.Drawing.Size(1000, 0);
             this.Name = "WorkItemHdrCtrl";
-            this.Size = new System.Drawing.Size(1500, 52);
+            this.Size = new System.Drawing.Size(1564, 52);
             this.ResumeLayout(false);
 
 		}
@@ -403,5 +415,6 @@
         private RotatableLabel OnderdelenLabel;
         private RotatableLabel UrenLabel;
         private RotatableLabel InkoopKozijnenLabel;
+        private RotatableLabel inkoopDTSDorpelsLabel;
     }
 }

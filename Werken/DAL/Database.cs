@@ -14,7 +14,7 @@ namespace Werken.DAL
         {
             get
             {
-                return @"Server=LAPTOP-TOM\SQLEXPRESS;Database=ProjectView-V1;Trusted_Connection=True;";
+                return @"Server=LAPTOP-TOM\SQLEXPRESS;Database=ProjectView-V1;User Id=productie; Password=productie;";
             }
         }
 #else
@@ -53,6 +53,7 @@ namespace Werken.DAL
 	                                Cilinders varchar(128) default '',
 	                                Inzethor varchar(128) default '',
                                     InkoopKozijnen varchar(128) default '',
+									InkoopDTSDorpels varchar(128) default '',
 	                                BAZ varchar(128) default '', 
 	                                LAS varchar(128) default '', 
 	                                AFM varchar(128) default '', 

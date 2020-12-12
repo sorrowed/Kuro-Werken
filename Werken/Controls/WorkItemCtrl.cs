@@ -49,8 +49,9 @@ namespace Werken.Controls
             {
                 /*OrderNrLabel,*/ProductionNrTextBox,ProjectLabel,CustomerLabel,ChaletsLabel,KozijnenLabel,
                 RamenLabel,DeurenLabel, LosseOnderdelenLabel,GlassTextBox,RoosterTextBox,ProfilesTextBox,
-                PanelsTextBox,CilindersTextBox,InzethorTextBox,InkoopKozijnenTextBox, BazTextBox, LasTextBox,
-                AfmTextBox, AwlTextBox, CompleteTextBox, LeverWeekLabel,LocationLabel,RemarksTextBox, UrenLabel
+                PanelsTextBox,CilindersTextBox,InzethorTextBox,InkoopKozijnenTextBox, InkoopDTSDorpelsTextBox,
+                BazTextBox, LasTextBox, AfmTextBox, AwlTextBox,
+                CompleteTextBox, LeverWeekLabel,LocationLabel,RemarksTextBox, UrenLabel
             };
 
             int x = OrderNrLabel.Left + OrderNrLabel.Width;
@@ -63,7 +64,6 @@ namespace Werken.Controls
 
         public void Assign(WorkItem item)
         {
-
             Item = item;
             Bind();
             Tooltips();
@@ -163,6 +163,14 @@ namespace Werken.Controls
             binding.Format += Binding_TryFormatColor;
             binding.Parse += Binding_TryParseColor;
             InkoopKozijnenTextBox.DataBindings.Add(binding);
+
+            binding = new Binding("Text", Item, "InkoopDTSDorpels", false, DataSourceUpdateMode.OnValidation);
+            binding.Format += Binding_TryFormatDate;
+            InkoopDTSDorpelsTextBox.DataBindings.Add(binding);
+            binding = new Binding("BackColor", Item, "InkoopDTSDorpelsColor", false, DataSourceUpdateMode.OnPropertyChanged);
+            binding.Format += Binding_TryFormatColor;
+            binding.Parse += Binding_TryParseColor;
+            InkoopDTSDorpelsTextBox.DataBindings.Add(binding);
 
             binding = new Binding("Text", Item, "Profielen", false, DataSourceUpdateMode.OnValidation);
             binding.Format += Binding_TryFormatDate;

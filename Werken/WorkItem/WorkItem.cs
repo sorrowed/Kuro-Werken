@@ -52,8 +52,18 @@ namespace Werken
         private string las;
         public string LAS { get { return las; } set { if (las != value) { las = value; Notify("LAS"); } } }
 
-        private string afm;
-        public string AFM { get { return afm; } set { if (afm != value) { afm = value; Notify("AFM"); } } }
+        private string afm1;
+        public string AFM1 { get { return afm1; } set { if (afm1 != value) { afm1 = value; Notify("AFM1"); } } }
+
+        private string afm1a;
+        public string AFM1A { get { return afm1a; } set { if (afm1a != value) { afm1a = value; Notify("AFM1A"); } } }
+
+        private string afm2;
+        public string AFM2 { get { return afm2; } set { if (afm2 != value) { afm2 = value; Notify("AFM2"); } } }
+
+        private string afm3;
+        public string AFM3 { get { return afm3; } set { if (afm3 != value) { afm3 = value; Notify("AFM3"); } } }
+
 
         private string awl;
         public string AWL { get { return awl; } set { if (awl != value) { awl = value; Notify("AWL"); } } }

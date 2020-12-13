@@ -50,7 +50,7 @@ namespace Werken.Controls
                 /*OrderNrLabel,*/ProductionNrTextBox,ProjectLabel,CustomerLabel,ChaletsLabel,KozijnenLabel,
                 RamenLabel,DeurenLabel, LosseOnderdelenLabel,GlassTextBox,RoosterTextBox,ProfilesTextBox,
                 PanelsTextBox,CilindersTextBox,InzethorTextBox,InkoopKozijnenTextBox, InkoopDTSDorpelsTextBox,
-                BazTextBox, LasTextBox, AfmTextBox, AwlTextBox,
+                BazTextBox, LasTextBox, Afm1TextBox, Afm1aTextBox, Afm2TextBox, Afm3TextBox, AwlTextBox,
                 CompleteTextBox, LeverWeekLabel,LocationLabel,RemarksTextBox, UrenLabel
             };
 
@@ -190,8 +190,12 @@ namespace Werken.Controls
 
             BazTextBox.DataBindings.Add(new Binding("Text", Item, "BAZ", false, DataSourceUpdateMode.OnPropertyChanged));
             LasTextBox.DataBindings.Add(new Binding("Text", Item, "LAS", false, DataSourceUpdateMode.OnPropertyChanged));
-            AfmTextBox.DataBindings.Add(new Binding("Text", Item, "AFM", false, DataSourceUpdateMode.OnPropertyChanged));
+            Afm1TextBox.DataBindings.Add(new Binding("Text", Item, "AFM1", false, DataSourceUpdateMode.OnPropertyChanged));
+            Afm1aTextBox.DataBindings.Add(new Binding("Text", Item, "AFM1A", false, DataSourceUpdateMode.OnPropertyChanged));
+            Afm2TextBox.DataBindings.Add(new Binding("Text", Item, "AFM2", false, DataSourceUpdateMode.OnPropertyChanged));
+            Afm3TextBox.DataBindings.Add(new Binding("Text", Item, "AFM3", false, DataSourceUpdateMode.OnPropertyChanged));
             AwlTextBox.DataBindings.Add(new Binding("Text", Item, "AWL", false, DataSourceUpdateMode.OnPropertyChanged));
+
 
             CompleteTextBox.DataBindings.Add(new Binding("Text", Item, "Complete", false, DataSourceUpdateMode.OnPropertyChanged));
 

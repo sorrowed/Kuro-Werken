@@ -38,7 +38,7 @@
             this.DeurenLabel = new System.Windows.Forms.Label();
             this.BazTextBox = new System.Windows.Forms.Label();
             this.LasTextBox = new System.Windows.Forms.Label();
-            this.AfmTextBox = new System.Windows.Forms.Label();
+            this.Afm1TextBox = new System.Windows.Forms.Label();
             this.CompleteTextBox = new System.Windows.Forms.Label();
             this.GlassTextBox = new System.Windows.Forms.TextBox();
             this.RoosterTextBox = new System.Windows.Forms.TextBox();
@@ -58,6 +58,9 @@
             this.InkoopKozijnenTextBox = new System.Windows.Forms.TextBox();
             this.InkoopDTSDorpelsTextBox = new System.Windows.Forms.TextBox();
             this.workItemBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.Afm1aTextBox = new System.Windows.Forms.Label();
+            this.Afm2TextBox = new System.Windows.Forms.Label();
+            this.Afm3TextBox = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.workItemBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -207,22 +210,22 @@
             this.LasTextBox.Leave += new System.EventHandler(this.TextBox_Leave);
             this.LasTextBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ProductionPhaseTextBox_MouseDown);
             // 
-            // AfmTextBox
+            // Afm1TextBox
             // 
-            this.AfmTextBox.BackColor = System.Drawing.SystemColors.Window;
-            this.AfmTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.AfmTextBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AfmTextBox.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AfmTextBox.Location = new System.Drawing.Point(1031, 2);
-            this.AfmTextBox.Margin = new System.Windows.Forms.Padding(0);
-            this.AfmTextBox.Name = "AfmTextBox";
-            this.AfmTextBox.Size = new System.Drawing.Size(22, 21);
-            this.AfmTextBox.TabIndex = 14;
-            this.AfmTextBox.Text = "X";
-            this.AfmTextBox.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.AfmTextBox.Click += new System.EventHandler(this.Control_Click);
-            this.AfmTextBox.Leave += new System.EventHandler(this.TextBox_Leave);
-            this.AfmTextBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ProductionPhaseTextBox_MouseDown);
+            this.Afm1TextBox.BackColor = System.Drawing.SystemColors.Window;
+            this.Afm1TextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Afm1TextBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Afm1TextBox.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Afm1TextBox.Location = new System.Drawing.Point(1031, 2);
+            this.Afm1TextBox.Margin = new System.Windows.Forms.Padding(0);
+            this.Afm1TextBox.Name = "Afm1TextBox";
+            this.Afm1TextBox.Size = new System.Drawing.Size(22, 21);
+            this.Afm1TextBox.TabIndex = 14;
+            this.Afm1TextBox.Text = "X";
+            this.Afm1TextBox.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Afm1TextBox.Click += new System.EventHandler(this.Control_Click);
+            this.Afm1TextBox.Leave += new System.EventHandler(this.TextBox_Leave);
+            this.Afm1TextBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ProductionPhaseTextBox_MouseDown);
             // 
             // CompleteTextBox
             // 
@@ -230,7 +233,7 @@
             this.CompleteTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.CompleteTextBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CompleteTextBox.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CompleteTextBox.Location = new System.Drawing.Point(1071, 2);
+            this.CompleteTextBox.Location = new System.Drawing.Point(1136, 2);
             this.CompleteTextBox.Margin = new System.Windows.Forms.Padding(0);
             this.CompleteTextBox.Name = "CompleteTextBox";
             this.CompleteTextBox.Size = new System.Drawing.Size(22, 21);
@@ -326,10 +329,10 @@
             this.RemarksTextBox.BackColor = System.Drawing.SystemColors.Window;
             this.RemarksTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.RemarksTextBox.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RemarksTextBox.Location = new System.Drawing.Point(1243, 1);
+            this.RemarksTextBox.Location = new System.Drawing.Point(1308, 1);
             this.RemarksTextBox.Margin = new System.Windows.Forms.Padding(0);
             this.RemarksTextBox.Name = "RemarksTextBox";
-            this.RemarksTextBox.Size = new System.Drawing.Size(225, 22);
+            this.RemarksTextBox.Size = new System.Drawing.Size(455, 22);
             this.RemarksTextBox.TabIndex = 16;
             this.RemarksTextBox.Click += new System.EventHandler(this.Control_Click);
             this.RemarksTextBox.TextChanged += new System.EventHandler(this.RemarksTextBox_TextChanged);
@@ -343,7 +346,7 @@
             this.LeverWeekLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.LeverWeekLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.LeverWeekLabel.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LeverWeekLabel.Location = new System.Drawing.Point(1091, 2);
+            this.LeverWeekLabel.Location = new System.Drawing.Point(1156, 2);
             this.LeverWeekLabel.Margin = new System.Windows.Forms.Padding(0);
             this.LeverWeekLabel.Name = "LeverWeekLabel";
             this.LeverWeekLabel.Size = new System.Drawing.Size(32, 21);
@@ -357,7 +360,7 @@
             this.LocationLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.LocationLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.LocationLabel.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LocationLabel.Location = new System.Drawing.Point(1121, 2);
+            this.LocationLabel.Location = new System.Drawing.Point(1186, 2);
             this.LocationLabel.Margin = new System.Windows.Forms.Padding(0);
             this.LocationLabel.Name = "LocationLabel";
             this.LocationLabel.Size = new System.Drawing.Size(122, 21);
@@ -383,7 +386,7 @@
             this.AwlTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.AwlTextBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AwlTextBox.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AwlTextBox.Location = new System.Drawing.Point(1051, 2);
+            this.AwlTextBox.Location = new System.Drawing.Point(1115, 2);
             this.AwlTextBox.Margin = new System.Windows.Forms.Padding(0);
             this.AwlTextBox.Name = "AwlTextBox";
             this.AwlTextBox.Size = new System.Drawing.Size(22, 21);
@@ -449,7 +452,7 @@
             this.UrenLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.UrenLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.UrenLabel.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UrenLabel.Location = new System.Drawing.Point(1468, 1);
+            this.UrenLabel.Location = new System.Drawing.Point(1763, 1);
             this.UrenLabel.Margin = new System.Windows.Forms.Padding(0);
             this.UrenLabel.Name = "UrenLabel";
             this.UrenLabel.Size = new System.Drawing.Size(32, 21);
@@ -495,10 +498,64 @@
             // 
             this.workItemBindingSource.DataSource = typeof(Werken.WorkItem);
             // 
+            // Afm1aTextBox
+            // 
+            this.Afm1aTextBox.BackColor = System.Drawing.SystemColors.Window;
+            this.Afm1aTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Afm1aTextBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Afm1aTextBox.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Afm1aTextBox.Location = new System.Drawing.Point(1052, 2);
+            this.Afm1aTextBox.Margin = new System.Windows.Forms.Padding(0);
+            this.Afm1aTextBox.Name = "Afm1aTextBox";
+            this.Afm1aTextBox.Size = new System.Drawing.Size(22, 21);
+            this.Afm1aTextBox.TabIndex = 27;
+            this.Afm1aTextBox.Text = "X";
+            this.Afm1aTextBox.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Afm1aTextBox.Click += new System.EventHandler(this.Control_Click);
+            this.Afm1aTextBox.Leave += new System.EventHandler(this.TextBox_Leave);
+            this.Afm1aTextBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ProductionPhaseTextBox_MouseDown);
+            // 
+            // Afm2TextBox
+            // 
+            this.Afm2TextBox.BackColor = System.Drawing.SystemColors.Window;
+            this.Afm2TextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Afm2TextBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Afm2TextBox.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Afm2TextBox.Location = new System.Drawing.Point(1073, 2);
+            this.Afm2TextBox.Margin = new System.Windows.Forms.Padding(0);
+            this.Afm2TextBox.Name = "Afm2TextBox";
+            this.Afm2TextBox.Size = new System.Drawing.Size(22, 21);
+            this.Afm2TextBox.TabIndex = 28;
+            this.Afm2TextBox.Text = "X";
+            this.Afm2TextBox.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Afm2TextBox.Click += new System.EventHandler(this.Control_Click);
+            this.Afm2TextBox.Leave += new System.EventHandler(this.TextBox_Leave);
+            this.Afm2TextBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ProductionPhaseTextBox_MouseDown);
+            // 
+            // Afm3TextBox
+            // 
+            this.Afm3TextBox.BackColor = System.Drawing.SystemColors.Window;
+            this.Afm3TextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Afm3TextBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Afm3TextBox.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Afm3TextBox.Location = new System.Drawing.Point(1094, 2);
+            this.Afm3TextBox.Margin = new System.Windows.Forms.Padding(0);
+            this.Afm3TextBox.Name = "Afm3TextBox";
+            this.Afm3TextBox.Size = new System.Drawing.Size(22, 21);
+            this.Afm3TextBox.TabIndex = 29;
+            this.Afm3TextBox.Text = "X";
+            this.Afm3TextBox.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Afm3TextBox.Click += new System.EventHandler(this.Control_Click);
+            this.Afm3TextBox.Leave += new System.EventHandler(this.TextBox_Leave);
+            this.Afm3TextBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ProductionPhaseTextBox_MouseDown);
+            // 
             // WorkItemCtrl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.Afm3TextBox);
+            this.Controls.Add(this.Afm2TextBox);
+            this.Controls.Add(this.Afm1aTextBox);
             this.Controls.Add(this.InkoopDTSDorpelsTextBox);
             this.Controls.Add(this.InkoopKozijnenTextBox);
             this.Controls.Add(this.UrenLabel);
@@ -517,7 +574,7 @@
             this.Controls.Add(this.RoosterTextBox);
             this.Controls.Add(this.GlassTextBox);
             this.Controls.Add(this.CompleteTextBox);
-            this.Controls.Add(this.AfmTextBox);
+            this.Controls.Add(this.Afm1TextBox);
             this.Controls.Add(this.LasTextBox);
             this.Controls.Add(this.BazTextBox);
             this.Controls.Add(this.DeurenLabel);
@@ -529,7 +586,7 @@
             this.Margin = new System.Windows.Forms.Padding(0);
             this.MinimumSize = new System.Drawing.Size(1000, 2);
             this.Name = "WorkItemCtrl";
-            this.Size = new System.Drawing.Size(1500, 24);
+            this.Size = new System.Drawing.Size(1795, 24);
             this.Load += new System.EventHandler(this.WorkItemCtrl_Load);
             this.SizeChanged += new System.EventHandler(this.WorkItemCtrl_SizeChanged);
             this.Validated += new System.EventHandler(this.WorkItemCtrl_Validated);
@@ -550,7 +607,7 @@
 		private System.Windows.Forms.Label DeurenLabel;
 		private System.Windows.Forms.Label BazTextBox;
 		private System.Windows.Forms.Label LasTextBox;
-		private System.Windows.Forms.Label AfmTextBox;
+		private System.Windows.Forms.Label Afm1TextBox;
 		private System.Windows.Forms.Label CompleteTextBox;
 		private System.Windows.Forms.TextBox GlassTextBox;
 		private System.Windows.Forms.TextBox RoosterTextBox;
@@ -570,5 +627,8 @@
         private System.Windows.Forms.Label UrenLabel;
         private System.Windows.Forms.TextBox InkoopKozijnenTextBox;
         private System.Windows.Forms.TextBox InkoopDTSDorpelsTextBox;
+        private System.Windows.Forms.Label Afm1aTextBox;
+        private System.Windows.Forms.Label Afm2TextBox;
+        private System.Windows.Forms.Label Afm3TextBox;
     }
 }

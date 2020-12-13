@@ -17,7 +17,7 @@ namespace Werken.Controls
                 /*OrderNrLabel,*/ProductionNrLabel,ProjectLabel,OpdrachtGeverLabel,ChaletsLabel,KozijnenLabel,
                 RamenLabel,DeurenLabel, OnderdelenLabel,GlasLabel,RoostersLabel,ProfielenLabel,
                 PanelenLabel,CilindersLabel,InzetHorLabel,InkoopKozijnenLabel,inkoopDTSDorpelsLabel,
-                BazLabel, Laslabel, AfmLabel, AwlLabel,
+                BazLabel, Laslabel, Afm1Label, Afm1ALabel, Afm2Label, Afm3Label, AwlLabel,
                 GereedLabel, WeekLabel,LocatieLabel,OpmerkingenLabel,UrenLabel    
             };
 

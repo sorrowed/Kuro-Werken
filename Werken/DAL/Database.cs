@@ -14,7 +14,8 @@ namespace Werken.DAL
         {
             get
             {
-                return @"Server=LAPTOP-TOM\SQLEXPRESS;Database=ProjectView-V1;User Id=productie; Password=productie;";
+                return @"Server=192.168.1.237\SQL2016;Database=ProjectView-V1;User Id=productie; Password=productie;";
+                //return @"Server=LAPTOP-TOM\SQLEXPRESS;Database=ProjectView-V1;User Id=productie; Password=productie;";
             }
         }
 #else
@@ -56,7 +57,10 @@ namespace Werken.DAL
 									InkoopDTSDorpels varchar(128) default '',
 	                                BAZ varchar(128) default '', 
 	                                LAS varchar(128) default '', 
-	                                AFM varchar(128) default '', 
+	                                AFM1 varchar(128) default '', 
+	                                AFM1A varchar(128) default '', 
+	                                AFM2 varchar(128) default '', 
+	                                AFM3 varchar(128) default '', 
 	                                AWL varchar(128) default '', 
 	                                Complete varchar(128) default '',
 	                                LeverWeek varchar(128) default '',

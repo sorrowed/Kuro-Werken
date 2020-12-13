@@ -123,7 +123,7 @@
             this.FromLabel.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FromLabel.Location = new System.Drawing.Point(279, 12);
             this.FromLabel.Name = "FromLabel";
-            this.FromLabel.Size = new System.Drawing.Size(150, 47);
+            this.FromLabel.Size = new System.Drawing.Size(166, 47);
             this.FromLabel.TabIndex = 8;
             this.FromLabel.Text = "31-12-9999";
             this.FromLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -132,9 +132,9 @@
             // 
             this.ToLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ToLabel.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ToLabel.Location = new System.Drawing.Point(480, 12);
+            this.ToLabel.Location = new System.Drawing.Point(479, 12);
             this.ToLabel.Name = "ToLabel";
-            this.ToLabel.Size = new System.Drawing.Size(150, 47);
+            this.ToLabel.Size = new System.Drawing.Size(166, 47);
             this.ToLabel.TabIndex = 9;
             this.ToLabel.Text = "31-12-9999";
             this.ToLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -143,7 +143,7 @@
             // 
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label1.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(419, 12);
+            this.label1.Location = new System.Drawing.Point(427, 12);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(65, 47);
             this.label1.TabIndex = 10;

@@ -16,8 +16,6 @@ namespace Werken.Forms
         private List<WorkItem> Items { get; set; }
         private List<WorkItemCtrl> WorkItemControls { get; set; }
 
-        private WorkItemHdrCtrl headerCtrl;
-
         private Settings settings;
 
         private bool configurationView;
@@ -32,12 +30,6 @@ namespace Werken.Forms
             Week = new Week(DateTime.Today);
 
             settings = new Settings(Properties.Settings.Default);
-
-            headerCtrl = new WorkItemHdrCtrl();
-            WorkItemsPanel.Controls.Add(headerCtrl);
-            headerCtrl.Location = new Point(0, 0);
-            headerCtrl.Width = WorkItemsPanel.Width;
-            headerCtrl.Anchor = AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Top;
 
             MainForm_SizeChanged(null, null);
         }
@@ -120,7 +112,7 @@ namespace Werken.Forms
 
             WorkItemControls.Clear();
 
-            int y = headerCtrl.Bottom;
+            int y = 0;
             foreach (var item in Items)
             {
                 if (item.IsRemarkRow())

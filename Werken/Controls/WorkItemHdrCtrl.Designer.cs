@@ -36,11 +36,9 @@
             this.LocatieLabel = new System.Windows.Forms.Label();
             this.Afm3Label = new Werken.Controls.RotatableLabel();
             this.Afm2Label = new Werken.Controls.RotatableLabel();
-            this.rotatableLabel2 = new Werken.Controls.RotatableLabel();
             this.Afm1ALabel = new Werken.Controls.RotatableLabel();
             this.inkoopDTSDorpelsLabel = new Werken.Controls.RotatableLabel();
             this.InkoopKozijnenLabel = new Werken.Controls.RotatableLabel();
-            this.UrenLabel = new Werken.Controls.RotatableLabel();
             this.OnderdelenLabel = new Werken.Controls.RotatableLabel();
             this.PanelenLabel = new Werken.Controls.RotatableLabel();
             this.ProfielenLabel = new Werken.Controls.RotatableLabel();
@@ -58,7 +56,6 @@
             this.RamenLabel = new Werken.Controls.RotatableLabel();
             this.KozijnenLabel = new Werken.Controls.RotatableLabel();
             this.ChaletsLabel = new Werken.Controls.RotatableLabel();
-            this.label3 = new Werken.Controls.RotatableLabel();
             this.SuspendLayout();
             // 
             // OrderNrLabel
@@ -110,7 +107,7 @@
             this.OpmerkingenLabel.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.OpmerkingenLabel.Location = new System.Drawing.Point(1377, 1);
             this.OpmerkingenLabel.Name = "OpmerkingenLabel";
-            this.OpmerkingenLabel.Size = new System.Drawing.Size(464, 62);
+            this.OpmerkingenLabel.Size = new System.Drawing.Size(86, 62);
             this.OpmerkingenLabel.TabIndex = 33;
             this.OpmerkingenLabel.Text = "Opmerkingen";
             this.OpmerkingenLabel.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
@@ -161,16 +158,6 @@
             this.Afm2Label.TabIndex = 44;
             this.Afm2Label.Text = "AFM H2";
             // 
-            // rotatableLabel2
-            // 
-            this.rotatableLabel2.BackColor = System.Drawing.SystemColors.Control;
-            this.rotatableLabel2.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rotatableLabel2.Location = new System.Drawing.Point(882, 1);
-            this.rotatableLabel2.Name = "rotatableLabel2";
-            this.rotatableLabel2.Size = new System.Drawing.Size(22, 62);
-            this.rotatableLabel2.TabIndex = 44;
-            this.rotatableLabel2.Text = "AFM H1";
-            // 
             // Afm1ALabel
             // 
             this.Afm1ALabel.BackColor = System.Drawing.SystemColors.Control;
@@ -200,17 +187,6 @@
             this.InkoopKozijnenLabel.Size = new System.Drawing.Size(42, 62);
             this.InkoopKozijnenLabel.TabIndex = 41;
             this.InkoopKozijnenLabel.Text = "Inkoop Kozijnen";
-            // 
-            // UrenLabel
-            // 
-            this.UrenLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.UrenLabel.BackColor = System.Drawing.SystemColors.Control;
-            this.UrenLabel.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UrenLabel.Location = new System.Drawing.Point(1839, 3);
-            this.UrenLabel.Name = "UrenLabel";
-            this.UrenLabel.Size = new System.Drawing.Size(25, 62);
-            this.UrenLabel.TabIndex = 40;
-            this.UrenLabel.Text = "Uren";
             // 
             // OnderdelenLabel
             // 
@@ -382,27 +358,15 @@
             this.ChaletsLabel.TabIndex = 6;
             this.ChaletsLabel.Text = "Chalets";
             // 
-            // label3
-            // 
-            this.label3.BackColor = System.Drawing.SystemColors.Control;
-            this.label3.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(423, 1);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(32, 62);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "Chalets";
-            // 
             // WorkItemHdrCtrl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.Afm3Label);
             this.Controls.Add(this.Afm2Label);
-            this.Controls.Add(this.rotatableLabel2);
             this.Controls.Add(this.Afm1ALabel);
             this.Controls.Add(this.inkoopDTSDorpelsLabel);
             this.Controls.Add(this.InkoopKozijnenLabel);
-            this.Controls.Add(this.UrenLabel);
             this.Controls.Add(this.OnderdelenLabel);
             this.Controls.Add(this.PanelenLabel);
             this.Controls.Add(this.ProfielenLabel);
@@ -425,12 +389,11 @@
             this.Controls.Add(this.KozijnenLabel);
             this.Controls.Add(this.ChaletsLabel);
             this.Controls.Add(this.OpdrachtGeverLabel);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.OrderNrLabel);
             this.Margin = new System.Windows.Forms.Padding(0);
             this.MinimumSize = new System.Drawing.Size(1000, 0);
             this.Name = "WorkItemHdrCtrl";
-            this.Size = new System.Drawing.Size(1867, 65);
+            this.Size = new System.Drawing.Size(1489, 65);
             this.ResumeLayout(false);
 
 		}
@@ -439,7 +402,6 @@
 
 		private System.Windows.Forms.Label OrderNrLabel;
 		private System.Windows.Forms.Label ProjectLabel;
-		private RotatableLabel label3;
 		private System.Windows.Forms.Label ProductionNrLabel;
 		private RotatableLabel RoostersLabel;
 		private System.Windows.Forms.Label OpmerkingenLabel;
@@ -461,11 +423,9 @@
         private RotatableLabel ProfielenLabel;
         private RotatableLabel PanelenLabel;
         private RotatableLabel OnderdelenLabel;
-        private RotatableLabel UrenLabel;
         private RotatableLabel InkoopKozijnenLabel;
         private RotatableLabel inkoopDTSDorpelsLabel;
         private RotatableLabel Afm1ALabel;
-        private RotatableLabel rotatableLabel2;
         private RotatableLabel Afm2Label;
         private RotatableLabel Afm3Label;
     }

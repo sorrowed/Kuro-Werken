@@ -18,7 +18,7 @@ namespace Werken.Controls
                 RamenLabel,DeurenLabel, OnderdelenLabel,GlasLabel,RoostersLabel,ProfielenLabel,
                 PanelenLabel,CilindersLabel,InzetHorLabel,InkoopKozijnenLabel,inkoopDTSDorpelsLabel,
                 BazLabel, Laslabel, Afm1Label, Afm1ALabel, Afm2Label, Afm3Label, AwlLabel,
-                GereedLabel, WeekLabel,LocatieLabel,OpmerkingenLabel,UrenLabel    
+                GereedLabel, WeekLabel,LocatieLabel/*,OpmerkingenLabel,UrelLabel*/    
             };
 
             int x = OrderNrLabel.Left + OrderNrLabel.Width;

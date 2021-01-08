@@ -41,13 +41,14 @@
             this.RemarksList = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SetDatabasePathButton = new System.Windows.Forms.Button();
+            this.workItemHdrCtrl1 = new Werken.Controls.WorkItemHdrCtrl();
             this.SuspendLayout();
             // 
             // UpdateButton
             // 
             this.UpdateButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.UpdateButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.UpdateButton.Location = new System.Drawing.Point(1068, 671);
+            this.UpdateButton.Location = new System.Drawing.Point(1774, 671);
             this.UpdateButton.Name = "UpdateButton";
             this.UpdateButton.Size = new System.Drawing.Size(138, 46);
             this.UpdateButton.TabIndex = 0;
@@ -156,9 +157,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.WorkItemsPanel.AutoScroll = true;
-            this.WorkItemsPanel.Location = new System.Drawing.Point(12, 65);
+            this.WorkItemsPanel.Location = new System.Drawing.Point(12, 142);
             this.WorkItemsPanel.Name = "WorkItemsPanel";
-            this.WorkItemsPanel.Size = new System.Drawing.Size(1194, 469);
+            this.WorkItemsPanel.Size = new System.Drawing.Size(1900, 392);
             this.WorkItemsPanel.TabIndex = 11;
             // 
             // RemarksList
@@ -176,7 +177,7 @@
             this.RemarksList.HideSelection = false;
             this.RemarksList.Location = new System.Drawing.Point(12, 540);
             this.RemarksList.Name = "RemarksList";
-            this.RemarksList.Size = new System.Drawing.Size(1194, 125);
+            this.RemarksList.Size = new System.Drawing.Size(1900, 125);
             this.RemarksList.TabIndex = 12;
             this.RemarksList.UseCompatibleStateImageBehavior = false;
             this.RemarksList.View = System.Windows.Forms.View.Details;
@@ -193,11 +194,23 @@
             this.SetDatabasePathButton.UseVisualStyleBackColor = true;
             this.SetDatabasePathButton.Click += new System.EventHandler(this.SetDatabasePath_Click);
             // 
+            // workItemHdrCtrl1
+            // 
+            this.workItemHdrCtrl1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.workItemHdrCtrl1.Location = new System.Drawing.Point(12, 62);
+            this.workItemHdrCtrl1.Margin = new System.Windows.Forms.Padding(0);
+            this.workItemHdrCtrl1.MinimumSize = new System.Drawing.Size(1167, 0);
+            this.workItemHdrCtrl1.Name = "workItemHdrCtrl1";
+            this.workItemHdrCtrl1.Size = new System.Drawing.Size(1900, 77);
+            this.workItemHdrCtrl1.TabIndex = 14;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1218, 729);
+            this.ClientSize = new System.Drawing.Size(1924, 729);
+            this.Controls.Add(this.workItemHdrCtrl1);
             this.Controls.Add(this.SetDatabasePathButton);
             this.Controls.Add(this.RemarksList);
             this.Controls.Add(this.WorkItemsPanel);
@@ -236,6 +249,7 @@
 		private System.Windows.Forms.ListView RemarksList;
 		private System.Windows.Forms.ColumnHeader columnHeader1;
 		private System.Windows.Forms.Button SetDatabasePathButton;
-	}
+        private Controls.WorkItemHdrCtrl workItemHdrCtrl1;
+    }
 }
 

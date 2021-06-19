@@ -90,6 +90,7 @@ namespace Werken.Forms
 
         private void UpdateWorkItems()
         {
+
             foreach (var item in Items)
             {
                 item.PropertyChanged -= Item_PropertyChanged;
@@ -151,12 +152,16 @@ namespace Werken.Forms
 
         private void UpdateControls()
         {
+            SuspendLayout();
+
             RemarksList.Columns[0].Width = RemarksList.ClientSize.Width;
 
             foreach (var ctrl in WorkItemControls)
             {
                 ctrl.Width = WorkItemsPanel.ClientSize.Width;
             }
+
+            ResumeLayout();
         }
 
         private void Ctrl_Clicked(WorkItemCtrl obj)
@@ -169,7 +174,7 @@ namespace Werken.Forms
 
         private void Item_PropertyChanged(object sender, PropertyChangedEventArgs e)
         {
-            WorkItems.Update(new Database(), sender as WorkItem);
+            WorkItems.Update(new Database(), sender as WorkItem, e.PropertyName);
         }
 
         private void MainForm_SizeChanged(object sender, EventArgs e)

@@ -14,8 +14,8 @@ namespace Werken.DAL
         {
             get
             {
-                //return @"Server=192.168.1.237\SQL2016;Database=ProjectView-V1;User Id=productie; Password=productie;";
-                return @"Server=LAPTOP-TOM\SQLEXPRESS;Database=ProjectView-V1;User Id=productie; Password=productie;";
+                return @"Server=192.168.1.237\SQL2016;Database=ProjectView-V1;User Id=productie; Password=productie;";
+                //return @"Server=LAPTOP-TOM\SQLEXPRESS;Database=ProjectView-V1;User Id=productie; Password=productie;";
             }
         }
 #else

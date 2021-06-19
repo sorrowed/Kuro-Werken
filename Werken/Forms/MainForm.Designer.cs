@@ -28,6 +28,7 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
+            this.components = new System.ComponentModel.Container();
             this.UpdateButton = new System.Windows.Forms.Button();
             this.CreateDatabasePathButton = new System.Windows.Forms.Button();
             this.WeekNrLabel = new System.Windows.Forms.Label();
@@ -204,6 +205,7 @@
             this.workItemHdrCtrl1.Name = "workItemHdrCtrl1";
             this.workItemHdrCtrl1.Size = new System.Drawing.Size(1900, 77);
             this.workItemHdrCtrl1.TabIndex = 14;
+
             // 
             // MainForm
             // 

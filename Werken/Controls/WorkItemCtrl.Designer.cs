@@ -583,6 +583,7 @@
             this.Controls.Add(this.ChaletsLabel);
             this.Controls.Add(this.CustomerLabel);
             this.Controls.Add(this.OrderNrLabel);
+            this.DoubleBuffered = true;
             this.Margin = new System.Windows.Forms.Padding(0);
             this.MinimumSize = new System.Drawing.Size(1000, 2);
             this.Name = "WorkItemCtrl";

@@ -202,7 +202,7 @@ namespace Werken.Controls
             LeverWeekLabel.DataBindings.Add(new Binding("Text", Item, "LeverWeek", false, DataSourceUpdateMode.OnPropertyChanged));
             LocationLabel.DataBindings.Add(new Binding("Text", Item, "Locatie", false, DataSourceUpdateMode.OnPropertyChanged));
 
-            RemarksTextBox.DataBindings.Add(new Binding("Text", Item, "Remarks", false, DataSourceUpdateMode.OnPropertyChanged));
+            RemarksTextBox.DataBindings.Add(new Binding("Text", Item, "Remarks", false, DataSourceUpdateMode.OnValidation));
             binding = new Binding("BackColor", Item, "RemarksColor", false, DataSourceUpdateMode.OnPropertyChanged);
             binding.Format += Binding_TryFormatColor;
             binding.Parse += Binding_TryParseColor;
@@ -254,6 +254,8 @@ namespace Werken.Controls
 
         private void WorkItemCtrl_SizeChanged(object sender, EventArgs e)
         {
+            SuspendLayout();
+
             int top = (Height - GlassTextBox.Height) / 2;
             int height = GlassTextBox.Height;
 
@@ -262,6 +264,8 @@ namespace Werken.Controls
                 control.Height = height;
                 control.Top = top;
             }
+
+            ResumeLayout();
         }
 
         private void ProductionPhaseTextBox_MouseDown(object sender, MouseEventArgs e)
